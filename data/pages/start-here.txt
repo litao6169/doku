@@ -16,15 +16,8 @@ uboot从emmc启动失败原因：\\
   - 在拷贝uboot到内存之前调高emmc时钟，导致拷贝失败；可适当降低时钟频率。
 ===== Linux =====
 ==== Linux Device Driver ====
-=== Power mangement ===
-记录Linux电源管理技术(Runtime pm,DVFS,Idle,Sleep&&Wake up)及相关问题。
-  * [[linux:ldd:runtime-pm|Runtime pm]]
-  * [[linux:ldd:cpu-hotplug|CPU-hotplug]]
-  * [[linux:ldd:dvfs|DVFS]]
-  * [[linux:ldd:idle|Idle]]
-  * [[linux:ldd:sleep|Sleep&&Wake up]]
-  * [[linux:ldd:early-suspend|Early Suspend]]
-  * [[linux:ldd:wakelock|Wakelock]]
+  * [[linux:ldd:pm:pm|Power mangement]]
+
 
 
 ==== Kernel Debug&&Hack ====
@@ -59,7 +52,8 @@ uboot从emmc启动失败原因：\\
 
 
 ===== Android =====
-  * [[android:port|Android移植]]
+  * [[android:port:port|Android 移植]]
+
 ===== Security =====
 
 ===== Revision Control =====

@@ -26,3 +26,7 @@ data/cache/*
 *.indexed
 *.meta
 *.trimmed
+
+#configs
+*.lock
+*.bak
