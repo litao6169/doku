@@ -1,3 +1,0 @@
-Android 移植所涉及到的内容。
-
-  * [[build-system|Android build system]]
