@@ -17,6 +17,7 @@ uboot从emmc启动失败原因：\\
 ===== Linux =====
 ==== Linux Device Driver ====
   * [[linux:ldd:pm:pm|Power mangement]]
+  * [[linux:ldd:sub-system:sub-system|驱动子系统分析]]
 
 
 
