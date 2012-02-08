@@ -1,0 +1,16 @@
+
+有些系统部分的电源管理会用到syscore_ops,如三星多媒体时钟:
+
+arch/arm/mach-exynos/clock-exynos4210.c
+
+
+<code>
+include/linux/syscore_ops.h
+struct syscore_ops {
+        struct list_head node;
+        int (*suspend)(void);
+        void (*resume)(void);
+        void (*shutdown)(void);
+};
+
+</code>

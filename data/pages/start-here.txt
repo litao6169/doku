@@ -28,6 +28,7 @@ uboot从emmc启动失败原因：\\
   * [[linux:kdebug:sysrq|System Request key]]
   * [[linux:kdebug:fiq|Fiq]]
   * [[linux:kdebug:trace32|Trace32]]
+  * [[linux:kdebug:debugfs|Debugfs]]
 
 
 ==== File Systems ====

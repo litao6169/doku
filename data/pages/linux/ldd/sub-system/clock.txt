@@ -1,1 +1,58 @@
-clock
+不同厂商有不同的struct clk 定义,以三星为例
+
+samsung:
+arch/arm/plat-samsung/include/plat/clock.c
+
+<code>
+struct clk {
+        struct list_head      list;
+        struct module        *owner;
+        struct clk           *parent;
+        const char           *name;
+        const char              *devname;
+        int                   id;
+        int                   usage;
+        unsigned long         rate;
+        unsigned long         ctrlbit;
+
+        struct clk_ops          *ops;
+        int                 (*enable)(struct clk *, int enable);
+        struct clk_lookup       lookup;
+#if defined(CONFIG_PM_DEBUG) && defined(CONFIG_DEBUG_FS)
+        struct dentry           *dent;  /* For visible tree hierarchy */
+#endif
+};
+
+</code>
+
+为满足三星新soc需要,新增struct clksrc_clk
+
+
+arch/arm/plat-samsung/include/plat/clock-clksrc.h:
+<code>
+
+/**
+ * struct clksrc_clk - class of clock for newer style samsung devices.
+ * @clk: the standard clock representation
+ * @sources: the sources for this clock
+ * @reg_src: the register definition for selecting the clock's source
+ * @reg_div: the register definition for the clock's output divisor
+ *
+ * This clock implements the features required by the newer SoCs where
+ * the standard clock block provides an input mux and a post-mux divisor
+ * to provide the periperhal's clock.
+ *
+ * The array of @sources provides the mapping of mux position to the
+ * clock, and @reg_src shows the code where to modify to change the mux
+ * position. The @reg_div defines how to change the divider settings on
+ * the output.
+ */
+struct clksrc_clk {
+        struct clk              clk;
+        struct clksrc_sources   *sources;
+
+        struct clksrc_reg       reg_src;
+        struct clksrc_reg       reg_div;
+};
+
+</code>
