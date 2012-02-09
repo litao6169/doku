@@ -56,3 +56,25 @@ struct clksrc_clk {
 };
 
 </code>
+
+
+clock ops分三类:
+
+<code>static struct clk_ops clksrc_ops = {
+        .set_parent     = s3c_setparent_clksrc,
+        .get_rate       = s3c_getrate_clksrc,
+        .set_rate       = s3c_setrate_clksrc,
+        .round_rate     = s3c_roundrate_clksrc,
+};
+
+static struct clk_ops clksrc_ops_nodiv = {
+        .set_parent     = s3c_setparent_clksrc,
+};
+
+static struct clk_ops clksrc_ops_nosrc = {
+        .get_rate       = s3c_getrate_clksrc,
+        .set_rate       = s3c_setrate_clksrc,
+        .round_rate     = s3c_roundrate_clksrc,
+};
+
+</code>
