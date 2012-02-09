@@ -6,4 +6,4 @@ Android 移植所涉及到的内容。
 
 
 Refs:
-  * [[http://www.kandroid.org/android_pdk/index.html]]
+  * [[http://www.kandroid.org/android_pdk/index.html|Android PDK]]

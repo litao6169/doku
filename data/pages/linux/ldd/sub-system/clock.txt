@@ -78,3 +78,23 @@ static struct clk_ops clksrc_ops_nosrc = {
 };
 
 </code>
+
+
+配置CLKDEV_LOOKUP支持后, 系统时钟clocks的HEAD 引用 driver/clk/clkdev.c中的static LIST_HEAD(clocks)。
+
+<code>
+int s3c24xx_register_clock(struct clk *clk)
+{
+        if (clk->enable == NULL)
+                clk->enable = clk_null_enable;
+
+        /* fill up the clk_lookup structure and register it*/
+        clk->lookup.dev_id = clk->devname;
+        clk->lookup.con_id = clk->name;
+        clk->lookup.clk = clk;
+        clkdev_add(&clk->lookup);//调用drivers/clk/clkdev.c 中的接口.
+
+        return 0;
+}
+</code>
+

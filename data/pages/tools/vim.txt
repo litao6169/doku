@@ -2,3 +2,30 @@
 
   * vim复制粘贴(原样)
 按下v进入visual模式，上下键选中需要复制的部分，再次按v退出；按i进入编辑模式即可用鼠标中粘贴。这样粘贴的好处是避免tab键被转换为空格。
+
+  * cscope.vim
+
+<code>
+if has("cscope")
+set csprg=/usr/bin/cscope
+set csto=0
+set cst
+set nocsverb
+" add any database in current directory
+"if filereadable("cscope.out")
+"cs add cscope.out
+" else add database pointed to by environment
+"elseif $CSCOPE_DB 环境变量输出cscope路径
+"CSCOPE_DB= ~/work/tags/mx-3.0-pre.cscope.out
+"cs add /home/litao/work/kernel-samsung-4x12/cscope.out
+cs add $CSCOPE_DB/cscope.out
+"endif
+set csverb
+:map \ :cs find g <C-R>=expand("<cword>")<CR><CR>
+:map s :cs find s <C-R>=expand("<cword>")<CR><CR>
+:map t :cs find t <C-R>=expand("<cword>")<CR><CR>
+:map c :cs find c <C-R>=expand("<cword>")<CR><CR>
+:map C :cs find d <C-R>=expand("<cword>")<CR><CR>
+:map f :cs find f <C-R>=expand("<cword>")<CR><CR>
+endif
+</code>

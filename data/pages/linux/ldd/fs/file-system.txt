@@ -1,5 +1,9 @@
 
 ==== File Systems ====
   * [[rootfs|Rootfs]]
-  * [[.ext4:Ext4]]
-  * [[.ntfs-3g:NTFS]]
+  * [[ext4|Ext4]]
+  * [[ntfs-3g|NTFS-3G]]
+
+
+=== 文件系统接口 ===
+  * [[seq-file|seq_file interface]]
