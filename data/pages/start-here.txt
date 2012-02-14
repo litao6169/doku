@@ -38,6 +38,7 @@ uboot从emmc启动失败原因：\\
   * [[tools:minicom|Minicom]]
   * [[tools:kermit|Kermit]]
   * [[tools:meld|Meld]]
+  * [[tools:command:cmds|Commands]]
 
 
 ===== Android =====
