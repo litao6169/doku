@@ -1,0 +1,3 @@
+蓝牙开关控制：rfkill
+
+external/bluetooth/bluez/src/rfkill.c

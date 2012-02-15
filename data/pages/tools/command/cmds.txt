@@ -1,4 +1,4 @@
-提取改动文件名：
+提取某一小段：
 <code>
 diff -rN -x '.*' -x out android-4.0/bionic/libc/Android.mk /home/litao/work/svn_src/android/android-4.0.1_r1_4210/bionic/libc/Android.mk
 510a511,513

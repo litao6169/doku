@@ -1,0 +1,3 @@
+wifi 控制：
+
+hardware/libhardware_legacy/wifi/wifi.c

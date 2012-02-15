@@ -1,0 +1,3 @@
+vibrator:
+
+hardware/libhardware_legacy/vibrator/vibrator.c

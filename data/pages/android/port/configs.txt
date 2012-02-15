@@ -1,0 +1,11 @@
+  * firmware 存放位置:
+system/core/init/devices.c
+<code>
+#define FIRMWARE_DIR1   "/etc/firmware"
+#define FIRMWARE_DIR2   "/vendor/firmware"
+</code>
+
+
+  * sdcard挂载配置文件：system/etc/vold.fstab
+
+  * egl配置文件：system/lib/egl/egl.cfg

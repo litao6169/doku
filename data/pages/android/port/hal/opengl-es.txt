@@ -1,0 +1,10 @@
+3D库实现：为保护ip厂商，一般不开放，直接提供动态库文件。
+
+存放位置，放在device/samsung/(device)/ 下，生成映像时拷贝到system/lib/egl/目录，并更改egl.cfg 文件。如：
+<code>
+egl.cfg
+libEGL_mali.so
+libGLES_android.so
+libGLESv1_CM_mali.so
+libGLESv2_mali.so
+</code>

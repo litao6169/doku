@@ -1,4 +1,15 @@
 ==== Android HAL层 ==== 
 
+  * Hardware:此类硬件抽象实现都放在system/lib/hw目录下，如sensors.bravo.so
+    * [[sensors|Sensors]]
+    * [[lights|Lights]]
+    * [[gralloc|Gralloc]]
+    * [[copybit|Copybit]]
+    * [[overlay|Overlay]]
+    * [[gps|GPS]]
+
+  * [[rfkill|BT rfkill]]
+  * [[wifi|WIFI]]
+  * [[vibrator|Vibrator]]
+  * [[opengl-es |OpenGL ES]]
   * [[ril|RIL]]
-  * 
