@@ -1,3 +1,5 @@
 FB 抽象实现。
 
 /device/samsung/device 下一般有libgralloc实现 gralloc.device.so,生成映像时拷贝到system/lib/hw/
+
+ramdisk 和system 不匹配时，gralloc 会失败。

@@ -21,6 +21,7 @@ uboot从emmc启动失败原因：\\
   * [[linux:ldd:pm:pm|Power mangement]]
   * [[linux:ldd:sub-system:sub-system|驱动子系统分析]]
   * [[linux:ldd:fs:file-system|文件系统]]
+  * [[linux:ldd:mm:memory|内存管理]]
 
 
 
