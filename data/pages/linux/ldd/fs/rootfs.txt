@@ -1,0 +1,38 @@
+  * 制作ramdisk：
+<code>
+Documentation/initrd.txt
+Compressed cpio images
+----------------------
+
+Recent kernels have support for populating a ramdisk from a compressed cpio
+archive. On such systems, the creation of a ramdisk image doesn't need to
+involve special block devices or loopbacks; you merely create a directory on
+disk with the desired initrd content, cd to that directory, and run (as an
+example):
+
+find . | cpio --quiet -H newc -o | gzip -9 -n > /boot/imagefile.img
+
+Examining the contents of an existing image file is just as simple:
+
+mkdir /tmp/imagefile
+cd /tmp/imagefile
+gzip -cd /boot/imagefile.img | cpio -imd --quiet
+
+</code>
+
+  * android ramdisk 加入busybox支持
+<code>
+1、将busybox 安装的_install 拷到android ramdisk 重命名为busybox.
+2、在android ramdisk /sbin 中创建ls,cd 到busybox 的链接。
+3、init.rc PATH 中加入busybox路径。
+export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin:/busybox/bin:/busybox/sbin:/busybox/usr/bin:/busybox/usr/sbin
+4、init.rc 中service console /system/bin/sh 改为service console /busybox/bin/sh
+5、打包ramdkisk
+find . | cpio -H newc -o | gzip -9 > ../ramdisk_new.img
+6、制作uboot-ramdisk
+mkimage -A arm -O linux -T ramdisk -C none -a 0x40800000 -n "ramdisk" -d ramdisk_new.img ramdisk-uboot-s5pc210.img
+</code>
+
+
+Refs:
+    Documentation/initrd.txt
