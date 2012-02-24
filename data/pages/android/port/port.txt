@@ -1,10 +1,12 @@
 Android 移植所涉及到的内容。
 
-  * [[build-system|Android build system]]
-  * [[.hal:hal|Android HAL]]
-  * [[init]]
-  * [[configs]]
+  * [[build-system|Build system]]
+  * [[.hal:hal|HAL]]
+  * [[init|Init]]
+  * [[configs|Configs]]
+  * [[.kernel:kernel|Android kernel]]
 
 
 Refs:
   * [[http://www.kandroid.org/android_pdk/index.html|Android PDK]]
+  * [[http://source.android.com/source/downloading.html|Source]]
