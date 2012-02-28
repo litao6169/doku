@@ -17,6 +17,7 @@ uboot从emmc启动失败原因：\\
 ===== Linux =====
 ==== Linux Device Driver ====
 
+  * [[linux:ldd:model|Driver Model]]
   * [[linux:ldd:kdebug:debug|Kernel Debug&&Hack]]
   * [[linux:ldd:pm:pm|Power Management]]
   * [[linux:ldd:sub-system:sub-system|Driver Subsystem]]
@@ -44,13 +45,14 @@ uboot从emmc启动失败原因：\\
 
 ===== Android =====
   * [[android:port:port|Android 移植]]
+  * [[android:app:app|Android 应用]]
 
 ===== Security =====
 
 ===== Revision Control =====
 
   * [[vcs:git:Git]]
-  * [[vcs:svn:Svn]]
+
 
 
 ===== English =====
