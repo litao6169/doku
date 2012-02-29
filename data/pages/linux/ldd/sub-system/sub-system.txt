@@ -10,3 +10,4 @@
   * [[audio|音频子系统(ALSA)]]
   * [[storage|存储子系统]]
   * [[usb|USB子系统]]
+  * [[i2c|I2C子系统]]

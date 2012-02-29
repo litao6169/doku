@@ -1,0 +1,3 @@
+Refs:
+
+http://www.lm-sensors.org/wiki/I2CTools

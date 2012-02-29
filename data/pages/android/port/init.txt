@@ -1,6 +1,6 @@
   * init.rc && init.hardware.rc:
 
-/system/core/init/init.c
+system/core/init/init.c
 <code>
 init_parse_config_file("/init.rc");
 
@@ -11,4 +11,40 @@ chmod("/proc/cmdline", 0440);
 get_hardware_name(hardware, &revision);//通过"/proc/cpuinfo"解析
 snprintf(tmp, sizeof(tmp), "/init.%s.rc", hardware);
 init_parse_config_file(tmp);
+</code>
+
+  * uevent.$hardware.rc
+
+system/core/init/devices.c
+<code>
+static mode_t get_device_perm(const char *path, unsigned *uid, unsigned *gid)
+{
+    mode_t perm;
+    struct listnode *node;
+    struct perm_node *perm_node;
+    struct perms_ *dp;
+
+    /* search the perms list in reverse so that ueventd.$hardware can
+     * override ueventd.rc
+     */
+    list_for_each_reverse(node, &dev_perms) {
+        perm_node = node_to_item(node, struct perm_node, plist);
+        dp = &perm_node->dp;
+
+        if (dp->prefix) {
+            if (strncmp(path, dp->name, strlen(dp->name)))
+                continue;
+        } else {
+            if (strcmp(path, dp->name))
+                continue;
+        }
+        *uid = dp->uid;
+        *gid = dp->gid;
+        return dp->perm;
+    }
+    /* Default if nothing found. */
+    *uid = 0;
+    *gid = 0;
+    return 0600;
+}
 </code>

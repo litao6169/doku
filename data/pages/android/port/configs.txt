@@ -6,6 +6,8 @@ system/core/init/devices.c
 </code>
 
 
-  * sdcard挂载配置文件：system/etc/vold.fstab
-
-  * egl配置文件：system/lib/egl/egl.cfg
+  * sdcard挂载配置文件： /system/etc/vold.fstab
+  * egl配置文件： /system/lib/egl/egl.cfg
+  * init.rc: /init.$hardware.rc
+  * uevent.rc: /uevent.$hardware.rc
+ 
