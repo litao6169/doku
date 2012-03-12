@@ -1,0 +1,4 @@
+Touch IC vendor：
+  * Synaptics(新思)
+  * [[atmel|Atmel(爱特梅尔)]]
+  * Cypress(赛普拉斯)。
