@@ -36,3 +36,9 @@ set csverb
 :map f :cs find f <C-R>=expand("<cword>")<CR><CR>
 endif
 </code>
+
+  * 内核源码树生成cscope
+<code>
+make xxx_defconfig
+make cscope O=./
+</code>
