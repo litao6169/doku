@@ -8,3 +8,5 @@
   * AVRISPmkII: USB--->ISP 下载器。
   * AVRISP： 并口--->ISP 下载器。
 
+Ref:
+  * http://www.atmel.no/webdoc/

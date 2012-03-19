@@ -8,6 +8,7 @@ Just for fun~~~\\
 ===== Hardware =====
   *[[hw:touch:touch|Touch]]
   *[[hw:vendor|Vendor]]
+  *[[hw:hex|Hex 格式]]
 ===== U-boot =====
 
 uboot从emmc启动失败原因：\\
