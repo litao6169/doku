@@ -7,3 +7,4 @@
   * [[early-suspend|Early Suspend]]
   * [[wakelock|Wakelock]]
   * [[pm-sub|Pm sub system]]
+  * [[pm-qos|Qos]]

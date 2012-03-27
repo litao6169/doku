@@ -11,5 +11,6 @@
   * [[rfkill|BT rfkill]]
   * [[wifi|WIFI]]
   * [[vibrator|Vibrator]]
-  * [[opengl-es |OpenGL ES]]
+  * [[2d-skia|2D-Skia]]
+  * [[opengl-es |3D-OpenGL|ES]]
   * [[ril|RIL]]

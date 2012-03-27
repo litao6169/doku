@@ -55,9 +55,23 @@ endef
 
 </code>
 
+==== vendorsetup.sh ====
+device/*/*/vendorsetup.sh
+
+. build/envsetup.sh 会搜索device/*/*/vendorsetup.sh
+
+<code>
+add_lunch_combo full_crespo-userdebug
+</code>
+
 ==== 编译目标版本 ====
   make PRODUCT-<TARGET_DEVICE>-goal
 TARGET_DEVICE:为PRODUCT_DEVICE := name, name为device/*/name。goal(eng,user,userdebug,test).
+
+==== 制作ext4 system ====
+mkuserimg.sh [-s] SRC_DIR OUTPUT_FILE EXT_VARIANT MOUNT_POINT SIZE
+
+
 
 Refs:
   * [[http://www.netmite.com/android/mydroid/development/pdk/docs/build_system.html]]

@@ -1,0 +1,8 @@
+三星C110,C210 FIMG2D(3.x):bit BLT 只支持 Nearest sampling.
+
+三星EXYNOS 4X12 FIMG2D(4.x):bit BLT 支持 Nearest and Bilinear sampling.
+
+
+
+Ref:
+  * http://en.wikipedia.org/wiki/Bilinear_sampling

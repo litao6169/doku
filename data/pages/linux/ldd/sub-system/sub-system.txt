@@ -11,3 +11,9 @@
   * [[storage|存储子系统]]
   * [[usb|USB子系统]]
   * [[i2c|I2C子系统]]
+
+IP:
+  * [[.ip:2d-graphic|2D]]
+  * [[.ip:3d-graphic|3D]]
+  * [[.ip:jpeg|JPEG]]
+  * [[.ip:rotator|Rotator]]
