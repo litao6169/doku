@@ -1,0 +1,185 @@
+输入设备配置文件：Input device calibration,Key layout maps,Key Character Map File,这三类文件一般放在device/xxx/xxx/目录下，生成映像时拷贝到system相应目录。
+
+  * system/usr/idc/xxx.idc(Input device calibration)
+  xxx表示驱动输入设备全称，如cypress-touch
+<code>
+#
+# Input Device Calibration File for the Crespo touch screen.
+#
+
+# Basic Parameters
+touch.deviceType = touchScreen
+touch.orientationAware = 1
+
+# Size
+# Based on empirical measurements, we estimate the size of the contact
+# using size = sqrt(area) * 43 + 0.
+touch.size.calibration = area
+touch.size.scale = 43
+touch.size.bias = 0
+touch.size.isSummed = 0
+
+# Pressure
+# Driver reports signal strength as pressure.
+#
+# A normal thumb touch typically registers about 80 signal strength
+# units although we don't expect these values to be accurate.
+touch.pressure.calibration = amplitude
+touch.pressure.scale = 0.0125
+
+# Orientation
+touch.orientation.calibration = none
+
+</code>
+
+
+  * system/usr/keychars/xxx.kcm(Key Character Map File)
+<code>
+# Copyright 2007 Google Inc.
+
+[type=QWERTY]
+
+# keycode   base    caps    fn      caps_fn number  display_label
+
+A           'a'     'A'     '%'     0x00    '%'     'A'
+B           'b'     'B'     '='     0x00    '='     'B'
+C           'c'     'C'     '8'     0x00E7  '8'     'C'
+D           'd'     'D'     '5'     0x00    '5'     'D'
+E           'e'     'E'     '2'     0x0301  '2'     'E'
+F           'f'     'F'     '6'     0x00A5  '6'     'F'
+G           'g'     'G'     '-'     '_'     '-'     'G'
+H           'h'     'H'     '['     '{'     '['     'H'
+I           'i'     'I'     '$'     0x0302  '$'     'I'
+J           'j'     'J'     ']'     '}'     ']'     'J'
+K           'k'     'K'     '"'     '~'     '"'     'K'
+L           'l'     'L'     '''     '`'     '''     'L'
+M           'm'     'M'     '>'     0x00    '>'     'M'
+N           'n'     'N'     '<'     0x0303  '<'     'N'
+O           'o'     'O'     '('     0x00    '('     'O'
+P           'p'     'P'     ')'     0x00    ')'     'P'
+Q           'q'     'Q'     '*'     0x0300  '*'     'Q'
+R           'r'     'R'     '3'     0x20AC  '3'     'R'
+S           's'     'S'     '4'     0x00DF  '4'     'S'
+T           't'     'T'     '+'     0x00A3  '+'     'T'
+U           'u'     'U'     '&'     0x0308  '&'     'U'
+V           'v'     'V'     '9'     '^'     '9'     'V'
+W           'w'     'W'     '1'     0x00    '1'     'W'
+X           'x'     'X'     '7'     0xEF00  '7'     'X'
+Y           'y'     'Y'     '!'     0x00A1  '!'     'Y'
+Z           'z'     'Z'     '#'     0x00    '#'     'Z'
+
+COMMA       ','     ';'     ';'     '|'     ','     ','
+PERIOD      '.'     ':'     ':'     0x2026  '.'     '.'
+AT          '@'     '0'     '0'     0x2022  '0'     '@'
+SLASH       '/'     '?'     '?'     '\'     '/'     '/'
+
+SPACE       0x20    0x20    0x9     0x9     0x20    0x20
+NEWLINE     0xa     0xa     0xa     0xa     0xa     0xa
+
+# on pc keyboards
+TAB         0x9     0x9     0x9     0x9     0x9     0x9
+0           '0'     ')'     ')'     ')'     '0'     '0'
+1           '1'     '!'     '!'     '!'     '1'     '1'
+2           '2'     '@'     '@'     '@'     '2'     '2'
+3           '3'     '#'     '#'     '#'     '3'     '3'
+4           '4'     '$'     '$'     '$'     '4'     '4'
+5           '5'     '%'     '%'     '%'     '5'     '5'
+6           '6'     '^'     '^'     '^'     '6'     '6'
+7           '7'     '&'     '&'     '&'     '7'     '7'
+8           '8'     '*'     '*'     '*'     '8'     '8'
+9           '9'     '('     '('     '('     '9'     '9'
+
+GRAVE         '`'     '~'     '`'     '~'     '`'     '`'
+MINUS         '-'     '_'     '-'     '_'     '-'     '-'
+EQUALS        '='     '+'     '='     '+'     '='     '='
+LEFT_BRACKET  '['     '{'     '['     '{'     '['     '['
+RIGHT_BRACKET ']'     '}'     ']'     '}'     ']'     ']'
+BACKSLASH     '\'     '|'     '\'     '|'     '\'     '\'
+SEMICOLON     ';'     ':'     ';'     ':'     ';'     ';'
+APOSTROPHE    '''     '"'     '''     '"'     '''     '''
+STAR          '*'     '*'     '*'     '*'     '*'     '*'
+POUND         '#'     '#'     '#'     '#'     '#'     '#'
+PLUS          '+'     '+'     '+'     '+'     '+'     '+'
+
+</code>
+
+  * system/usr/keylayout/xxx.kl(Key layout maps)
+<code>
+# Copyright 2007 Google Inc.
+
+key 2     1
+key 3     2
+key 4     3
+key 5     4
+key 6     5
+key 7     6
+key 8     7
+key 9     8
+key 10    9
+key 11    0
+key 158   BACK              WAKE_DROPPED
+key 230   SOFT_RIGHT        WAKE
+key 60    SOFT_RIGHT        WAKE
+key 107   ENDCALL           WAKE_DROPPED
+key 62    ENDCALL           WAKE_DROPPED
+key 229   MENU         WAKE_DROPPED
+key 59    MENU         WAKE_DROPPED
+key 228   POUND
+key 227   STAR
+key 231   CALL              WAKE_DROPPED
+key 61    CALL              WAKE_DROPPED
+key 232   DPAD_CENTER       WAKE_DROPPED
+key 108   DPAD_DOWN         WAKE_DROPPED
+key 103   DPAD_UP           WAKE_DROPPED
+key 102   HOME              WAKE
+key 105   DPAD_LEFT         WAKE_DROPPED
+key 106   DPAD_RIGHT        WAKE_DROPPED
+key 115   VOLUME_UP
+key 114   VOLUME_DOWN
+key 116   POWER             WAKE
+key 212   SLASH
+
+key 16    Q
+key 17    W
+key 18    E
+key 19    R
+key 20    T
+key 21    Y
+key 22    U
+key 23    I
+key 24    O
+key 25    P
+
+key 30    A
+key 31    S
+key 32    D
+key 33    F
+key 34    G
+key 35    H
+key 36    J
+key 37    K
+key 38    L
+key 14    DEL
+        
+key 44    Z
+key 45    X
+key 46    C
+key 47    V
+key 48    B
+key 49    N
+key 50    M
+key 51    COMMA
+key 52    PERIOD
+key 28    NEWLINE
+        
+key 56    ALT_LEFT
+key 42    SHIFT_LEFT
+key 215   AT
+key 57    SPACE
+key 53    SLASH
+key 127   SYM
+key 100   ALT_LEFT
+
+key 399   GRAVE
+
+</code>
