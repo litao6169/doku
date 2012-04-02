@@ -1,0 +1,9 @@
+<code>
+libaudioutils: system/media/audio_utils
+
+libaudio: device/xxx/xxx/libaudio(device/samsung/crespo/libaudio)
+/system/lib/hw --->audio.primary.xxx , audio_policy.xxx
+
+Legacy:己经不使用了
+hardware/libhardware_legacy/audio
+</code>

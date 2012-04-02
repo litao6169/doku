@@ -1,0 +1,2 @@
+  * EXYNOS 使用NEON memcpy慢,mem跑分低:bionic/libc/arch-arm/bionic/memcpy.s 中 Disable NEON
+  * Android 未显示定义TRUE,FALSE

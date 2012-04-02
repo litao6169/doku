@@ -2,4 +2,5 @@ Memory Management
 
   * [[cma|CMA]]
   * [[ump|UMP]]
+  * [[mmu|MMU]]
   * [[system-mmu|System MMU]]

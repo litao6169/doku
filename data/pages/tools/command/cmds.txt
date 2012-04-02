@@ -14,3 +14,8 @@ litao@litao:~/work/git_src$ cat samsung-4.0.diff | grep ^diff | cut -d' ' -f7
 <code>
   find ./ -name *.cmd |xargs rm -rvf {};
 </code>
+
+  * svn ip 更改
+<code>
+$ find ./ -name "*entries*" | xargs -i sed -i -e "s/172.16.11.122/172.16.9.63/g" {}
+</code>

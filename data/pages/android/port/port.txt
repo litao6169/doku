@@ -4,6 +4,7 @@ Android 移植所涉及到的内容。
   * [[.hal:hal|HAL]]
   * [[init|Init]]
   * [[configs|Configs]]
+  * [[tips|Tips]]
   * [[.kernel:kernel|Android kernel]]
 
 

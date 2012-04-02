@@ -1,5 +1,6 @@
 分析Linux重要子系统,如：电源，时钟，中断等常用子系统。
  
+LDD:
   * [[regulator|电源子系统]]
   * [[clock|时钟子系统]]
   * [[irq|中断子系统]]
@@ -11,8 +12,10 @@
   * [[storage|存储子系统]]
   * [[usb|USB子系统]]
   * [[i2c|I2C子系统]]
+  * [[bt|Bluetooth]]
+  * [[wifi|Wifi]]
 
-IP:
+IP core:
   * [[.ip:2d-graphic|2D]]
   * [[.ip:3d-graphic|3D]]
   * [[.ip:jpeg|JPEG]]
