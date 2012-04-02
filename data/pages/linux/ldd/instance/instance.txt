@@ -1,0 +1,18 @@
+Android Special Drivers:
+  * Binder
+  * Sharemem
+  * Alam
+  * Early suspend
+  * UMS + ADB
+  * Timeout
+  * Log
+  * Low mem killer
+  * FrameBuffer
+  * Key
+  * Touch
+
+IP core:
+  * [[.ip:2d-graphic|2D]]
+  * [[.ip:3d-graphic|3D]]
+  * [[.ip:jpeg|JPEG]]
+  * [[.ip:rotator|Rotator]]

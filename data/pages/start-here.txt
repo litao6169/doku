@@ -23,7 +23,8 @@ uboot从emmc启动失败原因：\\
   * [[linux:ldd:sub-system:sub-system|Driver Subsystem]]
   * [[linux:ldd:fs:file-system|File System]]
   * [[linux:ldd:mm:memory|Memory Management]]
-  * [[linux:ldd:sync:sync|Concurrency and Race Conditions]]
+  * [[linux:ldd:sync:sync|Concurrency And Race Conditions]]
+  * [[linux:ldd:instance:instance|Driver Instance]]
 
 ==== Linux App ====
 

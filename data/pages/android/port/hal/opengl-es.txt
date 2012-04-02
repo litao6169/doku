@@ -1,10 +1,16 @@
-3D库实现：为保护ip厂商，一般不开放，直接提供动态库文件。
+3D库实现：为保护IP厂商，一般不开放，直接提供动态库文件。
 
-存放位置，放在device/samsung/(device)/ 下，生成映像时拷贝到system/lib/egl/目录，并更改egl.cfg 文件。如：
+存放位置，放在device/samsung/(device)/ 下，生成映像时拷贝到system/lib/目录，并更改egl.cfg 文件。如MALI-400：
 <code>
-egl.cfg
-libEGL_mali.so
-libGLES_android.so
-libGLESv1_CM_mali.so
-libGLESv2_mali.so
+/system/lib/libMali.so
+/system/lib/libUMP.so
+
+system/lib/egl/egl.cfg
+system/lib/egl/libEGL_mali.so
+system/lib/egl/libGLES_android.so
+system/lib/egl/libGLESv1_CM_mali.so
+system/lib/egl/libGLESv2_mali.so
 </code>
+
+Links:
+  * [[https://gitorious.org/lima|Free software graphics driver for the ARM Mali GPUs]]
