@@ -1,0 +1,48 @@
+boot和recovery映像并不是一个完整的文件系统，它们是一种android自定义的文件格式，该格式包括了2K的文件头，后面紧跟着是用gzip压缩过的内核，再后面是一个ramdisk内存盘，然后紧跟着第二阶段的载入器程序（这个载入器程序是可选的，在某些映像中或许没有这部分）。
+
+boot(normal kernel + normal ramdisk),recovery(recovery kernel + recovery ramdisk)
+
+  * bootimg 格式：
+<code>
+system/core/mkbootimg/bootimg.h
+
+/*
+** +-----------------+ 
+** | boot header     | 1 page
+** +-----------------+
+** | kernel          | n pages  
+** +-----------------+
+** | ramdisk         | m pages  
+** +-----------------+
+** | second stage    | o pages
+** +-----------------+
+**
+** n = (kernel_size + page_size - 1) / page_size
+** m = (ramdisk_size + page_size - 1) / page_size
+** o = (second_size + page_size - 1) / page_size
+**
+** 0. all entities are page_size aligned in flash
+** 1. kernel and ramdisk are required (size != 0)
+** 2. second is optional (second_size == 0 -> no second)
+** 3. load each element (kernel, ramdisk, second) at
+**    the specified physical address (kernel_addr, etc)
+** 4. prepare tags at tag_addr.  kernel_args[] is
+**    appended to the kernel commandline in the tags.
+** 5. r0 = 0, r1 = MACHINE_TYPE, r2 = tags_addr
+** 6. if second_size != 0: jump to second_addr
+**    else: jump to kernel_addr
+*/
+</code>
+
+  * 制作工具：mkbootimg(system/core/mkbootimg/mkbootimg.c)
+
+  * recovery：(bootable/recovery)
+<code>
+替换recovery ui lib方法:
+1、一般是在device/xxx/xxx/ 目录下新建recovery目录，添加 librecovery_ui_xxx;
+2、在BoardConfig里添加TARGET_RECOVERY_UI_LIB := librecovery_ui_xxx；
+</code>
+
+Refs:
+  * http://android-dls.com/wiki/index.php?title=HOWTO:_Unpack,_Edit,_and_Re-Pack_Boot_Images
+

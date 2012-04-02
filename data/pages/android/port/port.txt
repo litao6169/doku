@@ -1,10 +1,12 @@
 Android 移植所涉及到的内容。
 
+  * [[boot-recovery|Bootimg and Recovery]]
   * [[build-system|Build system]]
   * [[.hal:hal|HAL]]
   * [[init|Init]]
   * [[configs|Configs]]
   * [[tips|Tips]]
+  * [[new-product|Add a new product]]
   * [[.kernel:kernel|Android kernel]]
 
 

@@ -1,0 +1,16 @@
+
+device/vendor/product/
+
+  * Android.mk(must)
+  * BoardConfig.mk(must)
+  * AndroidProducts.mk(must)
+  * full_xxx.mk
+  * device.mk
+  * CleanSpec.mk
+  * vendorsetup.sh
+
+
+
+
+Refs:
+  * 参考device/samsung/crespo

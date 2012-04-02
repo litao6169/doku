@@ -1,5 +1,6 @@
 Memory Management
 
+  * [[bootmem|Bootmem]]
   * [[cma|CMA]]
   * [[ump|UMP]]
   * [[mmu|MMU]]

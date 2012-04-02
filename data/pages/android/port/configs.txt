@@ -11,3 +11,4 @@ system/core/init/devices.c
   * init.rc: /init.$hardware.rc
   * uevent.rc: /uevent.$hardware.rc
   * device/xxx/xxx/overlay :修改android settings default value.
+  * [[input|Input]]

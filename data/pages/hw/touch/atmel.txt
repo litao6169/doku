@@ -1,3 +1,8 @@
+=== IDE ===
+  * AVR studio,IAR for avr
+
+=== Qtouch lib ===
+
 === 仿真调试工具 ===
   * Simulator: AVR Studio,IAR 软件仿真工具。
   * AVRONE: USB--->JTAG,nexus 仿真器。
