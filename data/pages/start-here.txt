@@ -11,9 +11,8 @@ Just for fun~~~\\
   *[[hw:hex|Hex Format]]
 ===== U-boot =====
 
-uboot从emmc启动失败原因：\\
-  - 烧写emmc错误，未校验是否写入正常。
-  - 在拷贝uboot到内存之前调高emmc时钟，导致拷贝失败；可适当降低时钟频率。
+  * [[uboot:boot-fail|Failed To Boot From eMMC]]
+
 ===== Linux =====
 ==== Linux Device Driver ====
 
@@ -35,7 +34,7 @@ uboot从emmc启动失败原因：\\
 ==== Shell Program====
   * [[linux:shell:rege|Rege]]
   * [[linux:shell:cmds|Commands]]
-  * [[linux:shell:bash|Bash]], [[linux:shell:perl|Perl]], [[linux:shell:python|Python]],  [[linux:shell:ruby|Ruby]]
+  * [[linux:shell:bash|Bash]], [[linux:shell:perl|Perl]], [[linux:shell:python|Python]], [[linux:shell:ruby|Ruby]]
 
 
 
