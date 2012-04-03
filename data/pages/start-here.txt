@@ -40,6 +40,7 @@ Just for fun~~~\\
 
 ==== Develop Tools ====
   * [[tools:vim|Vim]]
+  * [[tools:git:Git]]
   * [[tools:meld|Meld]]
   * [[tools:minicom|Minicom]], [[tools:kermit|Kermit]]
 
@@ -50,11 +51,6 @@ Just for fun~~~\\
   * [[android:app:app|Android App]]
 
 ===== Security =====
-
-===== Revision Control =====
-
-  * [[vcs:git:Git]]
-
 
 
 ===== English =====
