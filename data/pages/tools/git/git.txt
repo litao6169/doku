@@ -1,4 +1,4 @@
-====== VCS--Git ======
+====== VCS 之 Git ======
 
 Git是Linus Torvalds为了帮助管理Linux内核开发而开发的一个开放源码的版本控制软件。
 

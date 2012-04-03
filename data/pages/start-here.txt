@@ -38,7 +38,7 @@ Just for fun~~~\\
 
 
 
-==== Develop Tools ====
+==== Development Tools ====
   * [[tools:vim:vim|Vim]]
   * [[tools:git:Git]]
   * [[tools:meld|Meld]]
