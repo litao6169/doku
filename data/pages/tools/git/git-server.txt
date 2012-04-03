@@ -1,7 +1,7 @@
 ===== Ubuntu11.04+ 本机搭建Git Server =====
 
 ==== 安装所需软件 ====
-
+  (git + gitolite + git-daemon + gitweb)
   litao@litao:~$ sudo aptitude install git-core openssh-server openssh-client gitolite git-daemon-run gitweb
 
 

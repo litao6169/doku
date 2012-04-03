@@ -39,7 +39,7 @@ Just for fun~~~\\
 
 
 ==== Develop Tools ====
-  * [[tools:vim|Vim]]
+  * [[tools:vim:vim|Vim]]
   * [[tools:git:Git]]
   * [[tools:meld|Meld]]
   * [[tools:minicom|Minicom]], [[tools:kermit|Kermit]]

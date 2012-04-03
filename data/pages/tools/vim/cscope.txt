@@ -1,15 +1,3 @@
-====== Vim 配置及使用技巧 ======
-
-  * vim复制粘贴(原样)
-按下v进入visual模式，上下键选中需要复制的部分，再次按v退出；按i进入编辑模式即可用鼠标中粘贴。这样粘贴的好处是避免tab键被转换为空格。
-
-  * vim 配置：记录上次关闭时位置
-
-.vimrc
-<code>
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-</code>
-
   * vim plugins之 cscope.vim
 
 <code>
