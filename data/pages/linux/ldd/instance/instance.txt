@@ -2,6 +2,7 @@ Android Special Drivers:
   * Binder
   * Sharemem
   * Alam
+  * Power
   * Early suspend
   * UMS + ADB
   * Timeout

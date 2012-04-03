@@ -1,9 +1,11 @@
 <code>
+
+libtinyalsa: externel/tinyalsa
 libaudioutils: system/media/audio_utils
+audio_effects:system/media/audio_effects
+libhardware_legacy: hardware/libhardware_legacy
 
 libaudio: device/xxx/xxx/libaudio(device/samsung/crespo/libaudio)
 /system/lib/hw --->audio.primary.xxx , audio_policy.xxx
 
-Legacy:己经不使用了
-hardware/libhardware_legacy/audio
 </code>

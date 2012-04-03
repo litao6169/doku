@@ -8,7 +8,7 @@ Just for fun~~~\\
 ===== Hardware =====
   *[[hw:touch:touch|Touch]]
   *[[hw:vendor|Vendor]]
-  *[[hw:hex|Hex 格式]]
+  *[[hw:hex|Hex Format]]
 ===== U-boot =====
 
 uboot从emmc启动失败原因：\\
@@ -17,13 +17,13 @@ uboot从emmc启动失败原因：\\
 ===== Linux =====
 ==== Linux Device Driver ====
 
-  * [[linux:ldd:model|Driver Model]]
+  * [[linux:ldd:model:ldd-model|Device Driver Model]]
   * [[linux:ldd:kdebug:debug|Kernel Debug&&Hack]]
   * [[linux:ldd:pm:pm|Power Management]]
   * [[linux:ldd:sub-system:sub-system|Driver Subsystem]]
   * [[linux:ldd:fs:file-system|File System]]
   * [[linux:ldd:mm:memory|Memory Management]]
-  * [[linux:ldd:sync:sync|Concurrency And Race Conditions]]
+  * [[linux:ldd:sync:sync|Sync Mechanism]]
   * [[linux:ldd:instance:instance|Driver Instance]]
 
 ==== Linux App ====
@@ -31,21 +31,24 @@ uboot从emmc启动失败原因：\\
   * [[linux:app:app|Linux App]]
 
 
+
 ==== Shell Program====
-  * [[linux:rege|Rege]]
+  * [[linux:shell:rege|Rege]]
+  * [[linux:shell:cmds|Commands]]
+  * [[linux:shell:bash|Bash]], [[linux:shell:perl|Perl]], [[linux:shell:python|Python]],  [[linux:shell:ruby|Ruby]]
+
 
 
 ==== Develop Tools ====
   * [[tools:vim|Vim]]
-  * [[tools:minicom|Minicom]]
-  * [[tools:kermit|Kermit]]
   * [[tools:meld|Meld]]
-  * [[tools:command:cmds|Commands]]
+  * [[tools:minicom|Minicom]], [[tools:kermit|Kermit]]
+
 
 
 ===== Android =====
-  * [[android:port:port|Android 移植]]
-  * [[android:app:app|Android 应用]]
+  * [[android:port:port|Android Porting]]
+  * [[android:app:app|Android App]]
 
 ===== Security =====
 

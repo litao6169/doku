@@ -40,4 +40,3 @@ $                    匹配行结束符。例如正则表达式weasel$ 能够匹
 </code>
 参考：http://baike.baidu.com/view/94238.htm
 
-

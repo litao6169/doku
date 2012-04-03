@@ -40,5 +40,33 @@ endif
   * 内核源码树生成cscope
 <code>
 make xxx_defconfig
-make cscope O=./
+make cscope O=./  (O:生成绝对路径)
+</code>
+
+  * 简单脚本
+<code>
+#! /bin/sh 
+
+TAG_DIR=~/tags/xxx/
+
+case $1 in
+        "make")
+                #make xxx_defconfig
+                echo "make cscope db"
+                make cscope O=./ && mv cscope.* $TAG_DIR
+        ;;
+
+        "export")
+                echo "export cscope db"
+                export CSCOPE_DB=$TAG_DIR
+                export | grep CSCOPE_DB
+        ;;
+
+        *)
+                echo "useage:"
+                echo "cscope make: make cscope db"
+                echo ". ./cscope export: export cscope db"
+        ;;
+esac
+
 </code>
