@@ -17,3 +17,4 @@ IP core:
   * [[.ip:3d-graphic|3D]]
   * [[.ip:jpeg|JPEG]]
   * [[.ip:rotator|Rotator]]
+

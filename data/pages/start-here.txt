@@ -23,7 +23,7 @@ Just for fun~~~\\
   * [[linux:ldd:fs:file-system|File System]]
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Sync Mechanism]]
-  * [[linux:ldd:instance:instance|Driver Instance]]
+
 
 ==== Linux App ====
 
@@ -41,8 +41,7 @@ Just for fun~~~\\
 ==== Development Tools ====
   * [[tools:vim:vim|Vim]]
   * [[tools:git:Git]]
-  * [[tools:meld|Meld]]
-  * [[tools:minicom|Minicom]], [[tools:kermit|Kermit]]
+  * [[tools:kermit|Kermit]]
 
 
 
