@@ -1,0 +1,2 @@
+samsung bsp中gpio可能会被多次初始化，有时比较难找具体位置，调试方法：找到具体pin脚，在s3c_gpio_cfgpin 中开启WARN_ON(1).
+

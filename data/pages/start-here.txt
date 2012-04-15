@@ -17,12 +17,14 @@ Just for fun~~~\\
 ==== Linux Device Driver ====
 
   * [[linux:ldd:model:ldd-model|Device Driver Model]]
-  * [[linux:ldd:kdebug:debug|Kernel Debug&&Hack]]
+  * [[linux:ldd:kdebug:debug|Kernel Debug and Hack]]
   * [[linux:ldd:pm:pm|Power Management]]
   * [[linux:ldd:sub-system:sub-system|Driver Subsystem]]
   * [[linux:ldd:fs:file-system|File System]]
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Sync Mechanism]]
+  * [[linux:ldd:port:port|Platform porting]]
+  * [[linux:ldd:community|Linux Community and forum]]
 
 
 ==== Linux App ====

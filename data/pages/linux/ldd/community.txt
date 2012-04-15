@@ -1,0 +1,5 @@
+  * http://lwn.net/
+  * https://lkml.org/
+  * http://kernelnewbies.org/
+  * http://www.linuxfoundation.org/
+  * http://linuxforums.org.uk/index.php
