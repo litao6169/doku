@@ -6,3 +6,4 @@
   * [[fiq|Fiq]]
   * [[trace32|Trace32]]
   * [[debugfs|Debugfs]]
+  * [[tracers|Tracers]]

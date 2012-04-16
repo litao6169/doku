@@ -1,7 +1,7 @@
 记录Linux电源管理技术(Runtime pm,DVFS,Idle,Sleep&&Wake up)及相关问题。
   * [[runtime-pm|Runtime pm]]
   * [[cpu-hotplug|CPU-hotplug]]
-  * [[dvfs|DVFS]]
+  * [[.dvfs:dvfs|DVFS]]
   * [[devfreq|Devfreq(busfreq)]]
   * [[idle|Idle]]
   * [[sleep|Sleep&&Wake up]]

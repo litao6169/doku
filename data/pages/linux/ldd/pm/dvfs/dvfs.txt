@@ -1,0 +1,1 @@
+  * [[lock-fail|exynos4_cpufreq_lock fail]]

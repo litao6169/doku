@@ -1,0 +1,46 @@
+三星BSP exynos4_cpufreq_lock 在休眠时如果当前频率高于exynos4_cpufreq_lock 时并不锁频,达不到休眠锁频的目的.
+如休眠时为800M,唤醒时uboot 600M，电压是满足要求的，不会因电压低而死机。
+
+<code>
+{0}[  690.632845] Freezing of user space  aborted
+{0}[  690.638861] 
+{0}[  690.639137] Restarting tasks ... done.
+{0}[  690.649801] acm_notifier_event: PM_POST_SUSPEND
+{0}[  690.657183] busfreq_target-----> set mem clock at 267000MHz
+{0}[  690.671386] suspend: exit suspend, ret = -16 (2012-04-11 09:55:00.085834535)
+{0}[  690.815272] exynos4_target: old_freq 800MHz(L1)---->new_freq 400MHz(L3)
+{0}[  690.821632] max8997_set_gpio: idx is 3
+{0}[  690.985882] suspend: enter suspend
+{0}[  690.988096] PM: Syncing filesystems ... done.
+{0}[  691.004747] max8997_set_gpio: idx is 2
+{0}[  691.008306] exynos4_cpufreq_lock cpufreq lock L(2)
+{0}[  691.013650] acm_notifier_event: PM_SUSPEND_PREPARE
+{0}[  691.022517] busfreq_target-----> set mem clock at 400000MHz
+{0}[  691.030352] exynos4_target: old_freq 600MHz(L2)---->new_freq 1000MHz(L0)
+{0}[  691.036024] max8997_set_gpio: idx is 0
+{0}[  691.040725] Freezing user space processes ... (elapsed 0.02 seconds) done.
+{0}[  691.066435] Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+{0}[  691.092925] s5p_usb_phy_power: 0 -------------
+{0}[  691.096307] Modem: xmm6260_set_active_state: AP>>CP:   ACTIVE_STATE:0
+{0}[  691.103083] spdif_set_bias_level:On => Prepare
+{0}[  691.107902] spdif_set_bias_level:Prepare => Standby
+{0}[  691.113032] wm8994_isalwayson:path = 2
+{0}[  691.122137] wm8994_set_bias_level:Standby => Off
+{0}[  691.135367] a1026_setmode: Sleep mode
+{0}[  691.140186] exynos4_target: old_freq 1000MHz(L0)---->new_freq 800MHz(L1)
+{0}[  691.146162] max8997_set_gpio: idx is 1
+{0}[  691.153327] bu26507_suspend
+{0}[  691.155816] l3g4200d_suspend
+{0}[  691.158637] lis3dh_suspend
+{0}[  691.161255] mhl_suspend 
+{0}[  691.163969] mhl_suspend 
+{0}[  691.166774] mhl_suspend 
+{0}[  691.169522] mhl_suspend 
+{0}[  691.185669] android_work: did not send uevent (0 0   (null))
+{0}[  691.191170] [s3c2410-wdt]: s3c2410wdt_suspend: watchdog enabled, save its state and disable it.
+{0}[  691.199927] PM: suspend of devices complete after 108.981 msecs
+{0}[  691.205492] wm8994_isalwayson:path = 2
+{0}[  691.225778] power_suspend_late return 0
+{0}[  691.228411] PM: late suspend of devices complete after 5.180 msecs
+{0}[  691.234857] Disabling non-boot C
+</code>
