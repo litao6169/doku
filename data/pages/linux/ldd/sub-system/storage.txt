@@ -1,0 +1,6 @@
+  * [[mtd|MTD]]
+  * [[norflash|NOR Flash]]
+  * [[nand|NAND Flash]]
+  * [[onenand| oneNAND]]
+  * [[emmc|eMMC iNAND]]
+  * [[eeprom |EEPROM]]

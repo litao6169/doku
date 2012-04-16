@@ -1,16 +1,22 @@
 分析Linux重要子系统,如：电源，时钟，中断等常用子系统。
  
 LDD:
-  * [[regulator|电源子系统]]
-  * [[clock|时钟子系统]]
-  * [[irq|中断子系统]]
-  * [[i2c]I2C子系统]
-  * [[input|输入子系统]]
-  * [[fb|显示输出子系统]]
-  * [[video|视频子系统(V4L2)]]
-  * [[audio|音频子系统(ALSA)]]
-  * [[storage|存储子系统]]
-  * [[usb|USB子系统]]
-  * [[i2c|I2C子系统]]
+  * [[.power:power|Power]]
+  * [[clock|Clock]]
+  * [[irq|IRQ]]
+  * [[dma|DMA]]
+  * [[cache|Cache]]
+  * [[input|Input]]
+  * [[fb|FrameBuffer]]
+  * [[video|V4L2]]
+  * [[audio|ALSA]]
+  * [[storage|Storage]]
+  * [[usb|USB]]
+  * [[i2c|I2C]]
   * [[bt|Bluetooth]]
   * [[wifi|Wifi]]
+
+
+Instances
+
+  * [[.instance:instance|Driver Instance]]
