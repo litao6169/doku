@@ -1,0 +1,14 @@
+ns级时间测量:include/linux/ktime.h
+
+ktime_get(void)
+
+<code>
+/* Subtract two ktime_t variables. rem = lhs -rhs: */
+#define ktime_sub(lhs, rhs) \
+		({ (ktime_t){ .tv64 = (lhs).tv64 - (rhs).tv64 }; })
+
+/* Add two ktime_t variables. res = lhs + rhs: */
+#define ktime_add(lhs, rhs) \
+		({ (ktime_t){ .tv64 = (lhs).tv64 + (rhs).tv64 }; })
+
+</code>

@@ -3,6 +3,7 @@
 LDD:
   * [[.power:power|Power]]
   * [[clock|Clock]]
+  * [[.time:time|Time]]
   * [[irq|IRQ]]
   * [[dma|DMA]]
   * [[cache|Cache]]

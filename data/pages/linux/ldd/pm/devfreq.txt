@@ -1,0 +1,26 @@
+=== devfreq driver framework ===
+
+<code>
+static int __init devfreq_start_polling(void)
+{
+        mutex_lock(&devfreq_list_lock);
+        polling = false;
+        devfreq_wq = create_freezable_workqueue("devfreq_wq");
+        INIT_DELAYED_WORK_DEFERRABLE(&devfreq_work, devfreq_monitor);
+        mutex_unlock(&devfreq_list_lock);
+
+        devfreq_monitor(&devfreq_work.work);
+        return 0;
+}
+late_initcall(devfreq_start_polling);
+
+devfreq_monitor() 每next_jiffies运行一次.
+</code>
+
+<code>
+devfreq_monitor()
+  update_devfreq(devfreq)
+    devfreq->governor->get_target_freq(devfreq, &freq)
+      df->profile->get_dev_status(df->dev.parent, &stat)
+    devfreq->profile->target(devfreq->dev.parent, &freq, options)
+</code>

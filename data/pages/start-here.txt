@@ -6,6 +6,7 @@ Just for fun~~~\\
 {{rss>http://feed.feedsky.com/qiushi}}
 
 ===== Hardware =====
+  *[[hw:arm:arm|ARM]]
   *[[hw:touch:touch|Touch]]
   *[[hw:vendor|Vendor]]
   *[[hw:hex|Hex Format]]
@@ -24,7 +25,7 @@ Just for fun~~~\\
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Sync Mechanism]]
   * [[linux:ldd:port:port|Platform porting]]
-  * [[linux:ldd:community|Linux Community and forum]]
+  * [[linux:ldd:community|Community and forum]]
 
 
 ==== Linux App ====
