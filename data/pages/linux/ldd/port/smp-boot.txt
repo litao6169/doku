@@ -1,12 +1,17 @@
 <file>
-kernel_init
+start_kernel
+  setup_arch(&command_line);
+    smp_init_cpus(); --- mach-exynos/platsmp.c
+
+--------------------------------------------------------------  
+kernel_init(PID=1)
   smp_prepare_cpus(setup_max_cpus);
-    platform_smp_prepare_cpus(max_cpus);
+    platform_smp_prepare_cpus(max_cpus); --- mach-exynos/platsmp.c
       scu_enable(scu_base_addr());
     
   smp_init();
     cpu_up(cpu);
       _cpu_up(cpu, 0);
         __cpu_up(cpu, idle);
-          boot_secondary(cpu, idle);      
+          boot_secondary(cpu, idle); --- mach-exynos/platsmp.c     
 </file>

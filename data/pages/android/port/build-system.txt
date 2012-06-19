@@ -60,20 +60,20 @@ device/*/*/vendorsetup.sh
 
 . build/envsetup.sh 会搜索device/*/*/vendorsetup.sh
 
-<file>
+<code bash>
 add_lunch_combo full_crespo-userdebug
-</file>
+</code>
 
 ==== 编译目标版本 ====
-<file>
+<code bash>
 make PRODUCT-<TARGET_DEVICE>-goal
-</file> 
+</code> 
 TARGET_DEVICE:为PRODUCT_DEVICE := name, name为device/*/name。goal(eng,user,userdebug,test).
 
 ==== 制作ext4 system ====
-<file>
+<code bash>
 mkuserimg.sh [-s] SRC_DIR OUTPUT_FILE EXT_VARIANT MOUNT_POINT SIZE
-</file>
+</code>
 
 
 Refs:

@@ -13,14 +13,14 @@ static int __init devfreq_start_polling(void)
         return 0;
 }
 late_initcall(devfreq_start_polling);
-
-devfreq_monitor() 每next_jiffies运行一次.
 </code>
 
-<code c>
+devfreq_monitor() 每next_jiffies运行一次.
+
+<file>
 devfreq_monitor()
   update_devfreq(devfreq)
     devfreq->governor->get_target_freq(devfreq, &freq)
       df->profile->get_dev_status(df->dev.parent, &stat)
     devfreq->profile->target(devfreq->dev.parent, &freq, options)
-</code>
+</file>
