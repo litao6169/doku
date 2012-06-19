@@ -1,6 +1,6 @@
   * firmware 存放位置:
 system/core/init/devices.c
-<code>
+<code c>
 #define FIRMWARE_DIR1   "/etc/firmware"
 #define FIRMWARE_DIR2   "/vendor/firmware"
 </code>

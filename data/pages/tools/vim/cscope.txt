@@ -1,6 +1,6 @@
   * vim plugins之 cscope.vim
 
-<code>
+<code bash>
 if has("cscope")
 set csprg=/usr/bin/cscope
 set csto=0
@@ -26,13 +26,13 @@ endif
 </code>
 
   * 内核源码树生成cscope
-<code>
+<code bash>
 make xxx_defconfig
 make cscope O=./  (O:生成绝对路径)
 </code>
 
   * 简单脚本
-<code>
+<code bash>
 #! /bin/sh 
 
 TAG_DIR=~/tags/xxx/

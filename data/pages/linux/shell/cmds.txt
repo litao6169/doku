@@ -1,5 +1,5 @@
   * 提取某一小段：
-<code>
+<code bash>
 diff -rN -x '.*' -x out android-4.0/bionic/libc/Android.mk /home/litao/work/svn_src/android/android-4.0.1_r1_4210/bionic/libc/Android.mk
 510a511,513
 >   ifeq ($(filter-out exynos4,$(TARGET_BOARD_PLATFORM)),)
@@ -11,11 +11,11 @@ litao@litao:~/work/git_src$ cat samsung-4.0.diff | grep ^diff | cut -d' ' -f7
 </code>
 
   * 递归删除文件夹下某类型文件
-<code>
+<code bash>
   find ./ -name *.cmd |xargs rm -rvf {};
 </code>
 
   * svn ip 更改
-<code>
+<code bash>
 $ find ./ -name "*entries*" | xargs -i sed -i -e "s/172.16.11.122/172.16.9.63/g" {}
 </code>

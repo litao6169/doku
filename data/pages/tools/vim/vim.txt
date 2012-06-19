@@ -9,7 +9,7 @@
   * vim 配置：记录上次关闭时位置
 
 .vimrc
-<code>
+<code bash>
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 </code>
 

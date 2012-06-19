@@ -4,7 +4,7 @@ printk 将打印信息放在logbuf中，所以printk可以在任何上下文调�
 
   * printk 相关定义
 include/linux/printk.h
-<code>
+<code c>
 #define KERN_EMERG      "<0>"   /* system is unusable                   */
 #define KERN_ALERT      "<1>"   /* action must be taken immediately     */
 #define KERN_CRIT       "<2>"   /* critical conditions                  */
@@ -42,15 +42,15 @@ include/linux/printk.h
   * serial port and console
 
 调用过程
-<code>
+<file>
 printk->
-vprintk->
-console_unlock->
-call_console_drivers->
-_call_console_drivers->
-__call_console_drivers->
-con->write
-</code>
+  vprintk->
+    console_unlock->
+      call_console_drivers->
+        _call_console_drivers->
+          __call_console_drivers->
+            con->write
+</file>
 
   cmdline: console=ttySAC0,115200
 
@@ -64,6 +64,6 @@ drivers/char/tty/serial/samsung.c
 register_console, printk.c中console_cmdline name及index 与samsung.c 中一致时，ttySAC0就能注册到console_drivers list上。
 
   * 更改console loglevel
-<code>
+<file>
 echo "4 4 1 7" >/proc/sys/kernel/printk
-</code>
+</file>

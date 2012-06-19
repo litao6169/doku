@@ -1,11 +1,8 @@
+<file>
     $ git clone https://android.googlesource.com/kernel/common.git
-
     $ git clone https://android.googlesource.com/kernel/goldfish.git
-
     $ git clone https://android.googlesource.com/kernel/msm.git
-
     $ git clone https://android.googlesource.com/kernel/omap.git
-
     $ git clone https://android.googlesource.com/kernel/samsung.git
-
     $ git clone https://android.googlesource.com/kernel/tegra.git
+</file>

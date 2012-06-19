@@ -2,7 +2,7 @@ ns级时间测量:include/linux/ktime.h
 
 ktime_get(void)
 
-<code>
+<code c>
 /* Subtract two ktime_t variables. rem = lhs -rhs: */
 #define ktime_sub(lhs, rhs) \
 		({ (ktime_t){ .tv64 = (lhs).tv64 - (rhs).tv64 }; })

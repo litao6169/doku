@@ -1,4 +1,4 @@
-<code>
+<file>
 
 libtinyalsa: externel/tinyalsa
 libaudioutils: system/media/audio_utils
@@ -8,4 +8,4 @@ libhardware_legacy: hardware/libhardware_legacy
 libaudio: device/xxx/xxx/libaudio(device/samsung/crespo/libaudio)
 /system/lib/hw --->audio.primary.xxx , audio_policy.xxx
 
-</code>
+</file>

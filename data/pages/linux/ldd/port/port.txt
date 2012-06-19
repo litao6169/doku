@@ -1,1 +1,8 @@
   * [[gpio|GPIO]]
+  * [[console|Console]]
+  * [[smp-boot|Boot secondary cpus]]
+  * [[machine|Machine macros and numbers]]
+
+
+Ref:
+  * Documentation/kernel-parameters.txt

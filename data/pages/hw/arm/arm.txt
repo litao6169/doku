@@ -2,3 +2,4 @@
   *[[.trustzone|Turstzone]]
   *[[.coresight|Coresight]]
   *[[.ppmu|PPMU]]
+  *[[.mpcore|MP core]]

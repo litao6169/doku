@@ -1,0 +1,52 @@
+  * System Type  ---> (3) S3C UART to use for low-level messages
+
+arch/arm/boot/compressed/misc.c
+<code c>
+putstr("Uncompressing Linux...");
+</code>
+
+
+  * DEBUG_LL 支持
+<file>
+Kernel hacking  ---> 
+   [*] Kernel low-level debugging functions (read help!)  
+        Kernel low-level debugging port (Use S3C UART 0 for low-level debug)  --->
+</file>
+
+arch/arm/mach-exynos4/include/mach/debug-macro.S
+<code asm>
+
+.macro addruart, rp, rv, tmp
+		mrc	p15, 0, \tmp, c0, c0, 0
+		and	\tmp, \tmp, #0xf0
+		teq	\tmp, #0xf0		@@ A15
+		ldreq	\rp, =EXYNOS5_PA_UART
+		movne	\rp, #EXYNOS4_PA_UART	@@ EXYNOS4
+		ldr	\rv, =S3C_VA_UART
+#if CONFIG_DEBUG_S3C_UART != 0
+		add	\rp, \rp, #(0x10000 * CONFIG_DEBUG_S3C_UART)
+		add	\rv, \rv, #(0x10000 * CONFIG_DEBUG_S3C_UART)
+#endif
+	.endm
+</code>	
+
+  * console 注册之前,可以在printk 中使用printascii 查看log.
+
+vprintk_emit 中添加printascii
+<code c>
+	/*
+	 * The printf needs to come first; we need the syslog
+	 * prefix which might be passed-in as a parameter.
+	 */
+	text_len = vscnprintf(text, sizeof(textbuf), fmt, args);
+
+#ifdef	CONFIG_DEBUG_LL
+	printascii(text);
+#endif
+
+	/* mark and strip a trailing newline */
+	if (text_len && text[text_len-1] == '\n') {
+		text_len--;
+		newline = true;
+	}
+</code>

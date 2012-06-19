@@ -1,7 +1,7 @@
 三星BSP exynos4_cpufreq_lock 在休眠时如果当前频率高于exynos4_cpufreq_lock 时并不锁频,达不到休眠锁频的目的.
 如休眠时为800M,唤醒时uboot 600M，电压是满足要求的，不会因电压低而死机。
 
-<code>
+<file>
 {0}[  690.632845] Freezing of user space  aborted
 {0}[  690.638861] 
 {0}[  690.639137] Restarting tasks ... done.
@@ -43,4 +43,4 @@
 {0}[  691.225778] power_suspend_late return 0
 {0}[  691.228411] PM: late suspend of devices complete after 5.180 msecs
 {0}[  691.234857] Disabling non-boot C
-</code>
+</file>

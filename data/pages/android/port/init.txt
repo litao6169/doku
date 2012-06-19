@@ -1,7 +1,7 @@
   * init.rc && init.hardware.rc:
 
 system/core/init/init.c
-<code>
+<code c>
 init_parse_config_file("/init.rc");
 
 /* pull the kernel commandline and ramdisk properties file in */
@@ -16,7 +16,7 @@ init_parse_config_file(tmp);
   * uevent.$hardware.rc
 
 system/core/init/devices.c
-<code>
+<code c>
 static mode_t get_device_perm(const char *path, unsigned *uid, unsigned *gid)
 {
     mode_t perm;

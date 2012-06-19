@@ -1,5 +1,5 @@
   * 制作ramdisk：
-<code>
+<file>
 Documentation/initrd.txt
 Compressed cpio images
 ----------------------
@@ -18,10 +18,10 @@ mkdir /tmp/imagefile
 cd /tmp/imagefile
 gzip -cd /boot/imagefile.img | cpio -imd --quiet
 
-</code>
+</file>
 
   * android ramdisk 加入busybox支持
-<code>
+<file>
 1、将busybox 安装的_install 拷到android ramdisk 重命名为busybox.
 2、在android ramdisk /sbin 中创建ls,cd 到busybox 的链接。
 3、init.rc PATH 中加入busybox路径。
@@ -31,7 +31,7 @@ export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin:/busybox/bin
 find . | cpio -H newc -o | gzip -9 > ../ramdisk_new.img
 6、制作uboot-ramdisk
 mkimage -A arm -O linux -T ramdisk -C none -a 0x40800000 -n "ramdisk" -d ramdisk_new.img ramdisk-uboot-s5pc210.img
-</code>
+</file>
 
 
 Refs:

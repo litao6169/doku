@@ -3,7 +3,7 @@
 samsung:
 arch/arm/plat-samsung/include/plat/clock.c
 
-<code>
+<code c>
 struct clk {
         struct list_head      list;
         struct module        *owner;
@@ -29,7 +29,7 @@ struct clk {
 
 
 arch/arm/plat-samsung/include/plat/clock-clksrc.h:
-<code>
+<code c>
 
 /**
  * struct clksrc_clk - class of clock for newer style samsung devices.
@@ -60,7 +60,8 @@ struct clksrc_clk {
 
 clock ops分三类:
 
-<code>static struct clk_ops clksrc_ops = {
+<code c>
+static struct clk_ops clksrc_ops = {
         .set_parent     = s3c_setparent_clksrc,
         .get_rate       = s3c_getrate_clksrc,
         .set_rate       = s3c_setrate_clksrc,
@@ -82,7 +83,7 @@ static struct clk_ops clksrc_ops_nosrc = {
 
 配置CLKDEV_LOOKUP支持后, 系统时钟clocks的HEAD 引用 driver/clk/clkdev.c中的static LIST_HEAD(clocks)。
 
-<code>
+<code c>
 int s3c24xx_register_clock(struct clk *clk)
 {
         if (clk->enable == NULL)
@@ -97,4 +98,3 @@ int s3c24xx_register_clock(struct clk *clk)
         return 0;
 }
 </code>
-

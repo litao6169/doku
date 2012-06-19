@@ -4,7 +4,7 @@
 arch/arm/mach-exynos/clock-exynos4210.c
 
 
-<code>
+<code c>
 include/linux/syscore_ops.h
 struct syscore_ops {
         struct list_head node;

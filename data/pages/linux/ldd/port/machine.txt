@@ -1,0 +1,45 @@
+
+  * linux/arch/arm/tools/mach-types
+
+<code c>
+# machine_is_xxx        CONFIG_xxxx             MACH_TYPE_xxx           number
+m032                    MACH_M03X               MEIZU_M032              3765
+</code>
+
+  * CONFIG_xxxx: arch/arm/mach-exynos/Kconfig
+<code make>
+config MACH_M03X
+	bool "MEIZU M03X"
+	select SOC_EXYNOS4212
+	select SOC_EXYNOS4412
+
+</code>
+
+  * MACH_TYPE_xxx: arch/arm/mach-exynos/mach-m03x.c
+<code c>
+MACHINE_START(MEIZU_M032, "MX")
+	/* Maintainer: Kukjin Kim <kgene.kim@samsung.com> */
+	.atag_offset	= 0x100,
+	.init_irq	= exynos4_init_irq,
+	.map_io		= m03x_map_io,
+	.handle_irq	= gic_handle_irq,
+	.init_machine	= m03x_machine_init,
+	.timer		= &exynos4_timer,
+	.restart	= exynos4_restart,
+	.reserve	= &m03x_reserve,
+MACHINE_END
+</code>
+
+MACHINE_START 原型定义:
+<code c>
+#define MACHINE_START(_type,_name)			\
+static const struct machine_desc __mach_desc_##_type	\
+ __used							\
+ __attribute__((__section__(".arch.info.init"))) = {	\
+	.nr		= MACH_TYPE_##_type,		\
+	.name		= _name,
+
+#define MACHINE_END				\
+};
+</code>
+

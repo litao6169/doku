@@ -1,6 +1,6 @@
 === devfreq driver framework ===
 
-<code>
+<code c>
 static int __init devfreq_start_polling(void)
 {
         mutex_lock(&devfreq_list_lock);
@@ -17,7 +17,7 @@ late_initcall(devfreq_start_polling);
 devfreq_monitor() 每next_jiffies运行一次.
 </code>
 
-<code>
+<code c>
 devfreq_monitor()
   update_devfreq(devfreq)
     devfreq->governor->get_target_freq(devfreq, &freq)

@@ -3,7 +3,7 @@ main.mk-->config.mk-->envsetup.mk(product_config.mk)-->BoardConfig.mk
 ==== AndroidBoard.mk ====
 
 build/target/board/Android.mk
-<code>
+<code make>
 -include $(TARGET_DEVICE_DIR)/AndroidBoard.mk
 
 # Generate a file that contains various information about the
@@ -21,7 +21,7 @@ board_info_txt := $(wildcard $(TARGET_DEVICE_DIR)/board-info.txt)
 ==== BoardConfig.mk ====
 
 build/core/config.mk:
-<code>
+<code make>
 # Boards may be defined under $(SRC_TARGET_DIR)/board/$(TARGET_DEVICE)
 # or under vendor/*/$(TARGET_DEVICE).  Search in both places, but
 # make sure only one exists.
@@ -38,7 +38,7 @@ board_config_mk := \
 ==== AndroidProducts.mk ====
 build/core/product.mk
 
-<code>
+<code make>
 #
 # Functions for including AndroidProducts.mk files
 #
@@ -60,17 +60,20 @@ device/*/*/vendorsetup.sh
 
 . build/envsetup.sh 会搜索device/*/*/vendorsetup.sh
 
-<code>
+<file>
 add_lunch_combo full_crespo-userdebug
-</code>
+</file>
 
 ==== 编译目标版本 ====
-  make PRODUCT-<TARGET_DEVICE>-goal
+<file>
+make PRODUCT-<TARGET_DEVICE>-goal
+</file> 
 TARGET_DEVICE:为PRODUCT_DEVICE := name, name为device/*/name。goal(eng,user,userdebug,test).
 
 ==== 制作ext4 system ====
+<file>
 mkuserimg.sh [-s] SRC_DIR OUTPUT_FILE EXT_VARIANT MOUNT_POINT SIZE
-
+</file>
 
 
 Refs:

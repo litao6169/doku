@@ -1,0 +1,12 @@
+=== Qos(Quality of service) ===
+
+<file>
+qos作用: 使流畅性及功耗两者之间达到一个平衡
+  1. 硬件上AMBA corelink NIC-301内嵌QOS-301； 
+  2. Linux 内核目前有三种QOS类型:(PM_QOS_CPU_DMA_LATENCY,PM_QOS_NETWORK_LATENCY及PM_QOS_NETWORK_THROUGHPUT).
+  3. 在实际应用中可以添加cpufreq,devfreq相关的Qos,以提高流畅性,如在touchscreen上报事件之前请求cpu及bus qos latency.
+  
+qos实现:
+   qos 实际就是一个优先级链表. LUB:leasted upper bound, GLB:greatest lower bound
+</file>
+

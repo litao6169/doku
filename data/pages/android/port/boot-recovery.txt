@@ -3,7 +3,7 @@ boot和recovery映像并不是一个完整的文件系统，它们是一种andro
 boot(normal kernel + normal ramdisk),recovery(recovery kernel + recovery ramdisk)
 
   * bootimg 格式：
-<code>
+<code c>
 system/core/mkbootimg/bootimg.h
 
 /*
@@ -37,11 +37,11 @@ system/core/mkbootimg/bootimg.h
   * 制作工具：mkbootimg(system/core/mkbootimg/mkbootimg.c)
 
   * recovery：(bootable/recovery)
-<code>
+<file>
 替换recovery ui lib方法:
 1、一般是在device/xxx/xxx/ 目录下新建recovery目录，添加 librecovery_ui_xxx;
 2、在BoardConfig里添加TARGET_RECOVERY_UI_LIB := librecovery_ui_xxx；
-</code>
+</file>
 
 Refs:
   * http://android-dls.com/wiki/index.php?title=HOWTO:_Unpack,_Edit,_and_Re-Pack_Boot_Images
