@@ -5,7 +5,7 @@
   * [[pm-qos|PM-Qos]]
   * [[devfreq|PM-Devfreq]]
   * [[idle|PM-Idle]]
-  * [[sleep|PM-Sleep]]
+  * [[.sleep:sleep|PM-Sleep]]
   * [[cpu-hotplug|CPU-Hotplug]]
   * [[early-suspend|Early Suspend]]
   * [[wakelock|Wakelock]]

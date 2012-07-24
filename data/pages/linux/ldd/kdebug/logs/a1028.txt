@@ -1,0 +1,28 @@
+<file>
+A1028 拨出电话正常，接听i2c 超时：
+
+{3}[  301.495005] acc_release
+{3}[  302.780079] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{3}[  302.785040] wm8994_write:write failed(R:0x002A D:0x0030) !!!
+{1}[  302.895049] Switched to NOHz mode on CPU #1
+{2}[  303.375057] Switched to NOHz mode on CPU #2
+{1}[  306.790191] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{0}[  308.855918] CPU1: shutdown
+{0}[  310.795083] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{0}[  310.800102] wm8994_write:write failed(R:0x0018 D:0x010B) !!!
+{0}[  311.904024] CPU2: shutdown
+{3}[  314.805212] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{3}[  318.810207] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{3}[  318.815653] wm8994_write:write failed(R:0x0019 D:0x018B) !!!
+{3}[  322.820212] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{3}[  326.825204] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{3}[  326.830898] wm8994_write:write failed(R:0x001A D:0x010F) !!!
+{0}[  329.962282] CPU3: shutdown
+{0}[  330.840181] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{0}[  334.845153] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{0}[  334.850848] wm8994_write:write failed(R:0x0003 D:0x03F0) !!!
+{0}[  338.855175] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{0}[  342.860188] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+{0}[  342.865660] wm8994_write:write failed(R:0x0001 D:0x1013) !!!
+{0}[  346.875177] s3c-i2c s3c2440-i2c.0: cannot get bus (error -110)
+</file>

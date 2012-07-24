@@ -1,0 +1,2 @@
+  * emmc 黑屏,唤醒时timeout: 唤醒时误进入LPA（cmd,data busy 需要同时idle）.
+  * EXYNOS4210 BUS400Mhz,当cpu 100MHz时，播放视频或音频死机: auss clk使用了fout_epll,改为ext_xtal，即可。原因未知。

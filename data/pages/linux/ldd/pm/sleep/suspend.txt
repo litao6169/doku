@@ -1,0 +1,1128 @@
+<file>
+<4>{0}[  135.958267] Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+<7>{0}[  135.976723] PM: Entering mem sleep
+<7>{0}[  135.976824] power power.0: preparing suspend
+<7>{0}[  135.976867] platform reg-dummy: preparing suspend
+<7>{0}[  135.976949] s3c24xx-pwm s3c24xx-pwm.0: preparing suspend
+<7>{0}[  135.976991] pwm-backlight pwm-backlight: preparing suspend
+<7>{0}[  135.977032] wakeup_assist wakeup_assist.0: preparing suspend
+<7>{0}[  135.977073] samsung-pd samsung-pd.0: preparing suspend
+<7>{0}[  135.977113] samsung-pd samsung-pd.1: preparing suspend
+<7>{0}[  135.977151] samsung-pd samsung-pd.2: preparing suspend
+<7>{0}[  135.977191] samsung-pd samsung-pd.5: preparing suspend
+<7>{0}[  135.977231] samsung-pd samsung-pd.4: preparing suspend
+<7>{0}[  135.977270] samsung-pd samsung-pd.6: preparing suspend
+<7>{0}[  135.977310] samsung-pd samsung-pd.7: preparing suspend
+<7>{0}[  135.977349] samsung-pd samsung-pd.8: preparing suspend
+<7>{0}[  135.977389] s3c-i2c s3c2440-i2c.0: preparing suspend
+<7>{0}[  135.977429] s3c-i2c s3c2440-i2c.1: preparing suspend
+<7>{0}[  135.977468] s3c-i2c s3c2440-i2c.3: preparing suspend
+<7>{0}[  135.977507] s3c-i2c s3c2440-i2c.4: preparing suspend
+<7>{0}[  135.977545] s3c-i2c s3c2440-i2c.5: preparing suspend
+<7>{0}[  135.977584] s3c-i2c s3c2440-i2c.6: preparing suspend
+<7>{0}[  135.977623] s3c-i2c s3c2440-i2c.7: preparing suspend
+<7>{0}[  135.977663] i2c-gpio i2c-gpio.8: preparing suspend
+<7>{0}[  135.977701] i2c-gpio i2c-gpio.9: preparing suspend
+<7>{0}[  135.977740] i2c-gpio i2c-gpio.10: preparing suspend
+<7>{0}[  135.977778] i2c-gpio i2c-gpio.11: preparing suspend
+<7>{0}[  135.977816] i2c-gpio i2c-gpio.12: preparing suspend
+<7>{0}[  135.977855] i2c-gpio i2c-gpio.13: preparing suspend
+<7>{0}[  135.977895] gpio-keys gpio-keys.0: preparing suspend, may wakeup
+<7>{0}[  135.977935] reg-fixed-voltage reg-fixed-voltage.0: preparing suspend
+<7>{0}[  135.977976] reg-fixed-voltage reg-fixed-voltage.1: preparing suspend
+<7>{0}[  135.978016] reg-fixed-voltage reg-fixed-voltage.2: preparing suspend
+<7>{0}[  135.978057] reg-fixed-voltage reg-fixed-voltage.3: preparing suspend
+<7>{0}[  135.978097] reg-fixed-voltage reg-fixed-voltage.4: preparing suspend
+<7>{0}[  135.978137] reg-fixed-voltage reg-fixed-voltage.5: preparing suspend
+<7>{0}[  135.978178] reg-fixed-voltage reg-fixed-voltage.6: preparing suspend
+<7>{0}[  135.978218] reg-fixed-voltage reg-fixed-voltage.7: preparing suspend
+<7>{0}[  135.978258] reg-fixed-voltage reg-fixed-voltage.8: preparing suspend
+<7>{0}[  135.978298] reg-fixed-voltage reg-fixed-voltage.9: preparing suspend
+<7>{0}[  135.978339] reg-fixed-voltage reg-fixed-voltage.10: preparing suspend
+<7>{0}[  135.978379] s3cfb s3cfb.0: preparing suspend
+<7>{0}[  135.978419] s5p-mipi-dsim s5p-mipi-dsim.0: preparing suspend
+<7>{0}[  135.978460] dw_mmc dw_mmc: preparing suspend
+<7>{0}[  135.978499] samsung-i2s samsung-i2s.0: preparing suspend
+<7>{0}[  135.978539] samsung-pcm samsung-pcm.1: preparing suspend
+<7>{0}[  135.978579] samsung-audio samsung-audio: preparing suspend
+<7>{0}[  135.978618] platform samsung-audio-idma: preparing suspend
+<7>{0}[  135.978657] mx-audio mx-audio: preparing suspend
+<7>{0}[  135.978697] samsung-spdif samsung-spdif: preparing suspend
+<7>{0}[  135.978736] mx-spdif mx-spdif: preparing suspend
+<7>{0}[  135.978775] s5p-tvout s5p-tvout: preparing suspend
+<7>{0}[  135.978814] platform s5p-tvout-cec: preparing suspend
+<7>{0}[  135.978853] s5p-tvout-hpd s5p-tvout-hpd: preparing suspend
+<7>{0}[  135.978893] s3c-fimc s3c-fimc.0: preparing suspend
+<7>{0}[  135.978933] s3c-fimc s3c-fimc.1: preparing suspend
+<7>{0}[  135.978972] s3c-fimc s3c-fimc.2: preparing suspend
+<7>{0}[  135.979010] s3c-fimc s3c-fimc.3: preparing suspend
+<7>{0}[  135.979049] s3c-mfc s3c-mfc: preparing suspend
+<7>{0}[  135.979088] platform s5p-mfc-l: preparing suspend
+<7>{0}[  135.979127] platform s5p-mfc-r: preparing suspend
+<7>{0}[  135.979166] s3c-csis s3c-csis.0: preparing suspend
+<7>{0}[  135.979205] s3c2410-wdt s3c2410-wdt: preparing suspend
+<7>{0}[  135.979243] platform s3c64xx-rtc: preparing suspend
+<7>{0}[  135.979282] xmm_modem xmm_modem: preparing suspend, may wakeup
+<7>{0}[  135.979323] s3c-usbgadget s3c-usbgadget: preparing suspend
+<7>{0}[  135.979363] s5p-fimg2d s5p-fimg2d: preparing suspend
+<7>{0}[  135.979403] exynos-sysmmu exynos-sysmmu.15: preparing suspend
+<7>{0}[  135.979443] usb_detect usb_detect: preparing suspend
+<7>{0}[  135.979483] s3c-adc exynos4412-adc: preparing suspend
+<7>{0}[  135.979522] s3c-hwmon s3c-hwmon: preparing suspend
+<7>{0}[  135.979561] ublox-gps ublox-gps: preparing suspend
+<7>{0}[  135.979600] s5p-jpeg m03x-jpeg: preparing suspend
+<7>{0}[  135.979640] switch-gpio switch-gpio: preparing suspend
+<7>{0}[  135.979679] bt_ctr bt_ctr: preparing suspend, may wakeup
+<7>{0}[  135.979719] exynos-cpufreq exynos4412-cpufreq: preparing suspend
+<7>{0}[  135.979760] exynos4-ppmu exynos4-ppmu.4: preparing suspend
+<7>{0}[  135.979800] exynos4-ppmu exynos4-ppmu.5: preparing suspend
+<7>{0}[  135.979839] exynos4-ppmu exynos4-ppmu.3: preparing suspend
+<7>{0}[  135.979879] exynos-busfreq exynos-busfreq: preparing suspend
+<7>{0}[  135.979919] exynos4-tmu exynos4x12-tmu: preparing suspend
+<7>{0}[  135.979958] s3c24xx-pwm s3c24xx-pwm.1: preparing suspend
+<7>{0}[  135.979998] s5p-rotator s5p-rotator: preparing suspend
+<7>{0}[  135.980102] m03x-battery m03x-battery: preparing suspend
+<7>{0}[  135.980146] ram_console ram_console: preparing suspend
+<7>{0}[  135.980187] logger logger: preparing suspend
+<7>{0}[  135.980226] s3c-pl330 s3c-pl330.0: preparing suspend
+<7>{0}[  135.980266] s3c-pl330 s3c-pl330.1: preparing suspend
+<7>{0}[  135.980306] s3c-pl330 s3c-pl330.2: preparing suspend
+<7>{0}[  135.980345] arm-pmu arm-pmu.0: preparing suspend
+<7>{0}[  135.980385] s5pv210-uart s5pv210-uart.0: preparing suspend
+<7>{0}[  135.980425] s5pv210-uart s5pv210-uart.1: preparing suspend
+<7>{0}[  135.980464] s5pv210-uart s5pv210-uart.2: preparing suspend
+<7>{0}[  135.980504] s5pv210-uart s5pv210-uart.3: preparing suspend
+<7>{0}[  135.980809] i2c i2c-8: preparing suspend
+<7>{0}[  135.980848] s5p_mhl 8-003b: preparing suspend
+<7>{0}[  135.980887] s5p_mhl 8-003f: preparing suspend
+<7>{0}[  135.980925] s5p_mhl 8-004b: preparing suspend
+<7>{0}[  135.980964] s5p_mhl 8-0066: preparing suspend
+<7>{0}[  135.981003] i2c i2c-9: preparing suspend
+<7>{0}[  135.981042] lis3dh 9-0019: preparing suspend
+<7>{0}[  135.981080] i2c i2c-10: preparing suspend
+<7>{0}[  135.981119] akm8975 10-000c: preparing suspend
+<7>{0}[  135.981157] i2c i2c-11: preparing suspend
+<7>{0}[  135.981197] l3g4200d 11-0069: preparing suspend
+<7>{0}[  135.981235] i2c i2c-12: preparing suspend
+<7>{0}[  135.981274] gp2ap020a00f 12-0039: preparing suspend
+<7>{0}[  135.981313] i2c i2c-13: preparing suspend
+<7>{0}[  135.981352] bu26507-led 13-0074: preparing suspend
+<7>{0}[  135.981391] bu26507-led bu26507-led.0: preparing suspend
+<7>{0}[  135.981431] bu26507-led bu26507-led.1: preparing suspend
+<7>{0}[  135.981471] bu26507-led bu26507-led.2: preparing suspend
+<7>{0}[  135.981511] bu26507-led bu26507-led.3: preparing suspend
+<7>{0}[  135.981550] bu26507-led bu26507-led.4: preparing suspend
+<7>{0}[  135.981590] bu26507-led bu26507-led.5: preparing suspend
+<7>{0}[  135.981630] bu26507-led bu26507-led.6: preparing suspend
+<7>{0}[  135.981670] bu26507-led bu26507-led.7: preparing suspend
+<7>{0}[  135.981710] bu26507-led bu26507-led.8: preparing suspend
+<7>{0}[  135.981750] bu26507-led bu26507-led.9: preparing suspend
+<7>{0}[  135.981790] bu26507-led bu26507-pwm: preparing suspend
+<7>{0}[  135.981830] bu26507-led bu26507-slope: preparing suspend
+<7>{0}[  135.981870] i2c i2c-0: preparing suspend
+<7>{0}[  135.981908] wm8994 0-001a: preparing suspend
+<7>{0}[  135.981946] a1028_soc 0-003e: preparing suspend
+<7>{0}[  135.981985] i2c i2c-1: preparing suspend
+<7>{0}[  135.982023] s5p_ddc 1-003a: preparing suspend
+<7>{0}[  135.982062] i2c i2c-3: preparing suspend
+<7>{0}[  135.982101] max77686 3-0009: preparing suspend, may wakeup
+<7>{0}[  135.982142] dummy 3-0006: preparing suspend
+<7>{0}[  135.982180] max77686-pmic max77686-pmic: preparing suspend
+<7>{0}[  135.982944] max77686-rtc max77686-rtc: preparing suspend, may wakeup
+<7>{0}[  135.982985] i2c i2c-4: preparing suspend
+<7>{0}[  135.983024] max77665 4-0066: preparing suspend, may wakeup
+<7>{0}[  135.983064] dummy 4-0048: preparing suspend
+<7>{0}[  135.983103] platform max77665-pmic: preparing suspend
+<7>{0}[  135.983143] max77665-charger max77665-charger: preparing suspend
+<7>{0}[  135.983185] max77665-haptic max77665-haptic: preparing suspend
+<7>{0}[  135.983225] torch-led torch-led: preparing suspend
+<7>{0}[  135.983265] max77665-safeout max77665-safeout: preparing suspend
+<7>{0}[  135.983427] i2c i2c-5: preparing suspend
+<7>{0}[  135.983466] bq27541 5-0055: preparing suspend, may wakeup
+<7>{0}[  135.983505] i2c i2c-6: preparing suspend
+<7>{0}[  135.983543] atmel_mxt_ts 6-004a: preparing suspend
+<7>{0}[  135.983581] i2c i2c-7: preparing suspend
+<7>{0}[  135.983620] M6MO 7-001f: preparing suspend
+<7>{0}[  135.983658] ov7690 7-0021: preparing suspend
+<7>{0}[  135.985414] input input0: preparing type suspend
+<7>{0}[  135.985476] s3c-sdhci s3c-sdhci.3: preparing suspend
+<7>{0}[  135.985517] bcm4329_wlan bcm4329_wlan: preparing suspend
+<7>{0}[  135.985879] mali_dev mali_dev.0: preparing suspend
+<7>{0}[  135.986901] input input1: preparing type suspend
+<7>{0}[  135.986962] input input2: preparing type suspend
+<7>{0}[  135.987021] input input3: preparing type suspend
+<7>{0}[  135.987101] input input4: preparing type suspend
+<7>{0}[  135.987141] wm8994-ldo wm8994-ldo.0: preparing suspend
+<7>{0}[  135.987202] wm8994-ldo wm8994-ldo.1: preparing suspend
+<7>{0}[  135.987263] wm8994-codec wm8994-codec: preparing suspend
+<7>{0}[  135.987303] platform wm8994-gpio: preparing suspend
+<7>{0}[  135.987364] s5p-ehci s5p-ehci: preparing suspend
+<7>{0}[  135.987841] input input5: preparing type suspend
+<7>{0}[  135.987901] input input6: preparing type suspend
+<7>{0}[  135.987961] input input7: preparing type suspend
+<7>{0}[  135.988102] alarm alarm: preparing suspend
+<7>{0}[  135.989223] snd-soc-dummy snd-soc-dummy: preparing suspend
+<7>{0}[  135.989264] samsung-i2s samsung-i2s.4: preparing suspend
+<7>{0}[  135.989304] soc-audio soc-audio.0: preparing suspend
+<7>{0}[  135.989504] spdif-dit spdif-dit: preparing suspend
+<7>{0}[  135.989543] soc-audio soc-audio.1: preparing suspend
+<7>{0}[  135.989584] mmcblk mmc0:0001: preparing suspend
+<7>{0}[  135.990527] input input8: preparing type suspend
+<7>{0}[  135.990591] usb usb1: preparing type suspend, may wakeup
+<7>{0}[  135.990713] usb 1-2: preparing type suspend
+<7>{0}[  135.993870] usb 1-2: type suspend
+<7>{0}[  135.994341] usb usb1: type suspend, may wakeup
+<7>{0}[  135.994452] input input8: type suspend
+<7>{0}[  135.995847] mmcblk mmc0:0001: suspend
+<7>{0}[  135.995976] soc-audio soc-audio.1: suspend
+<7>{0}[  135.997722] spdif-dit spdif-dit: suspend
+<7>{0}[  135.998032] soc-audio soc-audio.0: suspend
+<6>{0}[  136.075418] A1028: set a1028 into Suspend mode
+<7>{0}[  136.250154] samsung-i2s samsung-i2s.4: suspend
+<7>{0}[  136.250209] snd-soc-dummy snd-soc-dummy: suspend
+<7>{0}[  136.250639] leds torch_led: legacy class suspend
+<7>{0}[  136.250690] leds bu26507-slope: legacy class suspend
+<7>{0}[  136.250742] leds bu26507-pwm: legacy class suspend
+<7>{0}[  136.250792] leds bu26507-led9: legacy class suspend
+<7>{0}[  136.250841] leds bu26507-led8: legacy class suspend
+<7>{0}[  136.250891] leds bu26507-led7: legacy class suspend
+<7>{0}[  136.250941] leds bu26507-led6: legacy class suspend
+<7>{0}[  136.250991] leds bu26507-led5: legacy class suspend
+<7>{0}[  136.251041] leds bu26507-led4: legacy class suspend
+<7>{0}[  136.251091] leds bu26507-led3: legacy class suspend
+<7>{0}[  136.251141] leds bu26507-led2: legacy class suspend
+<7>{0}[  136.251191] leds bu26507-led1: legacy class suspend
+<7>{0}[  136.251240] leds bu26507-led0: legacy class suspend
+<7>{0}[  136.251320] leds mmc1::: legacy class suspend
+<7>{0}[  136.252127] alarm alarm: suspend
+<7>{0}[  136.275624] max77686_rtc_read_time: 112/6/7 4:12:27(6)
+<7>{0}[  136.300614] max77686_rtc_read_time: 112/6/7 4:12:27(6)
+<7>{0}[  136.300640] max77686_rtc_set_alarm: 112/6/7 4:14:13(6)
+<6>{0}[  136.325586] max77686_rtc_stop_alarm: 112/6/7 4:14:12(6)
+<6>{0}[  136.405582] max77686_rtc_start_alarm: 112/6/7 4:14:13(6)
+<7>{0}[  136.460609] max77686_rtc_read_time: 112/6/7 4:12:27(6)
+<7>{0}[  136.460672] rtc rtc0: legacy class suspend
+<7>{0}[  136.485588] max77686_rtc_read_time: 112/6/7 4:12:27(6)
+<6>{0}[  136.485618] rtc_suspend @ (2012-07-07 12:12:27) Shanghai
+<7>{0}[  136.490281] input input7: type suspend
+<7>{0}[  136.490374] input input6: type suspend
+<7>{0}[  136.490463] input input5: type suspend
+<7>{0}[  136.491199] s5p-ehci s5p-ehci: suspend
+<7>{0}[  136.491890] max77686_reg_disable: id=15, reg=4f, mask=c0, pattern=40
+<7>{0}[  136.492848] max77686_reg_disable: id=14, reg=4e, mask=c0, pattern=40
+<7>{0}[  136.493719] platform wm8994-gpio: suspend
+<7>{0}[  136.493772] wm8994-codec wm8994-codec: suspend
+<7>{0}[  136.493857] wm8994-ldo wm8994-ldo.1: suspend
+<7>{0}[  136.493940] wm8994-ldo wm8994-ldo.0: suspend
+<7>{0}[  136.493993] input input4: type suspend
+<7>{0}[  136.494110] input input3: type suspend
+<7>{0}[  136.494197] input input2: type suspend
+<7>{0}[  136.494285] input input1: type suspend
+<7>{0}[  136.495831] mali_dev mali_dev.0: suspend
+<7>{0}[  136.496240] backlight pwm-backlight: legacy class suspend
+<7>{0}[  136.496418] bcm4329_wlan bcm4329_wlan: suspend
+<7>{0}[  136.496477] s3c-sdhci s3c-sdhci.3: suspend
+<7>{0}[  136.497149] rfkill rfkill0: legacy class suspend
+<7>{0}[  136.497207] input input0: type suspend
+<7>{0}[  136.499691] ov7690 7-0021: suspend
+<7>{0}[  136.499744] M6MO 7-001f: suspend
+<7>{0}[  136.499803] i2c i2c-7: suspend
+<7>{0}[  136.499859] atmel_mxt_ts 6-004a: suspend
+<7>{0}[  136.499914] i2c i2c-6: suspend
+<7>{0}[  136.499967] bq27541 5-0055: suspend, may wakeup
+<7>{0}[  136.500208] wake enabled for irq 369
+<7>{0}[  136.500272] i2c i2c-5: suspend
+<7>{0}[  136.500517] max77665-safeout max77665-safeout: suspend
+<7>{0}[  136.500572] torch-led torch-led: suspend
+<7>{0}[  136.500622] max77665-haptic max77665-haptic: suspend
+<6>{0}[  136.502157] [VIB] DEV NAME max77665-haptic 100000000
+<7>{0}[  136.506271] max77665-charger max77665-charger: suspend
+<6>{0}[  136.506291] max77665-charger max77665-charger: max77665_suspend
+<7>{0}[  136.512617] platform max77665-pmic: suspend
+<7>{0}[  136.512671] dummy 4-0048: suspend
+<7>{0}[  136.512736] max77665 4-0066: suspend, may wakeup
+<7>{0}[  136.512815] wake enabled for irq 357
+<7>{0}[  136.512877] i2c i2c-4: suspend
+<7>{0}[  136.512931] max77686-rtc max77686-rtc: suspend, may wakeup
+<7>{0}[  136.514136] max77686-pmic max77686-pmic: suspend
+<7>{0}[  136.514188] dummy 3-0006: suspend
+<7>{0}[  136.514243] max77686 3-0009: suspend, may wakeup
+<7>{0}[  136.514275] wake enabled for irq 356
+<7>{0}[  136.514335] i2c i2c-3: suspend
+<7>{0}[  136.514385] s5p_ddc 1-003a: suspend
+<7>{0}[  136.514440] i2c i2c-1: suspend
+<7>{0}[  136.514489] a1028_soc 0-003e: suspend
+<7>{0}[  136.514550] wm8994 0-001a: suspend
+<7>{0}[  136.517301] i2c i2c-0: suspend
+<7>{0}[  136.517357] bu26507-led bu26507-slope: suspend
+<7>{0}[  136.517412] bu26507-led bu26507-pwm: suspend
+<7>{0}[  136.517465] bu26507-led bu26507-led.9: suspend
+<7>{0}[  136.517518] bu26507-led bu26507-led.8: suspend
+<7>{0}[  136.517570] bu26507-led bu26507-led.7: suspend
+<7>{0}[  136.517623] bu26507-led bu26507-led.6: suspend
+<7>{0}[  136.517677] bu26507-led bu26507-led.5: suspend
+<7>{0}[  136.517730] bu26507-led bu26507-led.4: suspend
+<7>{0}[  136.517783] bu26507-led bu26507-led.3: suspend
+<7>{0}[  136.517835] bu26507-led bu26507-led.2: suspend
+<7>{0}[  136.517888] bu26507-led bu26507-led.1: suspend
+<7>{0}[  136.517941] bu26507-led bu26507-led.0: suspend
+<7>{0}[  136.518025] bu26507-led 13-0074: suspend
+<7>{0}[  136.518086] i2c i2c-13: suspend
+<7>{0}[  136.518139] gp2ap020a00f 12-0039: suspend
+<7>{0}[  136.518194] i2c i2c-12: suspend
+<7>{0}[  136.518245] l3g4200d 11-0069: suspend
+<7>{0}[  136.518301] i2c i2c-11: suspend
+<7>{0}[  136.518350] akm8975 10-000c: suspend
+<7>{0}[  136.519135] i2c i2c-10: suspend
+<7>{0}[  136.519188] lis3dh 9-0019: suspend
+<7>{0}[  136.519245] i2c i2c-9: suspend
+<7>{0}[  136.519293] s5p_mhl 8-0066: suspend
+<7>{0}[  136.519342] s5p_mhl 8-004b: suspend
+<7>{0}[  136.519391] s5p_mhl 8-003f: suspend
+<7>{0}[  136.519440] s5p_mhl 8-003b: suspend
+<7>{0}[  136.519503] i2c i2c-8: suspend
+<7>{0}[  136.519936] s5pv210-uart s5pv210-uart.3: suspend
+<7>{0}[  136.520159] s5pv210-uart s5pv210-uart.2: suspend
+<7>{0}[  136.520231] s5pv210-uart s5pv210-uart.1: suspend
+<7>{0}[  136.520301] s5pv210-uart s5pv210-uart.0: suspend
+<7>{0}[  136.520367] arm-pmu arm-pmu.0: suspend
+<7>{0}[  136.520418] s3c-pl330 s3c-pl330.2: suspend
+<7>{0}[  136.520468] s3c-pl330 s3c-pl330.1: suspend
+<7>{0}[  136.520518] s3c-pl330 s3c-pl330.0: suspend
+<7>{0}[  136.520567] logger logger: suspend
+<7>{0}[  136.520616] ram_console ram_console: suspend
+<7>{0}[  136.520670] m03x-battery m03x-battery: suspend
+<7>{0}[  136.520720] s5p-rotator s5p-rotator: suspend
+<7>{0}[  136.520770] s3c24xx-pwm s3c24xx-pwm.1: suspend
+<7>{0}[  136.520874] exynos4-tmu exynos4x12-tmu: suspend
+<7>{0}[  136.520976] exynos-busfreq exynos-busfreq: suspend
+<7>{0}[  136.521029] exynos4-ppmu exynos4-ppmu.3: suspend
+<7>{0}[  136.521081] exynos4-ppmu exynos4-ppmu.5: suspend
+<7>{0}[  136.521131] exynos4-ppmu exynos4-ppmu.4: suspend
+<7>{0}[  136.521182] exynos-cpufreq exynos4412-cpufreq: suspend
+<7>{0}[  136.521236] bt_ctr bt_ctr: suspend, may wakeup
+<7>{0}[  136.521286] switch-gpio switch-gpio: suspend
+<7>{0}[  136.521600] s5p-jpeg m03x-jpeg: suspend
+<7>{0}[  136.521658] ublox-gps ublox-gps: suspend
+<7>{0}[  136.521712] s3c-hwmon s3c-hwmon: suspend
+<7>{0}[  136.521766] s3c-adc exynos4412-adc: suspend
+<7>{0}[  136.521988] usb_detect usb_detect: suspend
+<7>{0}[  136.522041] exynos-sysmmu exynos-sysmmu.15: suspend
+<7>{0}[  136.522092] s5p-fimg2d s5p-fimg2d: suspend
+<7>{0}[  136.522145] s3c-usbgadget s3c-usbgadget: suspend
+<7>{0}[  136.522349] xmm_modem xmm_modem: suspend, may wakeup
+<7>{0}[  136.522374] wake enabled for irq 381
+<7>{0}[  136.522393] wake enabled for irq 376
+<7>{0}[  136.522445] platform s3c64xx-rtc: suspend
+<7>{0}[  136.522494] s3c2410-wdt s3c2410-wdt: suspend
+<7>{0}[  136.522588] s3c-csis s3c-csis.0: suspend
+<7>{0}[  136.522638] platform s5p-mfc-r: suspend
+<7>{0}[  136.522688] platform s5p-mfc-l: suspend
+<7>{0}[  136.522744] s3c-mfc s3c-mfc: suspend
+<7>{0}[  136.522794] s3c-fimc s3c-fimc.3: suspend
+<7>{0}[  136.522846] s3c-fimc s3c-fimc.2: suspend
+<7>{0}[  136.522895] s3c-fimc s3c-fimc.1: suspend
+<7>{0}[  136.522945] s3c-fimc s3c-fimc.0: suspend
+<7>{0}[  136.522995] s5p-tvout-hpd s5p-tvout-hpd: suspend
+<7>{0}[  136.523057] platform s5p-tvout-cec: suspend
+<7>{0}[  136.523129] s5p-tvout s5p-tvout: suspend
+<7>{0}[  136.523179] mx-spdif mx-spdif: suspend
+<7>{0}[  136.523228] samsung-spdif samsung-spdif: suspend
+<7>{0}[  136.523278] mx-audio mx-audio: suspend
+<7>{0}[  136.523327] platform samsung-audio-idma: suspend
+<7>{0}[  136.523377] samsung-audio samsung-audio: suspend
+<7>{0}[  136.523426] samsung-pcm samsung-pcm.1: suspend
+<7>{0}[  136.523476] samsung-i2s samsung-i2s.0: suspend
+<7>{0}[  136.523598] dw_mmc dw_mmc: suspend
+<7>{0}[  136.524695] s5p-mipi-dsim s5p-mipi-dsim.0: suspend
+<7>{0}[  136.524766] s3cfb s3cfb.0: suspend
+<7>{0}[  136.524820] reg-fixed-voltage reg-fixed-voltage.10: suspend
+<7>{0}[  136.524876] reg-fixed-voltage reg-fixed-voltage.9: suspend
+<7>{0}[  136.524930] reg-fixed-voltage reg-fixed-voltage.8: suspend
+<7>{0}[  136.524985] reg-fixed-voltage reg-fixed-voltage.7: suspend
+<7>{0}[  136.525110] reg-fixed-voltage reg-fixed-voltage.6: suspend
+<7>{0}[  136.525168] reg-fixed-voltage reg-fixed-voltage.5: suspend
+<7>{0}[  136.525223] reg-fixed-voltage reg-fixed-voltage.4: suspend
+<7>{0}[  136.525278] reg-fixed-voltage reg-fixed-voltage.3: suspend
+<7>{0}[  136.525333] reg-fixed-voltage reg-fixed-voltage.2: suspend
+<7>{0}[  136.525386] reg-fixed-voltage reg-fixed-voltage.1: suspend
+<7>{0}[  136.525441] reg-fixed-voltage reg-fixed-voltage.0: suspend
+<7>{0}[  136.525497] gpio-keys gpio-keys.0: suspend, may wakeup
+<7>{0}[  136.525520] wake enabled for irq 352
+<7>{0}[  136.525540] wake enabled for irq 354
+<7>{0}[  136.525595] i2c-gpio i2c-gpio.13: suspend
+<7>{0}[  136.525649] i2c-gpio i2c-gpio.12: suspend
+<7>{0}[  136.525702] i2c-gpio i2c-gpio.11: suspend
+<7>{0}[  136.525753] i2c-gpio i2c-gpio.10: suspend
+<7>{0}[  136.525806] i2c-gpio i2c-gpio.9: suspend
+<7>{0}[  136.525859] i2c-gpio i2c-gpio.8: suspend
+<7>{0}[  136.525912] s3c-i2c s3c2440-i2c.7: suspend
+<7>{0}[  136.525965] s3c-i2c s3c2440-i2c.6: suspend
+<7>{0}[  136.526018] s3c-i2c s3c2440-i2c.5: suspend
+<7>{0}[  136.526070] s3c-i2c s3c2440-i2c.4: suspend
+<7>{0}[  136.526123] s3c-i2c s3c2440-i2c.3: suspend
+<7>{0}[  136.526175] s3c-i2c s3c2440-i2c.1: suspend
+<7>{0}[  136.526228] s3c-i2c s3c2440-i2c.0: suspend
+<7>{0}[  136.526277] samsung-pd samsung-pd.8: suspend
+<7>{0}[  136.526328] samsung-pd samsung-pd.7: suspend
+<7>{0}[  136.526379] samsung-pd samsung-pd.6: suspend
+<7>{0}[  136.526433] samsung-pd samsung-pd.4: suspend
+<7>{0}[  136.526486] samsung-pd samsung-pd.5: suspend
+<7>{0}[  136.526536] samsung-pd samsung-pd.2: suspend
+<7>{0}[  136.526590] samsung-pd samsung-pd.1: suspend
+<7>{0}[  136.526643] samsung-pd samsung-pd.0: suspend
+<7>{0}[  136.526696] wakeup_assist wakeup_assist.0: suspend
+<7>{0}[  136.526750] pwm-backlight pwm-backlight: suspend
+<7>{0}[  136.526804] s3c24xx-pwm s3c24xx-pwm.0: suspend
+<7>{0}[  136.526968] platform reg-dummy: suspend
+<7>{0}[  136.527018] power power.0: suspend
+<6>{0}[  136.527353] PM: suspend of devices complete after 536.127 msecs
+<7>{0}[  136.532656] max77686_buck_suspend_disable: id=34, reg=38, mask=3, pattern=1
+<7>{0}[  136.532768] max77686_buck_suspend_disable: id=29, reg=26, mask=30, pattern=10
+<7>{0}[  136.532797] max77686_buck_suspend_disable: id=28, reg=1c, mask=30, pattern=10
+<7>{0}[  136.532825] max77686_buck_suspend_disable: id=27, reg=12, mask=30, pattern=10
+<7>{0}[  136.532853] max77686_buck_suspend_disable: id=26, reg=10, mask=3, pattern=1
+<7>{0}[  136.535104] usb 1-2: LATE type suspend
+<7>{0}[  136.535154] usb usb1: LATE type suspend, may wakeup
+<7>{0}[  136.535186] input input8: LATE type suspend
+<7>{0}[  136.535442] mmcblk mmc0:0001: LATE suspend
+<7>{0}[  136.535466] soc-audio soc-audio.1: LATE suspend
+<7>{0}[  136.535490] spdif-dit spdif-dit: LATE suspend
+<7>{0}[  136.535558] soc-audio soc-audio.0: LATE suspend
+<7>{0}[  136.535581] samsung-i2s samsung-i2s.4: LATE suspend
+<7>{0}[  136.535605] snd-soc-dummy snd-soc-dummy: LATE suspend
+<7>{0}[  136.535926] alarm alarm: LATE suspend
+<7>{0}[  136.535977] input input7: LATE type suspend
+<7>{0}[  136.536006] input input6: LATE type suspend
+<7>{0}[  136.536034] input input5: LATE type suspend
+<7>{0}[  136.536180] s5p-ehci s5p-ehci: LATE suspend
+<7>{0}[  136.536210] platform wm8994-gpio: LATE suspend
+<7>{0}[  136.536234] wm8994-codec wm8994-codec: LATE suspend
+<7>{0}[  136.536264] wm8994-ldo wm8994-ldo.1: LATE suspend
+<7>{0}[  136.536293] wm8994-ldo wm8994-ldo.0: LATE suspend
+<7>{0}[  136.536317] input input4: LATE type suspend
+<7>{0}[  136.536350] input input3: LATE type suspend
+<7>{0}[  136.536379] input input2: LATE type suspend
+<7>{0}[  136.536408] input input1: LATE type suspend
+<7>{0}[  136.536708] mali_dev mali_dev.0: LATE suspend
+<7>{0}[  136.536821] bcm4329_wlan bcm4329_wlan: LATE suspend
+<7>{0}[  136.536845] s3c-sdhci s3c-sdhci.3: LATE suspend
+<7>{0}[  136.536874] input input0: LATE type suspend
+<7>{0}[  136.537351] ov7690 7-0021: LATE suspend
+<7>{0}[  136.537374] M6MO 7-001f: LATE suspend
+<7>{0}[  136.537396] i2c i2c-7: LATE suspend
+<7>{0}[  136.537418] atmel_mxt_ts 6-004a: LATE suspend
+<7>{0}[  136.537441] i2c i2c-6: LATE suspend
+<7>{0}[  136.537463] bq27541 5-0055: LATE suspend, may wakeup
+<7>{0}[  136.537486] i2c i2c-5: LATE suspend
+<7>{0}[  136.537542] max77665-safeout max77665-safeout: LATE suspend
+<7>{0}[  136.537566] torch-led torch-led: LATE suspend
+<7>{0}[  136.537590] max77665-haptic max77665-haptic: LATE suspend
+<7>{0}[  136.537615] max77665-charger max77665-charger: LATE suspend
+<7>{0}[  136.537640] platform max77665-pmic: LATE suspend
+<7>{0}[  136.537662] dummy 4-0048: LATE suspend
+<7>{0}[  136.537685] max77665 4-0066: LATE suspend, may wakeup
+<7>{0}[  136.537709] i2c i2c-4: LATE suspend
+<7>{0}[  136.537731] max77686-rtc max77686-rtc: LATE suspend, may wakeup
+<7>{0}[  136.537951] max77686-pmic max77686-pmic: LATE suspend
+<7>{0}[  136.537975] dummy 3-0006: LATE suspend
+<7>{0}[  136.537998] max77686 3-0009: LATE suspend, may wakeup
+<7>{0}[  136.538021] i2c i2c-3: LATE suspend
+<7>{0}[  136.538043] s5p_ddc 1-003a: LATE suspend
+<7>{0}[  136.538065] i2c i2c-1: LATE suspend
+<7>{0}[  136.538087] a1028_soc 0-003e: LATE suspend
+<7>{0}[  136.538109] wm8994 0-001a: LATE suspend
+<7>{0}[  136.538131] i2c i2c-0: LATE suspend
+<7>{0}[  136.538153] bu26507-led bu26507-slope: LATE suspend
+<7>{0}[  136.538177] bu26507-led bu26507-pwm: LATE suspend
+<7>{0}[  136.538200] bu26507-led bu26507-led.9: LATE suspend
+<7>{0}[  136.538223] bu26507-led bu26507-led.8: LATE suspend
+<7>{0}[  136.538247] bu26507-led bu26507-led.7: LATE suspend
+<7>{0}[  136.538270] bu26507-led bu26507-led.6: LATE suspend
+<7>{0}[  136.538294] bu26507-led bu26507-led.5: LATE suspend
+<7>{0}[  136.538317] bu26507-led bu26507-led.4: LATE suspend
+<7>{0}[  136.538341] bu26507-led bu26507-led.3: LATE suspend
+<7>{0}[  136.538364] bu26507-led bu26507-led.2: LATE suspend
+<7>{0}[  136.538388] bu26507-led bu26507-led.1: LATE suspend
+<7>{0}[  136.538410] bu26507-led bu26507-led.0: LATE suspend
+<7>{0}[  136.538434] bu26507-led 13-0074: LATE suspend
+<7>{0}[  136.538456] i2c i2c-13: LATE suspend
+<7>{0}[  136.538479] gp2ap020a00f 12-0039: LATE suspend
+<7>{0}[  136.538501] i2c i2c-12: LATE suspend
+<7>{0}[  136.538523] l3g4200d 11-0069: LATE suspend
+<7>{0}[  136.538545] i2c i2c-11: LATE suspend
+<7>{0}[  136.538567] akm8975 10-000c: LATE suspend
+<7>{0}[  136.538589] i2c i2c-10: LATE suspend
+<7>{0}[  136.538611] lis3dh 9-0019: LATE suspend
+<7>{0}[  136.538633] i2c i2c-9: LATE suspend
+<7>{0}[  136.538655] s5p_mhl 8-0066: LATE suspend
+<7>{0}[  136.538677] s5p_mhl 8-004b: LATE suspend
+<7>{0}[  136.538699] s5p_mhl 8-003f: LATE suspend
+<7>{0}[  136.538721] s5p_mhl 8-003b: LATE suspend
+<7>{0}[  136.538743] i2c i2c-8: LATE suspend
+<7>{0}[  136.538835] s5pv210-uart s5pv210-uart.3: LATE suspend
+<7>{0}[  136.538859] s5pv210-uart s5pv210-uart.2: LATE suspend
+<7>{0}[  136.538883] s5pv210-uart s5pv210-uart.1: LATE suspend
+<7>{0}[  136.538907] s5pv210-uart s5pv210-uart.0: LATE suspend
+<7>{0}[  136.538930] arm-pmu arm-pmu.0: LATE suspend
+<7>{0}[  136.538953] s3c-pl330 s3c-pl330.2: LATE suspend
+<7>{0}[  136.538976] s3c-pl330 s3c-pl330.1: LATE suspend
+<7>{0}[  136.538999] s3c-pl330 s3c-pl330.0: LATE suspend
+<7>{0}[  136.539022] logger logger: LATE suspend
+<7>{0}[  136.539044] ram_console ram_console: LATE suspend
+<7>{0}[  136.539068] m03x-battery m03x-battery: LATE suspend
+<7>{0}[  136.539091] s5p-rotator s5p-rotator: LATE suspend
+<7>{0}[  136.539115] s3c24xx-pwm s3c24xx-pwm.1: LATE suspend
+<7>{0}[  136.539139] exynos4-tmu exynos4x12-tmu: LATE suspend
+<7>{0}[  136.539162] exynos-busfreq exynos-busfreq: LATE suspend
+<7>{0}[  136.539187] exynos4-ppmu exynos4-ppmu.3: LATE suspend
+<7>{0}[  136.539211] exynos4-ppmu exynos4-ppmu.5: LATE suspend
+<7>{0}[  136.539234] exynos4-ppmu exynos4-ppmu.4: LATE suspend
+<7>{0}[  136.539258] exynos-cpufreq exynos4412-cpufreq: LATE suspend
+<7>{0}[  136.539283] bt_ctr bt_ctr: LATE suspend, may wakeup
+<7>{0}[  136.539307] switch-gpio switch-gpio: LATE suspend
+<7>{0}[  136.539330] s5p-jpeg m03x-jpeg: LATE suspend
+<7>{0}[  136.539353] ublox-gps ublox-gps: LATE suspend
+<7>{0}[  136.539377] s3c-hwmon s3c-hwmon: LATE suspend
+<7>{0}[  136.539400] s3c-adc exynos4412-adc: LATE suspend
+<7>{0}[  136.539423] usb_detect usb_detect: LATE suspend
+<7>{0}[  136.539446] exynos-sysmmu exynos-sysmmu.15: LATE suspend
+<7>{0}[  136.539470] s5p-fimg2d s5p-fimg2d: LATE suspend
+<7>{0}[  136.539494] s3c-usbgadget s3c-usbgadget: LATE suspend
+<7>{0}[  136.539518] xmm_modem xmm_modem: LATE suspend, may wakeup
+<7>{0}[  136.539542] platform s3c64xx-rtc: LATE suspend
+<7>{0}[  136.539565] s3c2410-wdt s3c2410-wdt: LATE suspend
+<7>{0}[  136.539588] s3c-csis s3c-csis.0: LATE suspend
+<7>{0}[  136.539610] platform s5p-mfc-r: LATE suspend
+<7>{0}[  136.539633] platform s5p-mfc-l: LATE suspend
+<7>{0}[  136.539656] s3c-mfc s3c-mfc: LATE suspend
+<7>{0}[  136.539678] s3c-fimc s3c-fimc.3: LATE suspend
+<7>{0}[  136.539701] s3c-fimc s3c-fimc.2: LATE suspend
+<7>{0}[  136.539723] s3c-fimc s3c-fimc.1: LATE suspend
+<7>{0}[  136.539746] s3c-fimc s3c-fimc.0: LATE suspend
+<7>{0}[  136.539769] s5p-tvout-hpd s5p-tvout-hpd: LATE suspend
+<7>{0}[  136.539793] platform s5p-tvout-cec: LATE suspend
+<7>{0}[  136.539815] s5p-tvout s5p-tvout: LATE suspend
+<7>{0}[  136.539839] mx-spdif mx-spdif: LATE suspend
+<7>{0}[  136.539862] samsung-spdif samsung-spdif: LATE suspend
+<7>{0}[  136.539885] mx-audio mx-audio: LATE suspend
+<7>{0}[  136.539908] platform samsung-audio-idma: LATE suspend
+<7>{0}[  136.539932] samsung-audio samsung-audio: LATE suspend
+<7>{0}[  136.539956] samsung-pcm samsung-pcm.1: LATE suspend
+<7>{0}[  136.539979] samsung-i2s samsung-i2s.0: LATE suspend
+<7>{0}[  136.540003] dw_mmc dw_mmc: LATE suspend
+<7>{0}[  136.540084] s5p-mipi-dsim s5p-mipi-dsim.0: LATE suspend
+<7>{0}[  136.540111] s3cfb s3cfb.0: LATE suspend
+<7>{0}[  136.540135] reg-fixed-voltage reg-fixed-voltage.10: LATE suspend
+<7>{0}[  136.540160] reg-fixed-voltage reg-fixed-voltage.9: LATE suspend
+<7>{0}[  136.540185] reg-fixed-voltage reg-fixed-voltage.8: LATE suspend
+<7>{0}[  136.540209] reg-fixed-voltage reg-fixed-voltage.7: LATE suspend
+<7>{0}[  136.540234] reg-fixed-voltage reg-fixed-voltage.6: LATE suspend
+<7>{0}[  136.540259] reg-fixed-voltage reg-fixed-voltage.5: LATE suspend
+<7>{0}[  136.540284] reg-fixed-voltage reg-fixed-voltage.4: LATE suspend
+<7>{0}[  136.540308] reg-fixed-voltage reg-fixed-voltage.3: LATE suspend
+<7>{0}[  136.540333] reg-fixed-voltage reg-fixed-voltage.2: LATE suspend
+<7>{0}[  136.540358] reg-fixed-voltage reg-fixed-voltage.1: LATE suspend
+<7>{0}[  136.540382] reg-fixed-voltage reg-fixed-voltage.0: LATE suspend
+<7>{0}[  136.540407] gpio-keys gpio-keys.0: LATE suspend, may wakeup
+<7>{0}[  136.540432] i2c-gpio i2c-gpio.13: LATE suspend
+<7>{0}[  136.540455] i2c-gpio i2c-gpio.12: LATE suspend
+<7>{0}[  136.540478] i2c-gpio i2c-gpio.11: LATE suspend
+<7>{0}[  136.540500] i2c-gpio i2c-gpio.10: LATE suspend
+<7>{0}[  136.540523] i2c-gpio i2c-gpio.9: LATE suspend
+<7>{0}[  136.540546] i2c-gpio i2c-gpio.8: LATE suspend
+<7>{0}[  136.540568] s3c-i2c s3c2440-i2c.7: LATE suspend
+<7>{0}[  136.540592] s3c-i2c s3c2440-i2c.6: LATE suspend
+<7>{0}[  136.540616] s3c-i2c s3c2440-i2c.5: LATE suspend
+<7>{0}[  136.540639] s3c-i2c s3c2440-i2c.4: LATE suspend
+<7>{0}[  136.540662] s3c-i2c s3c2440-i2c.3: LATE suspend
+<7>{0}[  136.540684] s3c-i2c s3c2440-i2c.1: LATE suspend
+<7>{0}[  136.540708] s3c-i2c s3c2440-i2c.0: LATE suspend
+<7>{0}[  136.540732] samsung-pd samsung-pd.8: LATE suspend
+<7>{0}[  136.540755] samsung-pd samsung-pd.7: LATE suspend
+<7>{0}[  136.540779] samsung-pd samsung-pd.6: LATE suspend
+<7>{0}[  136.540802] samsung-pd samsung-pd.4: LATE suspend
+<7>{0}[  136.540825] samsung-pd samsung-pd.5: LATE suspend
+<7>{0}[  136.540848] samsung-pd samsung-pd.2: LATE suspend
+<7>{0}[  136.540871] samsung-pd samsung-pd.1: LATE suspend
+<7>{0}[  136.540894] samsung-pd samsung-pd.0: LATE suspend
+<7>{0}[  136.540917] wakeup_assist wakeup_assist.0: LATE suspend
+<7>{0}[  136.540942] pwm-backlight pwm-backlight: LATE suspend
+<7>{0}[  136.540965] s3c24xx-pwm s3c24xx-pwm.0: LATE suspend
+<7>{0}[  136.541000] platform reg-dummy: LATE suspend
+<7>{0}[  136.541023] power power.0: LATE suspend
+<6>{0}[  136.541043] power_suspend_late return 0
+<6>{0}[  136.544025] PM: late suspend of devices complete after 10.996 msecs
+<4>{0}[  136.550657] Disabling non-boot CPUs ...
+<7>{0}[  136.554822] power power.0: EARLY resume
+<7>{0}[  136.554854] platform reg-dummy: EARLY resume
+<7>{0}[  136.554892] s3c24xx-pwm s3c24xx-pwm.0: EARLY resume
+<7>{0}[  136.554918] pwm-backlight pwm-backlight: EARLY resume
+<7>{0}[  136.554942] wakeup_assist wakeup_assist.0: EARLY resume
+<7>{0}[  136.554967] samsung-pd samsung-pd.0: EARLY resume
+<7>{0}[  136.554991] samsung-pd samsung-pd.1: EARLY resume
+<7>{0}[  136.555014] samsung-pd samsung-pd.2: EARLY resume
+<7>{0}[  136.555038] samsung-pd samsung-pd.5: EARLY resume
+<7>{0}[  136.555061] samsung-pd samsung-pd.4: EARLY resume
+<7>{0}[  136.555160] samsung-pd samsung-pd.6: EARLY resume
+<7>{0}[  136.555187] samsung-pd samsung-pd.7: EARLY resume
+<7>{0}[  136.555211] samsung-pd samsung-pd.8: EARLY resume
+<7>{0}[  136.555235] s3c-i2c s3c2440-i2c.0: EARLY resume
+<7>{0}[  136.555259] s3c-i2c s3c2440-i2c.1: EARLY resume
+<7>{0}[  136.555282] s3c-i2c s3c2440-i2c.3: EARLY resume
+<7>{0}[  136.555305] s3c-i2c s3c2440-i2c.4: EARLY resume
+<7>{0}[  136.555328] s3c-i2c s3c2440-i2c.5: EARLY resume
+<7>{0}[  136.555351] s3c-i2c s3c2440-i2c.6: EARLY resume
+<7>{0}[  136.555374] s3c-i2c s3c2440-i2c.7: EARLY resume
+<7>{0}[  136.555398] i2c-gpio i2c-gpio.8: EARLY resume
+<7>{0}[  136.555421] i2c-gpio i2c-gpio.9: EARLY resume
+<7>{0}[  136.555443] i2c-gpio i2c-gpio.10: EARLY resume
+<7>{0}[  136.555466] i2c-gpio i2c-gpio.11: EARLY resume
+<7>{0}[  136.555489] i2c-gpio i2c-gpio.12: EARLY resume
+<7>{0}[  136.555511] i2c-gpio i2c-gpio.13: EARLY resume
+<7>{0}[  136.555534] gpio-keys gpio-keys.0: EARLY resume
+<7>{0}[  136.555559] reg-fixed-voltage reg-fixed-voltage.0: EARLY resume
+<7>{0}[  136.555584] reg-fixed-voltage reg-fixed-voltage.1: EARLY resume
+<7>{0}[  136.555609] reg-fixed-voltage reg-fixed-voltage.2: EARLY resume
+<7>{0}[  136.555633] reg-fixed-voltage reg-fixed-voltage.3: EARLY resume
+<7>{0}[  136.555658] reg-fixed-voltage reg-fixed-voltage.4: EARLY resume
+<7>{0}[  136.555683] reg-fixed-voltage reg-fixed-voltage.5: EARLY resume
+<7>{0}[  136.555707] reg-fixed-voltage reg-fixed-voltage.6: EARLY resume
+<7>{0}[  136.555732] reg-fixed-voltage reg-fixed-voltage.7: EARLY resume
+<7>{0}[  136.555757] reg-fixed-voltage reg-fixed-voltage.8: EARLY resume
+<7>{0}[  136.555781] reg-fixed-voltage reg-fixed-voltage.9: EARLY resume
+<7>{0}[  136.555806] reg-fixed-voltage reg-fixed-voltage.10: EARLY resume
+<7>{0}[  136.555831] s3cfb s3cfb.0: EARLY resume
+<7>{0}[  136.555854] s5p-mipi-dsim s5p-mipi-dsim.0: EARLY resume
+<7>{0}[  136.555879] dw_mmc dw_mmc: EARLY resume
+<7>{0}[  136.555902] samsung-i2s samsung-i2s.0: EARLY resume
+<7>{0}[  136.555926] samsung-pcm samsung-pcm.1: EARLY resume
+<7>{0}[  136.555950] samsung-audio samsung-audio: EARLY resume
+<7>{0}[  136.555974] platform samsung-audio-idma: EARLY resume
+<7>{0}[  136.555997] mx-audio mx-audio: EARLY resume
+<7>{0}[  136.556021] samsung-spdif samsung-spdif: EARLY resume
+<7>{0}[  136.556044] mx-spdif mx-spdif: EARLY resume
+<7>{0}[  136.556067] s5p-tvout s5p-tvout: EARLY resume
+<7>{0}[  136.556091] platform s5p-tvout-cec: EARLY resume
+<7>{0}[  136.556114] s5p-tvout-hpd s5p-tvout-hpd: EARLY resume
+<7>{0}[  136.556138] s3c-fimc s3c-fimc.0: EARLY resume
+<7>{0}[  136.556161] s3c-fimc s3c-fimc.1: EARLY resume
+<7>{0}[  136.556184] s3c-fimc s3c-fimc.2: EARLY resume
+<7>{0}[  136.556207] s3c-fimc s3c-fimc.3: EARLY resume
+<7>{0}[  136.556230] s3c-mfc s3c-mfc: EARLY resume
+<7>{0}[  136.556253] platform s5p-mfc-l: EARLY resume
+<7>{0}[  136.556276] platform s5p-mfc-r: EARLY resume
+<7>{0}[  136.556299] s3c-csis s3c-csis.0: EARLY resume
+<7>{0}[  136.556322] s3c2410-wdt s3c2410-wdt: EARLY resume
+<7>{0}[  136.556346] platform s3c64xx-rtc: EARLY resume
+<7>{0}[  136.556369] xmm_modem xmm_modem: EARLY resume
+<7>{0}[  136.556393] s3c-usbgadget s3c-usbgadget: EARLY resume
+<7>{0}[  136.556417] s5p-fimg2d s5p-fimg2d: EARLY resume
+<7>{0}[  136.556440] exynos-sysmmu exynos-sysmmu.15: EARLY resume
+<7>{0}[  136.556465] usb_detect usb_detect: EARLY resume
+<7>{0}[  136.556489] s3c-adc exynos4412-adc: EARLY resume
+<7>{0}[  136.556513] s3c-hwmon s3c-hwmon: EARLY resume
+<7>{0}[  136.556536] ublox-gps ublox-gps: EARLY resume
+<7>{0}[  136.556559] s5p-jpeg m03x-jpeg: EARLY resume
+<7>{0}[  136.556583] switch-gpio switch-gpio: EARLY resume
+<7>{0}[  136.556606] bt_ctr bt_ctr: EARLY resume
+<7>{0}[  136.556629] exynos-cpufreq exynos4412-cpufreq: EARLY resume
+<7>{0}[  136.556654] exynos4-ppmu exynos4-ppmu.4: EARLY resume
+<7>{0}[  136.556678] exynos4-ppmu exynos4-ppmu.5: EARLY resume
+<7>{0}[  136.556701] exynos4-ppmu exynos4-ppmu.3: EARLY resume
+<7>{0}[  136.556725] exynos-busfreq exynos-busfreq: EARLY resume
+<7>{0}[  136.556749] exynos4-tmu exynos4x12-tmu: EARLY resume
+<7>{0}[  136.556773] s3c24xx-pwm s3c24xx-pwm.1: EARLY resume
+<7>{0}[  136.556797] s5p-rotator s5p-rotator: EARLY resume
+<7>{0}[  136.556820] m03x-battery m03x-battery: EARLY resume
+<7>{0}[  136.556845] ram_console ram_console: EARLY resume
+<7>{0}[  136.556868] logger logger: EARLY resume
+<7>{0}[  136.556891] s3c-pl330 s3c-pl330.0: EARLY resume
+<7>{0}[  136.556914] s3c-pl330 s3c-pl330.1: EARLY resume
+<7>{0}[  136.556937] s3c-pl330 s3c-pl330.2: EARLY resume
+<7>{0}[  136.556960] arm-pmu arm-pmu.0: EARLY resume
+<7>{0}[  136.556984] s5pv210-uart s5pv210-uart.0: EARLY resume
+<7>{0}[  136.557007] s5pv210-uart s5pv210-uart.1: EARLY resume
+<7>{0}[  136.557031] s5pv210-uart s5pv210-uart.2: EARLY resume
+<7>{0}[  136.557054] s5pv210-uart s5pv210-uart.3: EARLY resume
+<7>{0}[  136.557154] i2c i2c-8: EARLY resume
+<7>{0}[  136.557176] s5p_mhl 8-003b: EARLY resume
+<7>{0}[  136.557198] s5p_mhl 8-003f: EARLY resume
+<7>{0}[  136.557220] s5p_mhl 8-004b: EARLY resume
+<7>{0}[  136.557242] s5p_mhl 8-0066: EARLY resume
+<7>{0}[  136.557265] i2c i2c-9: EARLY resume
+<7>{0}[  136.557287] lis3dh 9-0019: EARLY resume
+<7>{0}[  136.557308] i2c i2c-10: EARLY resume
+<7>{0}[  136.557330] akm8975 10-000c: EARLY resume
+<7>{0}[  136.557352] i2c i2c-11: EARLY resume
+<7>{0}[  136.557374] l3g4200d 11-0069: EARLY resume
+<7>{0}[  136.557396] i2c i2c-12: EARLY resume
+<7>{0}[  136.557418] gp2ap020a00f 12-0039: EARLY resume
+<7>{0}[  136.557441] i2c i2c-13: EARLY resume
+<7>{0}[  136.557463] bu26507-led 13-0074: EARLY resume
+<7>{0}[  136.557486] bu26507-led bu26507-led.0: EARLY resume
+<7>{0}[  136.557510] bu26507-led bu26507-led.1: EARLY resume
+<7>{0}[  136.557534] bu26507-led bu26507-led.2: EARLY resume
+<7>{0}[  136.557557] bu26507-led bu26507-led.3: EARLY resume
+<7>{0}[  136.557581] bu26507-led bu26507-led.4: EARLY resume
+<7>{0}[  136.557604] bu26507-led bu26507-led.5: EARLY resume
+<7>{0}[  136.557628] bu26507-led bu26507-led.6: EARLY resume
+<7>{0}[  136.557651] bu26507-led bu26507-led.7: EARLY resume
+<7>{0}[  136.557675] bu26507-led bu26507-led.8: EARLY resume
+<7>{0}[  136.557698] bu26507-led bu26507-led.9: EARLY resume
+<7>{0}[  136.557722] bu26507-led bu26507-pwm: EARLY resume
+<7>{0}[  136.557745] bu26507-led bu26507-slope: EARLY resume
+<7>{0}[  136.557769] i2c i2c-0: EARLY resume
+<7>{0}[  136.557791] wm8994 0-001a: EARLY resume
+<7>{0}[  136.557813] a1028_soc 0-003e: EARLY resume
+<7>{0}[  136.557836] i2c i2c-1: EARLY resume
+<7>{0}[  136.557858] s5p_ddc 1-003a: EARLY resume
+<7>{0}[  136.557880] i2c i2c-3: EARLY resume
+<7>{0}[  136.557902] max77686 3-0009: EARLY resume
+<7>{0}[  136.557924] dummy 3-0006: EARLY resume
+<7>{0}[  136.557947] max77686-pmic max77686-pmic: EARLY resume
+<7>{0}[  136.558180] max77686-rtc max77686-rtc: EARLY resume
+<7>{0}[  136.558204] i2c i2c-4: EARLY resume
+<7>{0}[  136.558226] max77665 4-0066: EARLY resume
+<7>{0}[  136.558248] dummy 4-0048: EARLY resume
+<7>{0}[  136.558270] platform max77665-pmic: EARLY resume
+<7>{0}[  136.558294] max77665-charger max77665-charger: EARLY resume
+<7>{0}[  136.558319] max77665-haptic max77665-haptic: EARLY resume
+<7>{0}[  136.558344] torch-led torch-led: EARLY resume
+<7>{0}[  136.558367] max77665-safeout max77665-safeout: EARLY resume
+<7>{0}[  136.558427] i2c i2c-5: EARLY resume
+<7>{0}[  136.558449] bq27541 5-0055: EARLY resume
+<7>{0}[  136.558471] i2c i2c-6: EARLY resume
+<7>{0}[  136.558493] atmel_mxt_ts 6-004a: EARLY resume
+<7>{0}[  136.558515] i2c i2c-7: EARLY resume
+<7>{0}[  136.558537] M6MO 7-001f: EARLY resume
+<7>{0}[  136.558559] ov7690 7-0021: EARLY resume
+<7>{0}[  136.559049] input input0: EARLY type resume
+<7>{0}[  136.559078] s3c-sdhci s3c-sdhci.3: EARLY resume
+<7>{0}[  136.559102] bcm4329_wlan bcm4329_wlan: EARLY resume
+<7>{0}[  136.559217] mali_dev mali_dev.0: EARLY resume
+<7>{0}[  136.559523] input input1: EARLY type resume
+<7>{0}[  136.559552] input input2: EARLY type resume
+<7>{0}[  136.559580] input input3: EARLY type resume
+<7>{0}[  136.559614] input input4: EARLY type resume
+<7>{0}[  136.559638] wm8994-ldo wm8994-ldo.0: EARLY resume
+<7>{0}[  136.559668] wm8994-ldo wm8994-ldo.1: EARLY resume
+<7>{0}[  136.559697] wm8994-codec wm8994-codec: EARLY resume
+<7>{0}[  136.559721] platform wm8994-gpio: EARLY resume
+<7>{0}[  136.559750] s5p-ehci s5p-ehci: EARLY resume
+<7>{0}[  136.559900] input input5: EARLY type resume
+<7>{0}[  136.559929] input input6: EARLY type resume
+<7>{0}[  136.559958] input input7: EARLY type resume
+<7>{0}[  136.560010] alarm alarm: EARLY resume
+<7>{0}[  136.560397] snd-soc-dummy snd-soc-dummy: EARLY resume
+<7>{0}[  136.560424] samsung-i2s samsung-i2s.4: EARLY resume
+<7>{0}[  136.560449] soc-audio soc-audio.0: EARLY resume
+<7>{0}[  136.560519] spdif-dit spdif-dit: EARLY resume
+<7>{0}[  136.560542] soc-audio soc-audio.1: EARLY resume
+<7>{0}[  136.560567] mmcblk mmc0:0001: EARLY resume
+<7>{0}[  136.560825] input input8: EARLY type resume
+<7>{0}[  136.560854] usb usb1: EARLY type resume
+<7>{0}[  136.560901] usb 1-2: EARLY type resume
+<6>{0}[  136.561064] PM: early resume of devices complete after 6.266 msecs
+<6>{0}[  136.567922] max77686_irq_unmask: group=2, cur=0xf9
+<6>{0}[  136.571821] max77686_irq_unmask: group=2, cur=0xf9
+<7>{0}[  136.577071] max77686_reg_enable: id=37, reg=7f, mask=4, pattern=4
+<7>{0}[  136.577300] max77686_reg_enable: id=25, reg=59, mask=c0, pattern=80
+<7>{0}[  136.577382] max77686_reg_enable: id=24, reg=58, mask=c0, pattern=80
+<7>{0}[  136.577480] max77686_reg_enable: id=19, reg=53, mask=c0, pattern=80
+<7>{0}[  136.577565] max77686_reg_enable: id=17, reg=51, mask=c0, pattern=c0
+<7>{0}[  136.577670] max77686_reg_enable: id=11, reg=4b, mask=c0, pattern=80
+<7>{0}[  136.577785] max77686_reg_enable: id=13, reg=4d, mask=c0, pattern=80
+<7>{0}[  136.577865] max77686_reg_enable: id=10, reg=4a, mask=c0, pattern=80
+<7>{0}[  136.577943] max77686_reg_enable: id=6, reg=46, mask=c0, pattern=40
+<7>{0}[  136.578021] max77686_reg_enable: id=5, reg=45, mask=c0, pattern=40
+<7>{0}[  136.578100] max77686_reg_enable: id=3, reg=43, mask=c0, pattern=80
+<7>{0}[  136.578179] max77686_reg_enable: id=2, reg=42, mask=c0, pattern=c0
+<7>{0}[  136.578257] max77686_reg_enable: id=1, reg=41, mask=c0, pattern=40
+<7>{0}[  136.578335] max77686_reg_enable: id=0, reg=40, mask=c0, pattern=c0
+<7>{0}[  136.578414] max77686_reg_enable: id=33, reg=36, mask=3, pattern=1
+<7>{0}[  136.578492] max77686_reg_enable: id=32, reg=34, mask=3, pattern=3
+<7>{0}[  136.578570] max77686_reg_enable: id=31, reg=32, mask=3, pattern=3
+<7>{0}[  136.578648] max77686_reg_enable: id=30, reg=30, mask=3, pattern=3
+<7>{0}[  136.578726] max77686_reg_enable: id=29, reg=26, mask=30, pattern=10
+<7>{0}[  136.578804] max77686_reg_enable: id=28, reg=1c, mask=30, pattern=10
+<7>{0}[  136.578883] max77686_reg_enable: id=27, reg=12, mask=30, pattern=10
+<7>{0}[  136.578961] max77686_reg_enable: id=26, reg=10, mask=3, pattern=1
+<7>{0}[  136.581643] dw_mmc dw_mmc: resume
+<6>{0}[  136.581755] exynos4_setup_mshci_set_power : internal MMC Card ON samsung-mshc.
+<7>{0}[  136.588195] power power.0: resume
+<7>{0}[  136.588230] platform reg-dummy: resume
+<7>{0}[  136.588290] s3c24xx-pwm s3c24xx-pwm.0: resume
+<7>{0}[  136.588378] pwm-backlight pwm-backlight: resume
+<7>{0}[  136.588410] wakeup_assist wakeup_assist.0: resume
+<6>{0}[  136.589256] wakeup wake lock: event0-1778
+<6>{0}[  136.592639] M03X Wakeup By: BLUETOOTH_WAKE KEY_HOME_WAKE
+<6>{0}[  136.598696] mmc0: FIFO WMARK FOR RX 0x80 WX 0x40. ###########
+<7>{0}[  136.604492] samsung-pd samsung-pd.0: resume
+<7>{0}[  136.604530] samsung-pd samsung-pd.1: resume
+<7>{0}[  136.604563] samsung-pd samsung-pd.2: resume
+<7>{0}[  136.604595] samsung-pd samsung-pd.5: resume
+<7>{0}[  136.604628] samsung-pd samsung-pd.4: resume
+<7>{0}[  136.604660] samsung-pd samsung-pd.6: resume
+<7>{0}[  136.604691] samsung-pd samsung-pd.7: resume
+<7>{0}[  136.604723] samsung-pd samsung-pd.8: resume
+<7>{0}[  136.604755] s3c-i2c s3c2440-i2c.0: resume
+<7>{0}[  136.604856] s3c-i2c s3c2440-i2c.1: resume
+<7>{0}[  136.604953] s3c-i2c s3c2440-i2c.3: resume
+<7>{0}[  136.605048] s3c-i2c s3c2440-i2c.4: resume
+<7>{0}[  136.605202] s3c-i2c s3c2440-i2c.5: resume
+<7>{0}[  136.605301] s3c-i2c s3c2440-i2c.6: resume
+<7>{0}[  136.605397] s3c-i2c s3c2440-i2c.7: resume
+<7>{0}[  136.605492] i2c-gpio i2c-gpio.8: resume
+<7>{0}[  136.605525] i2c-gpio i2c-gpio.9: resume
+<7>{0}[  136.605556] i2c-gpio i2c-gpio.10: resume
+<7>{0}[  136.605586] i2c-gpio i2c-gpio.11: resume
+<7>{0}[  136.605618] i2c-gpio i2c-gpio.12: resume
+<7>{0}[  136.605649] i2c-gpio i2c-gpio.13: resume
+<7>{0}[  136.605680] gpio-keys gpio-keys.0: resume
+<7>{0}[  136.605702] wake disabled for irq 352
+<7>{0}[  136.605734] wake disabled for irq 354
+<7>{0}[  136.605794] reg-fixed-voltage reg-fixed-voltage.0: resume
+<7>{0}[  136.605827] reg-fixed-voltage reg-fixed-voltage.1: resume
+<7>{0}[  136.605859] reg-fixed-voltage reg-fixed-voltage.2: resume
+<7>{0}[  136.605892] reg-fixed-voltage reg-fixed-voltage.3: resume
+<7>{0}[  136.605925] reg-fixed-voltage reg-fixed-voltage.4: resume
+<7>{0}[  136.605958] reg-fixed-voltage reg-fixed-voltage.5: resume
+<7>{0}[  136.605990] reg-fixed-voltage reg-fixed-voltage.6: resume
+<7>{0}[  136.606023] reg-fixed-voltage reg-fixed-voltage.7: resume
+<7>{0}[  136.606056] reg-fixed-voltage reg-fixed-voltage.8: resume
+<7>{0}[  136.606088] reg-fixed-voltage reg-fixed-voltage.9: resume
+<7>{0}[  136.606121] reg-fixed-voltage reg-fixed-voltage.10: resume
+<7>{0}[  136.606153] s3cfb s3cfb.0: resume
+<7>{0}[  136.606184] s5p-mipi-dsim s5p-mipi-dsim.0: resume
+<7>{0}[  136.606216] samsung-i2s samsung-i2s.0: resume
+<7>{0}[  136.606248] samsung-pcm samsung-pcm.1: resume
+<7>{0}[  136.606280] samsung-audio samsung-audio: resume
+<7>{0}[  136.606312] platform samsung-audio-idma: resume
+<7>{0}[  136.606343] mx-audio mx-audio: resume
+<7>{0}[  136.606374] samsung-spdif samsung-spdif: resume
+<7>{0}[  136.606405] mx-spdif mx-spdif: resume
+<7>{0}[  136.606436] s5p-tvout s5p-tvout: resume
+<7>{0}[  136.606474] platform s5p-tvout-cec: resume
+<7>{0}[  136.606506] s5p-tvout-hpd s5p-tvout-hpd: resume
+<7>{0}[  136.606539] s3c-fimc s3c-fimc.0: resume
+<7>{0}[  136.606572] s3c-fimc s3c-fimc.1: resume
+<7>{0}[  136.606603] s3c-fimc s3c-fimc.2: resume
+<7>{0}[  136.606634] s3c-fimc s3c-fimc.3: resume
+<7>{0}[  136.606752] s3c-mfc s3c-mfc: resume
+<7>{0}[  136.606785] platform s5p-mfc-l: resume
+<7>{0}[  136.606816] platform s5p-mfc-r: resume
+<7>{0}[  136.606847] s3c-csis s3c-csis.0: resume
+<7>{0}[  136.606879] s3c2410-wdt s3c2410-wdt: resume
+<7>{0}[  136.606941] platform s3c64xx-rtc: resume
+<7>{0}[  136.606973] xmm_modem xmm_modem: resume
+<7>{0}[  136.606993] wake disabled for irq 381
+<7>{0}[  136.607012] wake disabled for irq 376
+<7>{0}[  136.607045] s3c-usbgadget s3c-usbgadget: resume
+<7>{0}[  136.607088] s5p-fimg2d s5p-fimg2d: resume
+<7>{0}[  136.607120] exynos-sysmmu exynos-sysmmu.15: resume
+<7>{0}[  136.607153] usb_detect usb_detect: resume
+<7>{0}[  136.607185] s3c-adc exynos4412-adc: resume
+<7>{0}[  136.607234] s3c-hwmon s3c-hwmon: resume
+<7>{0}[  136.607265] ublox-gps ublox-gps: resume
+<7>{0}[  136.607297] s5p-jpeg m03x-jpeg: resume
+<7>{0}[  136.607975] switch-gpio switch-gpio: resume
+<7>{0}[  136.608019] bt_ctr bt_ctr: resume
+<7>{0}[  136.608051] exynos-cpufreq exynos4412-cpufreq: resume
+<7>{0}[  136.608084] exynos4-ppmu exynos4-ppmu.4: resume
+<7>{0}[  136.608118] exynos4-ppmu exynos4-ppmu.5: resume
+<7>{0}[  136.608152] exynos4-ppmu exynos4-ppmu.3: resume
+<7>{0}[  136.608186] exynos-busfreq exynos-busfreq: resume
+<7>{0}[  136.608219] exynos4-tmu exynos4x12-tmu: resume
+<6>{0}[  136.609246] exynos4x12_tmu_initialize: triminfo reg = 0x00000032, value = 50
+<7>{0}[  136.619300] s3c24xx-pwm s3c24xx-pwm.1: resume
+<7>{0}[  136.619390] s5p-rotator s5p-rotator: resume
+<7>{0}[  136.619423] m03x-battery m03x-battery: resume
+<7>{0}[  136.619456] ram_console ram_console: resume
+<7>{0}[  136.619488] logger logger: resume
+<7>{0}[  136.619519] s3c-pl330 s3c-pl330.0: resume
+<7>{0}[  136.619550] s3c-pl330 s3c-pl330.1: resume
+<7>{0}[  136.619581] s3c-pl330 s3c-pl330.2: resume
+<7>{0}[  136.619613] arm-pmu arm-pmu.0: resume
+<7>{0}[  136.619644] s5pv210-uart s5pv210-uart.0: resume
+<7>{0}[  136.619711] s5pv210-uart s5pv210-uart.1: resume
+<7>{0}[  136.619775] s5pv210-uart s5pv210-uart.2: resume
+<7>{0}[  136.619838] s5pv210-uart s5pv210-uart.3: resume
+<7>{0}[  136.620201] i2c i2c-8: resume
+<7>{0}[  136.620235] s5p_mhl 8-003b: resume
+<7>{0}[  136.620267] s5p_mhl 8-003f: resume
+<7>{0}[  136.620299] s5p_mhl 8-004b: resume
+<7>{0}[  136.620330] s5p_mhl 8-0066: resume
+<7>{0}[  136.620361] i2c i2c-9: resume
+<7>{0}[  136.620392] lis3dh 9-0019: resume
+<7>{0}[  136.620425] i2c i2c-10: resume
+<7>{0}[  136.620455] akm8975 10-000c: resume
+<7>{0}[  136.620487] i2c i2c-11: resume
+<7>{0}[  136.620517] l3g4200d 11-0069: resume
+<7>{0}[  136.620549] i2c i2c-12: resume
+<7>{0}[  136.620580] gp2ap020a00f 12-0039: resume
+<7>{0}[  136.620612] i2c i2c-13: resume
+<7>{0}[  136.620642] bu26507-led 13-0074: resume
+<7>{0}[  136.642522] bu26507-led bu26507-led.0: resume
+<7>{0}[  136.642559] bu26507-led bu26507-led.1: resume
+<7>{0}[  136.642593] bu26507-led bu26507-led.2: resume
+<7>{0}[  136.642625] bu26507-led bu26507-led.3: resume
+<7>{0}[  136.642657] bu26507-led bu26507-led.4: resume
+<7>{0}[  136.642689] bu26507-led bu26507-led.5: resume
+<7>{0}[  136.642720] bu26507-led bu26507-led.6: resume
+<7>{0}[  136.642752] bu26507-led bu26507-led.7: resume
+<7>{0}[  136.642784] bu26507-led bu26507-led.8: resume
+<7>{0}[  136.642815] bu26507-led bu26507-led.9: resume
+<7>{0}[  136.642846] bu26507-led bu26507-pwm: resume
+<7>{0}[  136.642878] bu26507-led bu26507-slope: resume
+<7>{0}[  136.642910] i2c i2c-0: resume
+<7>{0}[  136.642940] wm8994 0-001a: resume
+<7>{0}[  136.655157] a1028_soc 0-003e: resume
+<7>{0}[  136.655195] i2c i2c-1: resume
+<7>{0}[  136.655227] s5p_ddc 1-003a: resume
+<7>{0}[  136.655259] i2c i2c-3: resume
+<7>{0}[  136.655290] max77686 3-0009: resume
+<7>{0}[  136.655311] wake disabled for irq 356
+<7>{0}[  136.656322] dummy 3-0006: resume
+<7>{0}[  136.656358] max77686-pmic max77686-pmic: resume
+<7>{0}[  136.656876] max77686-rtc max77686-rtc: resume
+<7>{0}[  136.656909] i2c i2c-4: resume
+<7>{0}[  136.656941] max77665 4-0066: resume
+<7>{0}[  136.656960] wake disabled for irq 357
+<7>{0}[  136.657295] dummy 4-0048: resume
+<7>{0}[  136.657330] platform max77665-pmic: resume
+<7>{0}[  136.657364] max77665-charger max77665-charger: resume
+<6>{0}[  136.657383] max77665-charger max77665-charger: max77665_resume
+<7>{0}[  136.662483] max77665-haptic max77665-haptic: resume
+<6>{0}[  136.662551] [VIB] DEV NAME max77665-haptic 100000000
+<7>{0}[  136.667731] torch-led torch-led: resume
+<7>{0}[  136.667767] max77665-safeout max77665-safeout: resume
+<7>{0}[  136.667882] i2c i2c-5: resume
+<7>{0}[  136.667913] bq27541 5-0055: resume
+<7>{0}[  136.667932] wake disabled for irq 369
+<7>{0}[  136.691195] i2c i2c-6: resume
+<7>{0}[  136.691229] atmel_mxt_ts 6-004a: resume
+<7>{0}[  136.691262] i2c i2c-7: resume
+<7>{0}[  136.691293] M6MO 7-001f: resume
+<7>{0}[  136.691324] ov7690 7-0021: resume
+<7>{0}[  136.692482] input input0: type resume
+<7>{0}[  136.693566] rfkill rfkill0: legacy class resume
+<7>{0}[  136.693605] s3c-sdhci s3c-sdhci.3: resume
+<7>{0}[  136.693762] bcm4329_wlan bcm4329_wlan: resume
+<7>{0}[  136.693841] backlight pwm-backlight: legacy class resume
+<7>{0}[  136.694048] mali_dev mali_dev.0: resume
+<7>{0}[  136.694753] input input1: type resume
+<7>{0}[  136.694811] input input2: type resume
+<7>{0}[  136.694866] input input3: type resume
+<7>{0}[  136.694932] input input4: type resume
+<7>{0}[  136.694974] wm8994-ldo wm8994-ldo.0: resume
+<7>{0}[  136.695021] wm8994-ldo wm8994-ldo.1: resume
+<7>{0}[  136.695067] wm8994-codec wm8994-codec: resume
+<7>{0}[  136.695335] platform wm8994-gpio: resume
+<7>{0}[  136.695385] s5p-ehci s5p-ehci: resume
+<7>{0}[  136.696115] max77686_reg_enable: id=15, reg=4f, mask=c0, pattern=40
+<7>{0}[  136.696957] max77686_reg_enable: id=14, reg=4e, mask=c0, pattern=40
+<7>{0}[  136.697675] usb usb1: type resume
+<7>{0}[  136.698475] usb 1-2: type resume
+<7>{0}[  136.699874] input input5: type resume
+<7>{0}[  136.700036] input input6: type resume
+<7>{0}[  136.700204] input input7: type resume
+<7>{0}[  136.700399] rtc rtc0: legacy class resume
+<7>{0}[  136.725824] max77686_rtc_read_time: 112/6/7 4:12:31(6)
+<6>{0}[  136.725908] rtc_resume @ (2012-07-07 12:12:31) Shanghai
+<6>{0}[  136.730243] rtc_resume: Suspend 4.033 seconds, total 4.033/140.763 (1/35) seconds, 1 times
+<7>{0}[  136.738846] alarm alarm: resume
+<7>{0}[  136.955994] leds mmc1::: legacy class resume
+<7>{0}[  136.956046] leds bu26507-led0: legacy class resume
+<7>{0}[  136.956081] leds bu26507-led1: legacy class resume
+<7>{0}[  136.956115] leds bu26507-led2: legacy class resume
+<7>{0}[  136.956149] leds bu26507-led3: legacy class resume
+<7>{0}[  136.956182] leds bu26507-led4: legacy class resume
+<7>{0}[  136.956215] leds bu26507-led5: legacy class resume
+<7>{0}[  136.956248] leds bu26507-led6: legacy class resume
+<7>{0}[  136.956281] leds bu26507-led7: legacy class resume
+<7>{0}[  136.956314] leds bu26507-led8: legacy class resume
+<7>{0}[  136.956346] leds bu26507-led9: legacy class resume
+<7>{0}[  136.956379] leds bu26507-pwm: legacy class resume
+<7>{0}[  136.956413] leds bu26507-slope: legacy class resume
+<7>{0}[  136.956446] leds torch_led: legacy class resume
+<7>{0}[  136.956657] snd-soc-dummy snd-soc-dummy: resume
+<7>{0}[  136.956690] samsung-i2s samsung-i2s.4: resume
+<7>{0}[  136.956722] soc-audio soc-audio.0: resume
+<7>{0}[  136.956873] spdif-dit spdif-dit: resume
+<7>{0}[  136.956905] soc-audio soc-audio.1: resume
+<7>{0}[  136.956945] mmcblk mmc0:0001: resume
+<7>{0}[  136.958378] input input8: type resume
+<6>{0}[  136.958570] PM: resume of devices complete after 379.449 msecs
+<7>{0}[  136.963747] usb 1-2: completing type resume
+<7>{0}[  136.963817] usb usb1: completing type resume
+<7>{0}[  136.963856] input input8: completing type resume
+<7>{0}[  136.964285] mmcblk mmc0:0001: completing resume
+<7>{0}[  136.964313] soc-audio soc-audio.1: completing resume
+<7>{0}[  136.964341] spdif-dit spdif-dit: completing resume
+<7>{0}[  136.964448] soc-audio soc-audio.0: completing resume
+<7>{0}[  136.964476] samsung-i2s samsung-i2s.4: completing resume
+<7>{0}[  136.964505] snd-soc-dummy snd-soc-dummy: completing resume
+<7>{0}[  136.965068] alarm alarm: completing resume
+<7>{0}[  136.965202] input input7: completing type resume
+<7>{0}[  136.965243] input input6: completing type resume
+<7>{0}[  136.965282] input input5: completing type resume
+<7>{0}[  136.965529] s5p-ehci s5p-ehci: completing resume
+<7>{0}[  136.965568] platform wm8994-gpio: completing resume
+<7>{0}[  136.965596] wm8994-codec wm8994-codec: completing resume
+<7>{0}[  136.965636] wm8994-ldo wm8994-ldo.1: completing resume
+<7>{0}[  136.965675] wm8994-ldo wm8994-ldo.0: completing resume
+<7>{0}[  136.965703] input input4: completing type resume
+<7>{0}[  136.965750] input input3: completing type resume
+<7>{0}[  136.965788] input input2: completing type resume
+<7>{0}[  136.965826] input input1: completing type resume
+<7>{0}[  136.966347] mali_dev mali_dev.0: completing resume
+<7>{0}[  136.966538] bcm4329_wlan bcm4329_wlan: completing resume
+<7>{0}[  136.966567] s3c-sdhci s3c-sdhci.3: completing resume
+<7>{0}[  136.966606] input input0: completing type resume
+<7>{0}[  136.967472] ov7690 7-0021: completing resume
+<7>{0}[  136.967500] M6MO 7-001f: completing resume
+<7>{0}[  136.967527] i2c i2c-7: completing resume
+<7>{0}[  136.967554] atmel_mxt_ts 6-004a: completing resume
+<7>{0}[  136.967582] i2c i2c-6: completing resume
+<7>{0}[  136.967608] bq27541 5-0055: completing resume
+<7>{0}[  136.967636] i2c i2c-5: completing resume
+<7>{0}[  136.967725] max77665-safeout max77665-safeout: completing resume
+<7>{0}[  136.967756] torch-led torch-led: completing resume
+<7>{0}[  136.967784] max77665-haptic max77665-haptic: completing resume
+<7>{0}[  136.967815] max77665-charger max77665-charger: completing resume
+<7>{0}[  136.967845] platform max77665-pmic: completing resume
+<7>{0}[  136.967873] dummy 4-0048: completing resume
+<7>{0}[  136.967901] max77665 4-0066: completing resume
+<7>{0}[  136.967928] i2c i2c-4: completing resume
+<7>{0}[  136.967956] max77686-rtc max77686-rtc: completing resume
+<7>{0}[  136.968351] max77686-pmic max77686-pmic: completing resume
+<7>{0}[  136.968380] dummy 3-0006: completing resume
+<7>{0}[  136.968408] max77686 3-0009: completing resume
+<7>{0}[  136.968435] i2c i2c-3: completing resume
+<7>{0}[  136.968462] s5p_ddc 1-003a: completing resume
+<7>{0}[  136.968490] i2c i2c-1: completing resume
+<7>{0}[  136.968517] a1028_soc 0-003e: completing resume
+<7>{0}[  136.968545] wm8994 0-001a: completing resume
+<7>{0}[  136.968572] i2c i2c-0: completing resume
+<7>{0}[  136.968600] bu26507-led bu26507-slope: completing resume
+<7>{0}[  136.968629] bu26507-led bu26507-pwm: completing resume
+<7>{0}[  136.968657] bu26507-led bu26507-led.9: completing resume
+<7>{0}[  136.968686] bu26507-led bu26507-led.8: completing resume
+<7>{0}[  136.968715] bu26507-led bu26507-led.7: completing resume
+<7>{0}[  136.968743] bu26507-led bu26507-led.6: completing resume
+<7>{0}[  136.968772] bu26507-led bu26507-led.5: completing resume
+<7>{0}[  136.968801] bu26507-led bu26507-led.4: completing resume
+<7>{0}[  136.968830] bu26507-led bu26507-led.3: completing resume
+<7>{0}[  136.968858] bu26507-led bu26507-led.2: completing resume
+<7>{0}[  136.968887] bu26507-led bu26507-led.1: completing resume
+<7>{0}[  136.968916] bu26507-led bu26507-led.0: completing resume
+<7>{0}[  136.968945] bu26507-led 13-0074: completing resume
+<7>{0}[  136.968973] i2c i2c-13: completing resume
+<7>{0}[  136.969001] gp2ap020a00f 12-0039: completing resume
+<7>{0}[  136.969029] i2c i2c-12: completing resume
+<7>{0}[  136.969056] l3g4200d 11-0069: completing resume
+<7>{0}[  136.969084] i2c i2c-11: completing resume
+<7>{0}[  136.969112] akm8975 10-000c: completing resume
+<7>{0}[  136.969139] i2c i2c-10: completing resume
+<7>{0}[  136.969167] lis3dh 9-0019: completing resume
+<7>{0}[  136.969195] i2c i2c-9: completing resume
+<7>{0}[  136.969222] s5p_mhl 8-0066: completing resume
+<7>{0}[  136.969249] s5p_mhl 8-004b: completing resume
+<7>{0}[  136.969276] s5p_mhl 8-003f: completing resume
+<7>{0}[  136.969303] s5p_mhl 8-003b: completing resume
+<7>{0}[  136.969331] i2c i2c-8: completing resume
+<7>{0}[  136.969490] s5pv210-uart s5pv210-uart.3: completing resume
+<7>{0}[  136.969520] s5pv210-uart s5pv210-uart.2: completing resume
+<7>{0}[  136.969549] s5pv210-uart s5pv210-uart.1: completing resume
+<7>{0}[  136.969577] s5pv210-uart s5pv210-uart.0: completing resume
+<7>{0}[  136.969607] arm-pmu arm-pmu.0: completing resume
+<7>{0}[  136.969635] s3c-pl330 s3c-pl330.2: completing resume
+<7>{0}[  136.969663] s3c-pl330 s3c-pl330.1: completing resume
+<7>{0}[  136.969691] s3c-pl330 s3c-pl330.0: completing resume
+<7>{0}[  136.969720] logger logger: completing resume
+<7>{0}[  136.969747] ram_console ram_console: completing resume
+<7>{0}[  136.969776] m03x-battery m03x-battery: completing resume
+<7>{0}[  136.969806] s5p-rotator s5p-rotator: completing resume
+<7>{0}[  136.969835] s3c24xx-pwm s3c24xx-pwm.1: completing resume
+<7>{0}[  136.969865] exynos4-tmu exynos4x12-tmu: completing resume
+<7>{0}[  136.969894] exynos-busfreq exynos-busfreq: completing resume
+<7>{0}[  136.969924] exynos4-ppmu exynos4-ppmu.3: completing resume
+<7>{0}[  136.969953] exynos4-ppmu exynos4-ppmu.5: completing resume
+<7>{0}[  136.969982] exynos4-ppmu exynos4-ppmu.4: completing resume
+<7>{0}[  136.970011] exynos-cpufreq exynos4412-cpufreq: completing resume
+<7>{0}[  136.970041] bt_ctr bt_ctr: completing resume
+<7>{0}[  136.970125] switch-gpio switch-gpio: completing resume
+<7>{0}[  136.970159] s5p-jpeg m03x-jpeg: completing resume
+<7>{0}[  136.970188] ublox-gps ublox-gps: completing resume
+<7>{0}[  136.970218] s3c-hwmon s3c-hwmon: completing resume
+<7>{0}[  136.970247] s3c-adc exynos4412-adc: completing resume
+<7>{0}[  136.970275] usb_detect usb_detect: completing resume
+<7>{0}[  136.970305] exynos-sysmmu exynos-sysmmu.15: completing resume
+<7>{0}[  136.970335] s5p-fimg2d s5p-fimg2d: completing resume
+<7>{0}[  136.970363] s3c-usbgadget s3c-usbgadget: completing resume
+<7>{0}[  136.970392] xmm_modem xmm_modem: completing resume
+<7>{0}[  136.970421] platform s3c64xx-rtc: completing resume
+<7>{0}[  136.970449] s3c2410-wdt s3c2410-wdt: completing resume
+<7>{0}[  136.970478] s3c-csis s3c-csis.0: completing resume
+<7>{0}[  136.970506] platform s5p-mfc-r: completing resume
+<7>{0}[  136.970534] platform s5p-mfc-l: completing resume
+<7>{0}[  136.970562] s3c-mfc s3c-mfc: completing resume
+<7>{0}[  136.970591] s3c-fimc s3c-fimc.3: completing resume
+<7>{0}[  136.970619] s3c-fimc s3c-fimc.2: completing resume
+<7>{0}[  136.970647] s3c-fimc s3c-fimc.1: completing resume
+<7>{0}[  136.970675] s3c-fimc s3c-fimc.0: completing resume
+<7>{0}[  136.970704] s5p-tvout-hpd s5p-tvout-hpd: completing resume
+<7>{0}[  136.970732] platform s5p-tvout-cec: completing resume
+<7>{0}[  136.970761] s5p-tvout s5p-tvout: completing resume
+<7>{0}[  136.970789] mx-spdif mx-spdif: completing resume
+<7>{0}[  136.970818] samsung-spdif samsung-spdif: completing resume
+<7>{0}[  136.970847] mx-audio mx-audio: completing resume
+<7>{0}[  136.970875] platform samsung-audio-idma: completing resume
+<7>{0}[  136.970905] samsung-audio samsung-audio: completing resume
+<7>{0}[  136.970934] samsung-pcm samsung-pcm.1: completing resume
+<7>{0}[  136.970963] samsung-i2s samsung-i2s.0: completing resume
+<7>{0}[  136.970991] dw_mmc dw_mmc: completing resume
+<7>{0}[  136.971019] s5p-mipi-dsim s5p-mipi-dsim.0: completing resume
+<7>{0}[  136.971048] s3cfb s3cfb.0: completing resume
+<7>{0}[  136.971076] reg-fixed-voltage reg-fixed-voltage.10: completing resume
+<7>{0}[  136.971106] reg-fixed-voltage reg-fixed-voltage.9: completing resume
+<7>{0}[  136.971136] reg-fixed-voltage reg-fixed-voltage.8: completing resume
+<7>{0}[  136.971166] reg-fixed-voltage reg-fixed-voltage.7: completing resume
+<7>{0}[  136.971196] reg-fixed-voltage reg-fixed-voltage.6: completing resume
+<7>{0}[  136.971226] reg-fixed-voltage reg-fixed-voltage.5: completing resume
+<7>{0}[  136.971255] reg-fixed-voltage reg-fixed-voltage.4: completing resume
+<7>{0}[  136.971285] reg-fixed-voltage reg-fixed-voltage.3: completing resume
+<7>{0}[  136.971315] reg-fixed-voltage reg-fixed-voltage.2: completing resume
+<7>{0}[  136.971346] reg-fixed-voltage reg-fixed-voltage.1: completing resume
+<7>{0}[  136.971375] reg-fixed-voltage reg-fixed-voltage.0: completing resume
+<7>{0}[  136.971405] gpio-keys gpio-keys.0: completing resume
+<7>{0}[  136.971434] i2c-gpio i2c-gpio.13: completing resume
+<7>{0}[  136.971462] i2c-gpio i2c-gpio.12: completing resume
+<7>{0}[  136.971490] i2c-gpio i2c-gpio.11: completing resume
+<7>{0}[  136.971518] i2c-gpio i2c-gpio.10: completing resume
+<7>{0}[  136.971546] i2c-gpio i2c-gpio.9: completing resume
+<7>{0}[  136.971574] i2c-gpio i2c-gpio.8: completing resume
+<7>{0}[  136.971603] s3c-i2c s3c2440-i2c.7: completing resume
+<7>{0}[  136.971631] s3c-i2c s3c2440-i2c.6: completing resume
+<7>{0}[  136.971660] s3c-i2c s3c2440-i2c.5: completing resume
+<7>{0}[  136.971688] s3c-i2c s3c2440-i2c.4: completing resume
+<7>{0}[  136.971716] s3c-i2c s3c2440-i2c.3: completing resume
+<7>{0}[  136.971744] s3c-i2c s3c2440-i2c.1: completing resume
+<7>{0}[  136.971773] s3c-i2c s3c2440-i2c.0: completing resume
+<7>{0}[  136.971801] samsung-pd samsung-pd.8: completing resume
+<7>{0}[  136.971830] samsung-pd samsung-pd.7: completing resume
+<7>{0}[  136.971858] samsung-pd samsung-pd.6: completing resume
+<7>{0}[  136.971887] samsung-pd samsung-pd.4: completing resume
+<7>{0}[  136.971915] samsung-pd samsung-pd.5: completing resume
+<7>{0}[  136.971944] samsung-pd samsung-pd.2: completing resume
+<7>{0}[  136.971972] samsung-pd samsung-pd.1: completing resume
+<7>{0}[  136.972001] samsung-pd samsung-pd.0: completing resume
+<7>{0}[  136.972029] wakeup_assist wakeup_assist.0: completing resume
+<7>{0}[  136.972059] pwm-backlight pwm-backlight: completing resume
+<7>{0}[  136.972089] s3c24xx-pwm s3c24xx-pwm.0: completing resume
+<7>{0}[  136.972138] platform reg-dummy: completing resume
+<7>{0}[  136.972166] power power.0: completing resume
+<7>{0}[  136.972200] PM: Finishing wakeup.
+<4>{0}[  136.972213] Restarting tasks ... m03x_tvout_enable_power:[ON]
+</file>

@@ -1,4 +1,4 @@
-
+  * [[printf|printf颜色]]
 
 Ref:
   * http://www.tldp.org/HOWTO/text/

@@ -4,7 +4,7 @@ Git是Linus Torvalds为了帮助管理Linux内核开发而开发的一个开放�
 
   * [[git-server|Setup Git Server On Ubuntu 11.04]]
   * [[git-base|Git基本用法]]
-  * [[doku-to-github|把dokuwiki放github上]]
+  * [[git-svn|Git svn]]
 
 Refs:
 

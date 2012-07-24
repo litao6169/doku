@@ -1,0 +1,3 @@
+  * [[.scu|SCU]]
+  * [[.smp-boot|Boot secondary cpus]]
+  * [[.percpu|per_cpu]]

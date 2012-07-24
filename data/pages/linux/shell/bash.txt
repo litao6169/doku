@@ -1,1 +1,10 @@
-bash
+echo 带颜色输出：
+
+<code bash>
+echo -e '\e[31mERROR when compile \e[m'
+echo -e '\e[32mERROR when compile \e[m' 
+echo -e '\e[33mERROR when compile \e[m' 
+echo -e '\e[34mERROR when compile \e[m' 
+echo -e '\e[35mERROR when compile \e[m' 
+echo -e '\e[36mERROR when compile \e[m'
+</code>

@@ -1,0 +1,76 @@
+===Linux per_cpu机制 ===
+
+<file>
+在Linux操作系统中，特别是针对SMP或者NUMA架构的多CPU系统的时候，描述每个CPU的私有数据的时候，Linux操作系统提供了per_cpu机制。
+
+per_cpu机制就是让每个CPU都有自己的私有数据段，便于保护与访问。
+
+通过宏DEFINE_PER_CPU，定义这种私有数据，只不过这种私有数据放在特定的数据段中。
+#define DEFINE_PER_CPU(type, name)     \
+
+__attribute__((__section__(".data.percpu")))   \
+PER_CPU_ATTRIBUTES __typeof__(type) per_cpu__##name
+在GCC中__typeof__相当于typeof（检查数据类型），用__typeof__为了兼容性。
+
+例如1：在Linux操作系统中，用于描述每个IA64CPU信息的数据结构的定义：
+DEFINE_PER_CPU(struct cpuinfo_ia64, cpu_info);
+
+例如2：描述每个CPU的状态的变量的定义：*
+* State for each CPU
+*/
+DEFINE_PER_CPU(int, cpu_state);
+
+系统如何为每个CPU保留这些私有数据的？
+在start_kernel函数中调用执行函数setup_per_cpu_areas( )，setup_per_cpu_areas( )定义如下：
+void __init setup_per_cpu_areas(void)
+{
+	unsigned long delta;
+	unsigned int cpu;
+	int rc;
+
+	/*
+	 * Always reserve area for module percpu variables.  That's
+	 * what the legacy allocator did.
+	 */
+	rc = pcpu_embed_first_chunk(PERCPU_MODULE_RESERVE,
+				    PERCPU_DYNAMIC_RESERVE, PAGE_SIZE, NULL,
+				    pcpu_dfl_fc_alloc, pcpu_dfl_fc_free);
+	if (rc < 0)
+		panic("Failed to initialize percpu areas.");
+
+	delta = (unsigned long)pcpu_base_addr - (unsigned long)__per_cpu_start;
+	for_each_possible_cpu(cpu)
+		__per_cpu_offset[cpu] = delta + pcpu_unit_offsets[cpu];
+}
+setup_per_cpu_areas( )的功能就是将.data.percpu中的数据拷贝到每个CPU的数据段中，每个CPU一份。
+其中CPU n 对应的专有数据区的首地址为__per_cpu_offset[n]。
+
+在Linux操作系统中，在系统启动的时候会生成以__per_cpu_start标识开头和__per_cpu_end标识结尾的数据段，
+在执行完函数setup_per_cpu_areas( )后，将.data.percpu中的数据拷贝到每个CPU数据段后，这个数据段就会释放（free）掉。
+.data.percpu定义如下（在arch/ia64/kernel/vmlinux.lds.S）：
+{
+   __per_cpu_start = .;
+   *(.data.percpu)
+   *(.data.percpu.shared_aligned)
+   __per_cpu_end = .;
+}
+
+如何存取每个CPU的这些私有数据呢？
+第一种方法：取制定cpu的制定变量
+/*
+ * A percpu variable may point to a discarded regions. The following are
+ * established ways to produce a usable pointer from the percpu variable
+ * offset.
+ */
+#define per_cpu(var, cpu) \
+	(*SHIFT_PERCPU_PTR(&(var), per_cpu_offset(cpu)))
+
+第二种方法：取当前CPU的制定变量
+#define __get_cpu_var(var) \
+(*SHIFT_PERCPU_PTR(&per_cpu_var(var), my_cpu_offset))
+
+第三种方法：读后写的方式读取当前CPU的制定变量
+#define __raw_get_cpu_var(var) \
+(*SHIFT_PERCPU_PTR(&per_cpu_var(var), __my_cpu_offset))
+
+</file>

@@ -24,8 +24,10 @@ Just for fun(Samsung Platform)~~~\\
   * [[linux:ldd:fs:file-system|File System]]
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Sync Mechanism]]
+  * [[linux:ldd:smp:smp|SMP]]
   * [[linux:ldd:port:port|Platform porting]]
   * [[linux:ldd:community|Community and forum]]
+  * [[linux:ldd:problem:problems|Problems list]]
 
 
 ==== Linux App ====
@@ -43,8 +45,8 @@ Just for fun(Samsung Platform)~~~\\
 
 ==== Development Tools ====
   * [[tools:vim:vim|Vim]]
-  * [[tools:git:Git]]
-  * [[tools:kermit|Kermit]]
+  * [[tools:git:git|Git]]
+  * [[tools:terminal:terminal|Terminal]]
 
 
 

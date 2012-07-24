@@ -1,0 +1,130 @@
+<file>
+
+{0}[    4.653814] mmc0: Voltage range not supported for power class.
+{0}[    4.659871] mmc0: power class selection to bus width 8 failed
+{0}[    4.667449] mmc0: new high speed MMC card at address 0001
+{0}[    4.672451] mmcblk0: mmc0:0001 SEM32G 29.7 GiB 
+{0}[    4.676753] mmcblk0boot0: mmc0:0001 SEM32G partition 1 1.00 MiB
+{0}[    4.682978] mmcblk0boot1: mmc0:0001 SEM32G partition 2 1.00 MiB
+{0}[    4.690347]  mmcblk0: p1 p2 p3 p4
+{0}[    4.693224] max77686-rtc max77686-rtc: setting system clock to 2012-01-04 17:30:00 UTC (1325698200)
+{0}[    4.703351] FIMC0 registered successfully
+{0}[    4.707057] FIMC1 registered successfully
+{2}[    4.710704]  mmcblk0boot1: unknown partition table
+{0}[    4.711192] FIMC2 registered successfully
+{0}[    4.711685] FIMC3 registered successfully
+{0}[    4.712020] S5P TVOUT Driver v3.0 (c) 2010 Samsung Electronics
+{0}[    4.712753] m03x_tvout_enable_power:[ON]
+{0}[    4.734055] m03x_tvout_enable_power:[OFF]
+{2}[    4.741449]  mmcblk0boot0: unknown partition table
+{0}[    4.743073] m03x-battery m03x-battery: m03x_bat_probe: MX Battery Driver Loading
+{0}[    4.743815] DVFS : VDD_ARM Voltage table set with 5 Group
+{0}[    4.743827] full_volt_table[0] = 0
+{0}[    4.743836] full_volt_table[1] = 1287500
+{0}[    4.743845] full_volt_table[2] = 1250000
+{0}[    4.743853] full_volt_table[3] = 1187500
+{0}[    4.743861] full_volt_table[4] = 1137500
+{0}[    4.743869] full_volt_table[5] = 1087500
+{0}[    4.743877] full_volt_table[6] = 1037500
+{0}[    4.743885] full_volt_table[7] = 987500
+{0}[    4.743893] full_volt_table[8] = 975000
+{0}[    4.743901] full_volt_table[9] = 962500
+{0}[    4.743909] full_volt_table[10] = 937500
+{0}[    4.743917] full_volt_table[11] = 925000
+{0}[    4.743925] full_volt_table[12] = 900000
+{0}[    4.743933] full_volt_table[13] = 900000
+{0}[    4.743993] max77686_update_dvs_voltage: MAX77686_BUCK2
+{0}[    4.746376] input: mx-mic-input as /devices/virtual/input/input8
+{0}[    4.747148] ram_console: start_update_thread: Start ram console update daemon
+{0}[    4.835414] Freeing init memory: 224K
+{2}[    4.835926] add extra partion at mmcblk0p5,                               start_sec = 34816, sec_num = 20480
+{1}[    4.866549] MFC F/W loaded successfully (size: 352524)
+{1}[    5.104009] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+{0}[    5.111609] ------------[ cut here ]------------
+{0}[    5.116057] vbus(0), dock(0)
+{0}[    5.119062] last_vbus(0), last_dock(0)
+{0}[    5.123091] WARNING: at drivers/mmc/core/core.c:755 mmc_release_host+0x40/0x44()
+{0}[    5.130804] usbid(0), last_usbid(0)
+{0}[    5.134427] Backtrace: 
+{0}[    5.137169] [<c004be44>] (dump_backtrace+0x0/0x110) from [<c056fe60>] (dump_stack+0x18/0x1c)
+{0}[    5.145899]  r6:000002f3 r5:c039e404 r4:00000000 r3:271aed13
+{0}[    5.151729] [<c056fe48>] (dump_stack+0x0/0x1c) from [<c00827a8>] (warn_slowpath_common+0x58/0x68)
+{0}[    5.160925] [<c0082750>] (warn_slowpath_common+0x0/0x68) from [<c00827dc>] (warn_slowpath_null+0x24/0x2c)
+{0}[    5.170637]  r8:db766000 r7:db76600c r6:db766000 r5:00000000 r4:db015000
+{0}[    5.177388] r3:00000009
+{0}[    5.180301] [<c00827b8>] (warn_slowpath_null+0x0/0x2c) from [<c039e404>] (mmc_release_host+0x40/0x44)
+{0}[    5.189827] [<c039e3c4>] (mmc_release_host+0x0/0x44) from [<c03ace70>] (mmc_blk_issue_rq+0x228/0x24c)
+{0}[    5.199275]  r4:db620000 r3:db2510d8
+{0}[    5.203019] [<c03acc48>] (mmc_blk_issue_rq+0x0/0x24c) from [<c03adab8>] (mmc_queue_thread+0x68/0x12c)
+{0}[    5.212575] [<c03ada50>] (mmc_queue_thread+0x0/0x12c) from [<c00a0e6c>] (kthread+0x94/0x98)
+{0}[    5.221168] [<c00a0dd8>] (kthread+0x0/0x98) from [<c0087528>] (do_exit+0x0/0x340)
+{0}[    5.228877]  r7:00000013 r6:c0087528 r5:c00a0dd8 r4:db055c88
+{0}[    5.234690] ---[ end trace f5d030818c8cdc24 ]---
+{1}[    5.331948] m6mo_mipi_cam_power():1
+{0}[    8.724815] CPU1: shutdown
+{0}[    9.391018] m6mo_handle_normal_irq: handed irq, value 0x01
+{0}[    9.396856] firmware old version = 0x0168, new version = 0x0168
+{0}[    9.402341] m6mo_mipi_cam_power():0
+{0}[    9.723599] CPU2: shutdown
+{0}[   13.721927] CPU3: shutdown
+{0}[   64.642511] wm8994-codec wm8994-codec:  fw=  (null)!
+{0}[   73.806545] -----max77665_charger_isr insert
+{0}[   73.810610] set alarm after 120 seconds
+{0}[   73.961760] m03x_usb_attach enable
+{0}[   73.965416] s3c-usbgadget s3c-usbgadget: power on usb PHY
+{0}[   73.970486] s3c-usbgadget s3c-usbgadget: Change USB MUX from Host to Device
+{0}[   74.330167] vbus(1), dock(0)
+{0}[   74.332454] last_vbus(0), last_dock(0)
+{0}[   74.336548] usbid(0), last_usbid(0)
+{0}[   74.341543] mxt_usb_notifier_event event is USB_VBUS_INSERT:0x1
+{0}[   74.346987] charger_usb_host_notifier_event (0)
+{0}[   74.352637] charger_work_func, charger_status:1
+{0}[   74.357379] mxt_write_charger_param charger_status:1
+{0}[   74.361919] -----max77665_charger_isr remove
+{0}[   74.856746] vbus(0), dock(0)
+{0}[   74.859030] last_vbus(1), last_dock(0)
+{0}[   74.863386] usbid(0), last_usbid(0)
+{0}[   74.866810] mxt_usb_notifier_event event is USB_VBUS_INSERT:0x0
+{0}[   74.873028] charger_usb_host_notifier_event (1)
+{0}[   74.878029] charger_work_func, charger_status:0
+{0}[   74.882572] mxt_write_charger_param charger_status:0
+{0}[   76.485113] m03x_usb_attach disable
+{0}[   76.488183] s3c-usbgadget s3c-usbgadget: Change USB MUX from Device to Host
+{0}[  125.041759] INFO: task init:1 blocked for more than 60 seconds.
+{0}[  125.047185] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+{0}[  125.055515] init            D c0570740     0     1      0 0x00000000
+{0}[  125.062048] Backtrace: 
+{0}[  125.064924] [<c0570514>] (__schedule+0x0/0x46c) from [<c0570b5c>] (schedule+0x50/0x68)
+{0}[  125.073149] [<c0570b0c>] (schedule+0x0/0x68) from [<c019a024>] (jbd2_log_wait_commit+0xb4/0x128)
+{0}[  125.081572] [<c0199f70>] (jbd2_log_wait_commit+0x0/0x128) from [<c017415c>] (ext4_sync_fs+0x54/0x58)
+{0}[  125.090847] [<c0174108>] (ext4_sync_fs+0x0/0x58) from [<c012d51c>] (__sync_filesystem+0x7c/0x94)
+{0}[  125.099832]  r5:00000001 r4:db1d7600
+{0}[  125.103602] [<c012d4a0>] (__sync_filesystem+0x0/0x94) from [<c012d5ec>] (sync_filesystem+0x4c/0x64)
+{0}[  125.113016]  r5:00000000 r4:db1d7600
+{0}[  125.116727] [<c012d5a0>] (sync_filesystem+0x0/0x64) from [<c0106e10>] (do_remount_sb+0x44/0x120)
+{0}[  125.126043]  r4:db1d7600 r3:00000000
+{0}[  125.129419] [<c0106dcc>] (do_remount_sb+0x0/0x120) from [<c01215c0>] (do_remount+0xc8/0x10c)
+{0}[  125.138071]  r6:db1d7640 r5:00000060 r4:db041f40
+{0}[  125.142902] [<c01214f8>] (do_remount+0x0/0x10c) from [<c0124168>] (do_mount+0x15c/0x1e8)
+{0}[  125.151338] [<c012400c>] (do_mount+0x0/0x1e8) from [<c0124280>] (sys_mount+0x8c/0xcc)
+{0}[  125.159329] [<c01241f4>] (sys_mount+0x0/0xcc) from [<c0046f40>] (ret_fast_syscall+0x0/0x30)
+{0}[  125.167994]  r7:00000015 r6:00000000 r5:00000000 r4:00000000
+{0}[  125.173842] Kernel panic - not syncing: hung_task: blocked tasks
+{0}[  125.180066] Backtrace: 
+{0}[  125.182743] [<c004be44>] (dump_backtrace+0x0/0x110) from [<c056fe60>] (dump_stack+0x18/0x1c)
+{0}[  125.191502]  r6:db03c000 r5:c0795e20 r4:c07c01a0 r3:271aed13
+{0}[  125.197326] [<c056fe48>] (dump_stack+0x0/0x1c) from [<c056fef0>] (panic+0x8c/0x1b8)
+{0}[  125.205245] [<c056fe64>] (panic+0x0/0x1b8) from [<c00c4908>] (T.278+0x0/0x1fc)
+{0}[  125.212771]  r3:c003e8b8 r2:00000001 r1:00000000 r0:c07069a4
+{0}[  125.218583]  r7:db03c0d4
+{0}[  125.221366] [<c00c4864>] (T.279+0x0/0xa4) from [<c00c4a64>] (T.278+0x15c/0x1fc)
+{0}[  125.228931]  r5:db03c000 r4:00008000
+{0}[  125.232741] [<c00c4908>] (T.278+0x0/0x1fc) from [<c00c4b3c>] (watchdog+0x38/0x3c)
+{0}[  125.240487] [<c00c4b04>] (watchdog+0x0/0x3c) from [<c00a0e6c>] (kthread+0x94/0x98)
+{0}[  125.248372] [<c00a0dd8>] (kthread+0x0/0x98) from [<c0087528>] (do_exit+0x0/0x340)
+{0}[  125.256081]  r7:00000013 r6:c0087528 r5:c00a0dd8 r4:db041f38
+{0}[  125.261899] ram_console: record_boot_reason: 3, panic reboot, 1
+{0}[  125.268149] Rebooting in 5 seconds..
+{0}[  130.267801] m03x_reboot (104, OK
+
+</file>

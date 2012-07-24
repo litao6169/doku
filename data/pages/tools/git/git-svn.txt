@@ -1,0 +1,14 @@
+svn转git 仓库:
+<code bash>
+git svn init svn://172.16.9.63/svn_src/kernel/meizu_mxse_master/linux-3.0.15-rtm --no-metadata
+git config svn.authorsfile ../svn.users.txt
+git svn fetch
+git merge git-svn
+</code>
+
+svn-users.txt:
+<file>
+litao = 李桃 <litao@meizu.com>
+....
+
+</file>

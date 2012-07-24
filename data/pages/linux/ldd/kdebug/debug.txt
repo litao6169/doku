@@ -7,3 +7,5 @@
   * [[trace32|Trace32]]
   * [[debugfs|Debugfs]]
   * [[tracers|Tracers]]
+  * [[led|LED]]
+  * [[.logs:logs|Erro logs]]
