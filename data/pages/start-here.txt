@@ -8,7 +8,6 @@ Just for fun(Samsung Platform)~~~\\
 ===== Hardware =====
   *[[hw:arm:arm|ARM]]
   *[[hw:touch:touch|Touch]]
-  *[[hw:vendor|Vendor]]
   *[[hw:hex|Hex Format]]
 ===== U-boot =====
 
@@ -20,14 +19,15 @@ Just for fun(Samsung Platform)~~~\\
   * [[linux:ldd:model:ldd-model|Device Driver Model]]
   * [[linux:ldd:kdebug:debug|Kernel Debug and Hack]]
   * [[linux:ldd:pm:pm|Power Management]]
-  * [[linux:ldd:sub-system:sub-system|Driver Subsystem]]
+  * [[linux:ldd:sub-system:sub-system|Driver Subsystems]]
   * [[linux:ldd:fs:file-system|File System]]
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Sync Mechanism]]
   * [[linux:ldd:smp:smp|SMP]]
   * [[linux:ldd:port:port|Platform porting]]
-  * [[linux:ldd:community|Community and forum]]
   * [[linux:ldd:problem:problems|Problems list]]
+  * [[linux:ldd:community|Community and forum]]
+
 
 
 ==== Linux App ====
@@ -46,7 +46,7 @@ Just for fun(Samsung Platform)~~~\\
 ==== Development Tools ====
   * [[tools:vim:vim|Vim]]
   * [[tools:git:git|Git]]
-  * [[tools:terminal:terminal|Terminal]]
+
 
 
 

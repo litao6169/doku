@@ -3,7 +3,7 @@
   * [[printk|Printk]]
   * [[kgdb|KGDB]]
   * [[sysrq|System Request key]]
-  * [[fiq|Fiq]]
+  * [[fiq|Android fiq debugger]]
   * [[trace32|Trace32]]
   * [[debugfs|Debugfs]]
   * [[tracers|Tracers]]

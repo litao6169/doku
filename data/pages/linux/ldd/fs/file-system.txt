@@ -1,5 +1,6 @@
 
 ==== File Systems ====
+  * [[initrd|Initrd]]
   * [[rootfs|Rootfs]]
   * [[ext4|Ext4]]
   * [[ntfs-3g|NTFS-3G]]

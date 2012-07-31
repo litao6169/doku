@@ -1,2 +1,23 @@
-  * emmc 黑屏,唤醒时timeout: 唤醒时误进入LPA（cmd,data busy 需要同时idle）.
-  * EXYNOS4210 BUS400Mhz,当cpu 100MHz时，播放视频或音频死机: auss clk使用了fout_epll,改为ext_xtal，即可。原因未知。
+  * emmc 黑屏,唤醒时timeout: 
+<file>
+  1、唤醒时误进入LPA（cmd,data busy 需要同时idle）.
+  2、切换了boot分区。
+</file>
+
+  * EXYNOS4210 BUS400Mhz,当cpu 100MHz时，播放视频或音频死机:
+<file>
+ auss clk使用了fout_epll,改为ext_xtal，即可。原因未知。
+</file>
+
+  * EXYNOS4210 开启SCHED_MC（cpu topology支持）死机：
+<file>
+  scu_enable 中 scu_control 第三位需要开启。	
+  if ((soc_is_exynos4412() && (samsung_rev() >= EXYNOS4412_REV_1_0)) ||
+		soc_is_exynos4210())
+		scu_ctrl |= (1<<3);
+</file>
+
+  * recovery Modem 升级不成功
+<file>
+进入LPA或AFTER导致modem超时，去掉即可。
+</file>
