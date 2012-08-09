@@ -1,2 +1,4 @@
   * [[a1028|A1028 接听电话i2c超时]]
   * [[.emmc:emmc|eMMC]]
+  * [[wm8994-suspend|wm8994]]
+  * [[sound|Sound]]

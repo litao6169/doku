@@ -1,4 +1,4 @@
-====== Embedded Linux Development ======
+====== Embedded Linux System Development ======
 Just for fun(Samsung Platform)~~~\\
 
 
@@ -24,9 +24,10 @@ Just for fun(Samsung Platform)~~~\\
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Sync Mechanism]]
   * [[linux:ldd:smp:smp|SMP]]
-  * [[linux:ldd:port:port|Platform porting]]
-  * [[linux:ldd:problem:problems|Problems list]]
-  * [[linux:ldd:community|Community and forum]]
+  * [[linux:ldd:android:android|Android Drivers]]
+  * [[linux:ldd:port:port|Platform Porting]]
+  * [[linux:ldd:problem:problems|Problems List]]
+  * [[linux:ldd:community|Community And Forums]]
 
 
 

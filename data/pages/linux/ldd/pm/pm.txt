@@ -1,5 +1,5 @@
 Linux电源管理技术及相关问题。
-  * [[pmic|PM-PMIC]]
+  * [[pmic|PM-Regulator]]
   * [[power-supply|PM-Power Supply]]
   * [[pm-domain|PM-Domain]]
   * [[runtime-pm|PM-Runtime]]
@@ -13,6 +13,7 @@ Linux电源管理技术及相关问题。
   * [[pm-cooling|PM-Cooling device]]
   * [[wakelock|PM-Wakelock]]
   * [[early-suspend|PM-Early Suspend]]
+  * [[pm-autosleep|PM-Auto Sleep]]
   * [[.sleep:sleep|PM-Sleep]]
   * [[reboot|PM-Reboot]]
   * [[pm-debug|PM-Debug]]

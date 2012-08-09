@@ -1,0 +1,3 @@
+  * echo "0xe0100460 200" > /sys/class/mem/kmem/phys_read
+
+  * devmem 0xe0100460
