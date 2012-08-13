@@ -1,0 +1,4 @@
+
+
+Ref:
+  * [[http://www.linuxpromagazine.com/Online/Features/Qemu-and-the-Kernel?category=13388|Qemu and the Kernel]]

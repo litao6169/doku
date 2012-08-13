@@ -47,9 +47,7 @@ Just for fun(Samsung Platform)~~~\\
 ==== Development Tools ====
   * [[tools:vim:vim|Vim]]
   * [[tools:git:git|Git]]
-
-
-
+  * [[tools:embedded:embedded-system|Embedded System]]
 
 ===== Android =====
   * [[android:port:port|Android Porting]]

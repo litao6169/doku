@@ -7,3 +7,4 @@
   * https://opensource.samsung.com/community.do
   * http://omappedia.org/wiki/Main_Page
   * http://forum.xda-developers.com/
+  * https://blueprints.launchpad.net/linux-linaro

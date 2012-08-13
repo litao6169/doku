@@ -98,3 +98,6 @@ int s3c24xx_register_clock(struct clk *clk)
         return 0;
 }
 </code>
+
+Ref:
+  * http://lwn.net/Articles/472998/

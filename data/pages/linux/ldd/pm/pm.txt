@@ -20,3 +20,6 @@ Linux电源管理技术及相关问题。
   * [[pm-test|PM-Test]]
   * [[pm-acpi|PM-ACPI]]
   * [[pm-sub|Pm sub system]]
+
+Refs:
+  * [[http://lwn.net/Articles/505683/|Linux power management]]

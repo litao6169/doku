@@ -1,5 +1,6 @@
 
 ==== File Systems ====
+  * [[pstore|Persistent Store]]
   * [[initrd|Initrd]]
   * [[rootfs|Rootfs]]
   * [[ext4|Ext4]]

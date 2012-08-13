@@ -38,3 +38,6 @@ fork(),创建第一个用户进程:
 才会调度执行 idle。而目前的版本中idle并不在运行队列中参与调度，而是在运行队列结构中含idle指针，指向idle进程，在调度器发现运
 行队列为空的时候运行，调入运行。
 </file>
+
+Refs:
+  * [[http://lwn.net/Articles/384146/|The cpuidle subsystem]]
