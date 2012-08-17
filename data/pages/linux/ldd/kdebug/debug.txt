@@ -8,7 +8,7 @@
   * [[debugfs|Debugfs]]
   * [[tracers|Tracers]]
   * [[led|LED]]
-  * [[.logs:logs|Erro logs]]
   * [[devmem|Busybox devmem]]
   * [[watch-point|Watch point]]
   * [[qemu|Qemu]]
+  * [[.logs:logs|Erro logs]]

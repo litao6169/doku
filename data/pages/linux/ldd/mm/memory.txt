@@ -3,5 +3,6 @@ Memory Management
   * [[bootmem|Bootmem]]
   * [[cma|CMA]]
   * [[ump|UMP]]
+  * [[ion|ION]]
   * [[mmu|MMU]]
   * [[iommu|IOMMU(sysMMU)]]
