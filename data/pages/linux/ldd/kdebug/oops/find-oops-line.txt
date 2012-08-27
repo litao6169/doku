@@ -1,0 +1,160 @@
+<file>
+ 嗯，这是一种方法，但依赖出错内核对应的vmlinux, 提供一种不依赖对应vmlinux的方法。
+其实多数情况下出错的函数可能都不是一时改出来的，利用 PC is at fimc_s_fmt_vid_capture+0x118/0x3e8，
+在出错函数没变，就算内核配置改变了的情况下也可以找到出错的地方。
+上面的0x118/0x3e8: 0x118 表示出错的偏移位置，0x3e8 表示fimc_s_fmt_vid_capture函数大小。
+
+1）找到fimc_s_fmt_vid_capture位置
+litao@litao:~/kernel_out/mxse-rtm/m03x_eng$ arm-none-linux-gnueabi-nm vmlinux | grep fimc_s_fmt_vid_capture
+c035b600 T fimc_s_fmt_vid_capture
+
+2）
+arm-none-linux-gnueabi-objdump -S vmlinux --start-address=0xc035b600 --stop-address=0xc035c600 >/tmp/fimc
+
+vi /tmp/fimc  找到 0xc035b600+0x118=0xc035b718的位置。
+
+int fimc_s_fmt_vid_capture(struct file *file, void *fh, struct v4l2_format *f)
+{
+c035b600:       e1a0c00d        mov     ip, sp
+c035b604:       e92dddf0        push    {r4, r5, r6, r7, r8, sl, fp, ip, lr, pc}
+c035b608:       e24cb004        sub     fp, ip, #4
+c035b60c:       e24dd008        sub     sp, sp, #8
+        struct fimc_control *ctrl = ((struct fimc_prv_data *)fh)->ctrl;
+c035b610:       e5915000        ldr     r5, [r1]
+        struct s3c_platform_fimc *pdata = to_fimc_plat(ctrl->dev);
+        fimc_info1("s_fmt width = %d, height = %d\n", \
+c035b704:       e595026c        ldr     r0, [r5, #620]  ; 0x26c
+c035b708:       e3100c01        tst     r0, #256        ; 0x100
+c035b70c:       1a00009e        bne     c035b98c <fimc_s_fmt_vid_capture+0x38c>
+                                cap->fmt.width, cap->fmt.height);
+...........
+        /* WriteBack doesn't have subdev_call */
+        if (ctrl->cam->id == CAMERA_WB || ctrl->cam->id == CAMERA_WB_B) {
+c035b710:       e59531f0        ldr     r3, [r5, #496]  ; 0x1f0
+c035b714:       e593e000        ldr     lr, [r3]
+c035b718:       e24e2004        sub     r2, lr, #4
+c035b71c:       e3520001        cmp     r2, #1
+c035b720:       9a00007c        bls     c035b918 <fimc_s_fmt_vid_capture+0x318>
+                mutex_unlock(&ctrl->v4l2_lock);
+                return 0;
+        }
+........
+
+
+>  
+> root@android:/ # {0}[   34.940488] write count 7##########
+> {0}[   34.942940] set flash erase address:0x10070000
+> {0}[   36.399741] s3c-fimc0: FIMC0 1 opened.
+> {2}[   36.405216] s3c-fimc0: s_power failed: -16
+> {2}[   36.409066] s3c-fimc0: fimc_configure_subdev: fail to initialize subdev
+> {2}[   36.415664] s3c-fimc0: fimc_s_input: Could not register camera sensor with V4L2.
+> {1}[   37.025356] lis3dh_acc_update_odr: cutoff_ms = 40, odr = 0x30
+> {2}[   37.121234] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+> {2}[   37.128336] pgd = d9e54000
+> {1}[   37.133467] [00000000] *pgd=59db3831, *pte=00000000, *ppte=00000000
+> {1}[   37.138714] Internal error: Oops: 17 [#1] PREEMPT SMP
+> {1}[   37.143956] CPU: 1    Not tainted  (3.0.15 #29)
+> {1}[   37.148753] PC is at fimc_s_fmt_vid_capture+0x118/0x3e8
+> {1}[   37.154287] LR is at 0x5a0
+> {1}[   37.157149] pc : [<c03807b8>]    lr : [<000005a0>]    psr: 40000013
+> {1}[   37.157155] sp : d81c1c50  ip : 000002d0  fp : d81c1c7c
+> {1}[   37.169147] r10: d6999714  r9 : d65201c0  r8 : db907bc0
+> {1}[   37.174658] r7 : dba1b0a8  r6 : da06103c  r5 : dba1b000  r4 : da061000
+> {1}[   37.181382] r3 : 00000000  r2 : 00000000  r1 : 000fd200  r0 : 00000011
+> {1}[   37.188224] Flags: nZcv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+> {1}[   37.195628] Control: 10c5387d  Table: 59e5404a  DAC: 00000015
+> {1}[   37.201538] 
+> {1}[   37.201542] PC: 0xc0380738:
+> {1}[   37.206390] 0738  e5943058 e1a00005 e584c05c e5842060 e5843070 ebfff28f e3500000 0a00009c
+> {1}[   37.214721] 0758  ba000086 e594e03c e3a02000 e594c040 e5943054 e001009e e5842058 e1a02003
+> {1}[   37.223144] 0778  e3020007 e5840064 e1a0e1a1 e584e04c e0010e9c e5841050 e3530007 e584206c
+> {1}[   37.231560] 0798  13a03000 158532b8 15843c24 0a000067 e595030c e3100c01 1a00009e e5953290
+> {1}[   37.239970] 07b8  e593e000 e24e2004 e3520001 9a00007c e595c26c e35c0000 0a000031 e5d81024
+> {1}[   37.248391] 07d8  e3510000 0a00002e e3a03000 e303200a e30101e2 e5852244 e340009a e50b3028
+> {1}[   37.256815] 07f8  e50b002c e595026c e1500003 0a000063 e590e064 e59e3000 e3530000 0a00005f
+> {1}[   37.265246] 0818  e5933020 e3530000 0a00005c e24b102c e12fff33 e51b2028 e585221c e3a0c000
+> {1}[   37.273677] 
+> {1}[   37.273682] SP: 0xd81c1bd0:
+> {1}[   37.278441] 1bd0  dba1b0a8 d81c0000 d81c1bf4 c00adcac d81c0000 dba1b0a8 ffffffff d81c1c3c
+> {1}[   37.286856] 1bf0  da06103c dba1b0a8 d81c1c7c d81c1c08 c0042a2c c003c500 00000011 000fd200
+> {1}[   37.295274] 1c10  00000000 00000000 da061000 dba1b000 da06103c dba1b0a8 db907bc0 d65201c0
+> {1}[   37.303678] 1c30  d6999714 d81c1c7c 000002d0 d81c1c50 000005a0 c03807b8 40000013 ffffffff
+> {1}[   37.312098] 1c50  00000000 00000000 c077f810 d6999700 c0cc5605 c05faa44 d6999700 00000000
+> {1}[   37.320499] 1c70  d81c1e44 d81c1c80 c036644c c03806ac d81b8840 d81c0000 00000000 0000000f
+> {1}[   37.328941] 1c90  00000000 d81b8840 00000000 c079c03c 0000000f c0767ecc d81c1d2c d81c1cb8
+> {1}[   37.337362] 1cb0  c00b44fc c00b36ac 0000000f 00000000 c006b398 c0caab30 00000001 00000000
+> {1}[   37.345763] 
+> {1}[   37.345766] FP: 0xd81c1bfc:
+> {1}[   37.350563] 1bfc  d81c1c08 c0042a2c c003c500 00000011 000fd200 00000000 00000000 da061000
+> {1}[   37.358972] 1c1c  dba1b000 da06103c dba1b0a8 db907bc0 d65201c0 d6999714 d81c1c7c 000002d0
+> {1}[   37.367372] 1c3c  d81c1c50 000005a0 c03807b8 40000013 ffffffff 00000000 00000000 c077f810
+> {1}[   37.375790] 1c5c  d6999700 c0cc5605 c05faa44 d6999700 00000000 d81c1e44 d81c1c80 c036644c
+> {1}[   37.384230] 1c7c  c03806ac d81b8840 d81c0000 00000000 0000000f 00000000 d81b8840 00000000
+> {1}[   37.392634] 1c9c  c079c03c 0000000f c0767ecc d81c1d2c d81c1cb8 c00b44fc c00b36ac 0000000f
+> {1}[   37.401075] 1cbc  00000000 c006b398 c0caab30 00000001 00000000 c07e8e58 d81b8840 00000000
+> {1}[   37.409490] 1cdc  c079c03c 00000287 00000287 00000000 d81b8840 d5f2f120 c079c03c 00000287
+>  
+> （1）运行gdb，一定要加载出错的kernel对应的vmlinux
+> #arm-none-linux-gnueabi-gdb vmlinux
+>  
+> （2）设置上面红色地址为断点，可以看到是在哪个文件哪一行
+> (gdb) b *0xc03807b8
+> Breakpoint 1 at 0xc03807b8: file drivers/media/video/samsung/fimc/fimc_capture.c, line 1448.
+> （3）查看所在地址的内容，可以先设定显示行数（注意是1448行出错）：
+> (gdb) set listsize 50
+> (gdb) list *0xc03807b8
+> 0xc03807b8 is in fimc_s_fmt_vid_capture (drivers/media/video/samsung/fimc/fimc_capture.c:1448).
+> 1423 cap->fmt.colorspace = V4L2_COLORSPACE_JPEG;
+> 1424 cap->fmt.priv = V4L2_PIX_FMT_MODE_CAPTURE;
+> 1425 mbus_fmt->code = V4L2_MBUS_FMT_JPEG_1X8;
+> 1426 } else {
+> 1427 cap->fmt.bytesperline = (cap->fmt.width * depth) >> 3;
+> 1428 cap->fmt.sizeimage = (cap->fmt.bytesperline * cap->fmt.height);
+> 1429 cap->fmt.priv = V4L2_PIX_FMT_MODE_PREVIEW;
+> 1430 mbus_fmt->code = V4L2_MBUS_FMT_VYUY8_2X8;
+> 1431 }
+> 1432
+> 1433 mbus_fmt->colorspace = cap->fmt.colorspace;
+> 1434
+> 1435 if (cap->fmt.colorspace == V4L2_COLORSPACE_JPEG) {
+> 1436 ctrl->sc.bypass = 1;
+> 1437 cap->lastirq = 0;
+> 1438 fimc_info1("fimc_s_fmt_vid_capture V4L2_COLORSPACE_JPEG\n");
+> 1439 } else {
+> 1440 ctrl->sc.bypass = 0;
+> 1441 cap->lastirq = 0;
+> 1442 }
+> 1443
+> 1444 fimc_info1("s_fmt width = %d, height = %d\n", \
+> 1445 cap->fmt.width, cap->fmt.height);
+> 1446
+> 1447 /* WriteBack doesn't have subdev_call */
+> 1448 if (ctrl->cam->id == CAMERA_WB || ctrl->cam->id == CAMERA_WB_B) {
+> 1449 mutex_unlock(&ctrl->v4l2_lock);
+> 1450 return 0;
+> 1451 }
+> 1452
+> 1453 if (ctrl->is.sd && fimc_cam_use) {
+> 1454 ctrl->is.mbus_fmt.code = V4L2_MBUS_FMT_SGRBG10_1X10;
+> 1455 is_ctrl.id = V4L2_CID_IS_GET_SENSOR_WIDTH;
+> 1456 is_ctrl.value = 0;
+> 1457 v4l2_subdev_call(ctrl->is.sd, core, g_ctrl, &is_ctrl);
+> 1458 ctrl->is.fmt.width = ctrl->is.mbus_fmt.width = is_ctrl.value;
+> 1459
+> 1460 is_ctrl.id = V4L2_CID_IS_GET_SENSOR_HEIGHT;
+> 1461 is_ctrl.value = 0;
+> 1462 v4l2_subdev_call(ctrl->is.sd, core, g_ctrl, &is_ctrl);
+> 1463 ctrl->is.fmt.height = ctrl->is.mbus_fmt.height = is_ctrl.value;
+> 1464 /* default offset values */
+> 1465 ctrl->is.offset_x = 16;
+> 1466 ctrl->is.offset_y = 12;
+> 1467 }
+> 1468
+> 1469 /*add by jerrymo*/
+> 1470 if (ctrl->cam->sd && fimc_cam_use)
+> 1471 ret = v4l2_subdev_call(ctrl->cam->sd, video, s_mbus_fmt, mbus_fmt);
+> 1472
+> 或者使用下面命令也行
+> (gdb) list drivers/media/video/samsung/fimc/fimc_capture.c:1448
+
+</file>

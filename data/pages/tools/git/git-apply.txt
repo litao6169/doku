@@ -1,0 +1,61 @@
+<file>
+$ git am 0001-BUG-Sybase.patch
+Applying: CHG: 读取Sybase如果时间为空,设置默认时间的修改
+error: patch failed: source.php:38
+error: source.php: patch does not apply
+Patch failed at 0001.
+When you have resolved this problem run "git am --resolved".
+If you would prefer to skip this patch, instead run "git am --skip".
+To restore the original branch and stop patching run "git am --abort".
+
+刚开始一看有些懵，因为没有任何冲突在哪里的提示，后来找到一种方法，am 操作出问题后先手工 apply：
+
+$ git apply --reject 0001-BUG-Sybase.patch
+Checking patch source.php...
+error: while searching for:
+        // 注释
+        // 以下为几行代码片断
+error: patch failed: source.php:38
+Applying patch source.php with 1 rejects...
+Rejected hunk #1.
+
+这样，就把没有冲突的文件先合并了，剩下有冲突的作了标记。先看输出，error: while searching for: 说明是这段代码有冲突，error: patch failed: source.php:38 指明了产生冲突的代码片断的开始行号，相应的，patch 中应该有这么一段：
+
+diff --git a/source.php b/source.php
+index 8770441..4e77b8a 100644
+--- a/source.php
++++ b/source.php
+@@ -38,27 +38,23 @@ class Site extends Module
+        // 注释
+        // 以下为几行代码片断
+
+同时，还会产生一个 source.php.rej 文件，里面也是上面这段因为冲突无法合并的代码片断。
+
+现在，在这段代码中查找冲突原因，并对文件进行修改，source.php.rej 参考完了可以删掉。改好之后，用 git add 把 source.php 添加到缓冲区，同时也要把其他没有冲突合并成功了的文件也加进来，因为在作 apply 操作的时候他们也发生了变化：
+
+$ git add source.php
+$ git add 其他 apply 进来的文件们
+
+最后：
+
+$ git am --resolved
+Applying: CHG: 读取Sybase如果时间为空,设置默认时间的修改
+
+大功告成。
+
+中间如果处理乱了，用 git reset 恢复即可，所以合并 patch 在一个“干净”的分支上处理更好。
+
+注意，根据我自身实践的流程是：
+
+1. git am one-patch 此时，即使有错误使用git status看到没有任何修改
+
+2. git apply --reject one-patch 此时将会把能修改的文件修改了，不能修改的文件会生成一个.rej文件，此时git status可以看到正常patch的文件，以及生成的一个untrack的.rej文件
+
+3. 根据生成的.rej文件知道错误，然后再修改错误
+
+4. git add 添加修改的文件
+
+5. git am --resolved 此时将会把补丁中修改的文件以及log都提交上去
+
+之此，完成了冲突解决。
+</file>

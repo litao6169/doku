@@ -8,3 +8,5 @@
   * http://omappedia.org/wiki/Main_Page
   * http://forum.xda-developers.com/
   * https://blueprints.launchpad.net/linux-linaro
+  * http://free-electrons.com/
+  * https://patchwork.kernel.org/

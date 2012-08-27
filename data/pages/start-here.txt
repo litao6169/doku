@@ -26,7 +26,7 @@ Just for fun(Samsung Platform)~~~\\
   * [[linux:ldd:smp:smp|SMP]]
   * [[linux:ldd:android:android|Android Drivers]]
   * [[linux:ldd:port:port|Platform Porting]]
-  * [[linux:ldd:problem:problems|Problems List]]
+  * [[linux:ldd:problem:problems|Problem Lists]]
   * [[linux:ldd:community|Community And Forums]]
 
 
@@ -47,7 +47,7 @@ Just for fun(Samsung Platform)~~~\\
 ==== Development Tools ====
   * [[tools:vim:vim|Vim]]
   * [[tools:git:git|Git]]
-  * [[tools:embedded:embedded-system|Embedded System]]
+  * [[tools:embedded:embedded-system|Embedded Systems]]
 
 ===== Android =====
   * [[android:port:port|Android Porting]]

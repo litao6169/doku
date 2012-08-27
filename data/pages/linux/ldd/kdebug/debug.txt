@@ -11,4 +11,6 @@
   * [[devmem|Busybox devmem]]
   * [[watch-point|Watch point]]
   * [[qemu|Qemu]]
+  * [[.oops:oops|Oops]]
   * [[.logs:logs|Erro logs]]
+
