@@ -1,1 +1,1 @@
-Linux device driver modle
+  * [[devres|device resource management]]

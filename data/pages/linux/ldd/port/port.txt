@@ -4,4 +4,4 @@
 
 
 Ref:
-  * Documentation/kernel-parameters.txt
+  * [[http://www.kernel.org/doc/Documentation/kernel-parameters.txt|Documentation/kernel-parameters.txt]]
