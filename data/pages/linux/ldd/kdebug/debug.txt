@@ -14,3 +14,6 @@
   * [[.oops:oops|Oops]]
   * [[.logs:logs|Erro logs]]
 
+Refs:
+
+  * [[http://lwn.net/Articles/514898/|KS2012: Improving tracing and debugging]]
