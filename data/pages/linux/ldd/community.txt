@@ -10,5 +10,6 @@
   * https://blueprints.launchpad.net/linux-linaro
   * http://free-electrons.com/
   * https://patchwork.kernel.org/
+  * http://www.spinics.net/lists/
   * http://vger.kernel.org/vger-lists.html
   * http://www.kernel.org/doc/ols/

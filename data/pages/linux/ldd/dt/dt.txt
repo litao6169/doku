@@ -2,5 +2,8 @@
 
 Refs:
 
+  * [[http://devicetree.org/Main_Page]]
+  * [[http://lwn.net/Articles/414016/]]
   * [[http://www.linaro.org/linaro-blog/2011/08/15/enabling-device-tree-support-on-arm-platforms/]]
   * [[http://omappedia.org/wiki/Device_Tree]]
+  * [[http://www.slideshare.net/softpapa/device-tree-support-on-arm-linux-8930303]]
