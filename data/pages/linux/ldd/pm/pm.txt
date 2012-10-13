@@ -23,3 +23,6 @@ Linux电源管理技术及相关问题。
 
 Refs:
   * [[http://lwn.net/Articles/505683/|Linux power management]]
+  * [[http://lesswatts.org/]]
+  * [[https://wiki.linaro.org/WorkingGroups/PowerManagement/|Linaro PM]]
+  * [[https://irqbalance.org/index.html]]

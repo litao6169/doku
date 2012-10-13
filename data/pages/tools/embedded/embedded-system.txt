@@ -1,7 +1,9 @@
   * [[https://www.tizen.org/|Tizen]]
+  * [[http://www.openembedded.org/wiki/Main_Page|Openembedded]]
   * [[http://www.pokylinux.org/|Poky]]
+  * [[http://www.yoctoproject.org/|Yocto]]
+  * [[http://trac.cross-lfs.org/wiki|CLFS]]
   * [[http://git.buildroot.net/buildroot/|Buildroot]]
   * [[http://crosstool-ng.org/|Crosstool-ng]]
-  * [[http://trac.cross-lfs.org/wiki|CLFS]]
-  * [[http://www.openembedded.org/wiki/Main_Page|Openembedded]]
-  * [[http://www.yoctoproject.org/|Yocto]]
+
+
