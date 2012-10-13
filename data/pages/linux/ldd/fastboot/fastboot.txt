@@ -1,0 +1,8 @@
+
+  * asynchronous function
+
+
+Refs:
+
+  * [[http://elinux.org/Boot_Time]]
+  * [[http://lwn.net/Articles/299483/]]

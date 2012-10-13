@@ -24,9 +24,10 @@ Just for fun(Samsung Platform)~~~\\
   * [[linux:ldd:mm:memory|Memory Management]]
   * [[linux:ldd:sync:sync|Kernel Synchronization]]
   * [[linux:ldd:smp:smp|SMP]]
+  * [[linux:ldd:dt:dt|Device Tree]]
+  * [[linux:ldd:fastboot:fastboot|Fast Boot]]
   * [[linux:ldd:android:android|Android Drivers]]
   * [[linux:ldd:port:port|Platform Porting]]
-  * [[linux:ldd:dt:dt|Device Tree]]
   * [[linux:ldd:problem:problems|Problem Lists]]
   * [[linux:ldd:community|Community And Forums]]
 
