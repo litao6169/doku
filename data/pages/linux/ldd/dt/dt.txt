@@ -1,12 +1,12 @@
 
 
 Refs:
-  * [[http://elinux.org/Device_Trees]]
-  * [[http://devicetree.org/Main_Page]]
-  * [[http://www.firmworks.com/QuickRef.html#Syntax]]
-  * [[http://lwn.net/Articles/414016/]]
-  * [[https://wiki.linaro.org/Boards/Origen/DeviceTree]]
-  * [[http://www.linaro.org/linaro-blog/2011/08/15/enabling-device-tree-support-on-arm-platforms/]]
-  * [[http://omappedia.org/wiki/Device_Tree]]
-  * [[http://www.slideshare.net/softpapa/device-tree-support-on-arm-linux-8930303]]
-  * [[http://my.safaribooksonline.com/book/operating-systems-and-server-administration/embedded-linux/9780137061129/bootloaders/ch07lev1sec5#ch07ex13]]
+  * http://elinux.org/Device_Trees
+  * http://devicetree.org/Main_Page
+  * http://www.firmworks.com/QuickRef.html#Syntax
+  * http://lwn.net/Articles/414016/
+  * https://wiki.linaro.org/Boards/Origen/DeviceTree
+  * http://www.linaro.org/linaro-blog/2011/08/15/enabling-device-tree-support-on-arm-platforms/
+  * http://omappedia.org/wiki/Device_Tree
+  * http://www.slideshare.net/softpapa/device-tree-support-on-arm-linux-8930303
+  * http://my.safaribooksonline.com/book/operating-systems-and-server-administration/embedded-linux/9780137061129/bootloaders/ch07lev1sec5#ch07ex13

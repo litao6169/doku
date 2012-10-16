@@ -7,3 +7,6 @@ litao@litao:~$ git config --global user.name litao
 litao@litao:~$ git config --global user.email litao@meizu.com
 litao@litao:~$ git config --global core.editor vim
 </code>
+
+Refs:
+  * http://blog.csdn.net/xuhaiyan8825/article/details/7707801
