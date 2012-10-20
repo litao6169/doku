@@ -14,7 +14,7 @@ Just for fun(Samsung Platform)~~~\\
   * [[uboot:boot-fail|Failed To Boot From eMMC]]
 
 ===== Linux =====
-==== Linux Device Driver ====
+==== Linux os ====
 
   * [[linux:ldd:model:ldd-model|Device Driver Model]]
   * [[linux:ldd:kdebug:debug|Kernel Debug and Hack]]
