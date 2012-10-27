@@ -1,0 +1,4 @@
+
+Ref: 
+
+  * http://en.wikipedia.org/wiki/Magic_SysRq_key

@@ -14,6 +14,7 @@ News,Wikis,Docs:
 Src:
   * https://lkml.org/
   * https://patchwork.kernel.org/
+  * http://marc.info/
   * http://www.spinics.net/lists/
   * http://vger.kernel.org/vger-lists.html
   * http://news.gmane.org/gmane.linux.kernel

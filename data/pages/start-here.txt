@@ -9,6 +9,7 @@ Just for fun(Samsung Platform)~~~\\
   *[[hw:arm:arm|ARM]]
   *[[hw:touch:touch|Touch]]
   *[[hw:hex|Hex Format]]
+  *[[hw:hw:protocol|HW Protocols]]
 ===== U-boot =====
 
   * [[uboot:boot-fail|Failed To Boot From eMMC]]

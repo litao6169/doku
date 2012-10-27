@@ -1,0 +1,15 @@
+
+<file>
+DTE   |    DCE    
+
+RTS---->----CTS
+CTS----<----RTS
+
+RTS: OUT0(可接收数据), OUT1(不可接收数据)
+CTS: IN0(可发送数据), IN1(不可发送数据)
+
+</file>
+
+
+Ref:
+  * http://en.wikipedia.org/wiki/RS-232#RTS.2FCTS_handshaking

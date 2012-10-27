@@ -10,5 +10,6 @@ Git是Linus Torvalds为了帮助管理Linux内核开发而开发的一个开放�
 Refs:
 
   * [[http://progit.org/|pro git]]
+  * http://www.kernel.org/pub/software/scm/git/docs/
   * [[http://book.git-scm.com/|Git Community Book]]
   * [[http://www.worldhello.net/gotgit/Git权威指南]]
