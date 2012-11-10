@@ -3,3 +3,4 @@
   *[[.coresight|Coresight]]
   *[[.ppmu|PPMU]]
   *[[.mpcore|MP core]]
+  *[[glossary|Glossary]]

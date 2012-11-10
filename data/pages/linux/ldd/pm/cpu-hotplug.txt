@@ -1,0 +1,3 @@
+
+Ref:
+  * https://wiki.linaro.org/WorkingGroups/PowerManagement/Doc/Hotplug#CPU_hotplug_on_latest_kernel

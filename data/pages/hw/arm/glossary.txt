@@ -1,0 +1,31 @@
+=== [ARM Glossaries] ===
+== A ==
+  * ATB: AMBA Trace Bus (ATB).
+
+== D ==
+  * DCG: Dynamic Clock Generator.
+  * DVC: Dynamic Voltage Controller.
+  * DPM: Dynamic Performance Monitor.
+  * DAP: Debug Access Port (DAP).
+
+== E ==
+  * ETM: Embedded Trace Macrocell.
+  * ECT: Embedded Cross Trigger (ECT).
+  * ETB: Embedded Trace Buffer (ETB).
+
+== H ==
+  * HPM: Hardware Performance Monitor (HPM).
+  * HTM: AMBA AHB Trace Macrocell (HTM).
+
+== I ==
+  * IEC: Intelligent Energy Controller.
+  * IEM: Intelligent Energy Manager (IEM).
+
+== P ==
+  * PFT: Program Flow Trace.
+  * PTM: Program Flow Trace Macrocell.
+
+== T ==
+  * TIM: Instrumentation Trace Macrocell (ITM).
+  * TPIU: Trace Port Interface Unit (TPIU).
+ 

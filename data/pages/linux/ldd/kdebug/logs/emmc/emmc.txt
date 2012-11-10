@@ -1,1 +1,2 @@
   * [[emmc-start| emmc 开机错误]]
+  * [[ext4-erro| EXT4 erro]]

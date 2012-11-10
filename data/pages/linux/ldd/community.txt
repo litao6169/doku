@@ -5,6 +5,7 @@ News,Wikis,Docs:
   * http://kernelnewbies.org/
   * http://free-electrons.com/
   * http://www.linuxfoundation.org/
+  * http://www.makelinux.net/reference
   * http://linuxforums.org.uk/index.php
   * http://omappedia.org/wiki/Main_Page
   * http://forum.xda-developers.com/

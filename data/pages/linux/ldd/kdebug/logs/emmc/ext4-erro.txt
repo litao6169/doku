@@ -1,0 +1,11 @@
+<file>
+[   21.237460] c1   2291 EXT4-fs error (device mmcblk0p3): ext4_mb_generate_buddy:736: group 0, 8745 blocks in bitmap, 8715 in gd
+[   21.249735] c1   2291 Aborting journal on device mmcblk0p3-8.
+[   21.269003] c1   2291 EXT4-fs (mmcblk0p3): Remounting filesystem read-only
+[   21.276743] c1   2291 EXT4-fs error (device mmcblk0p3) in ext4_reserve_inode_write:5658: Journal has aborted
+[   21.292815] c1   2291 EXT4-fs error (device mmcblk0p3) in ext4_reserve_inode_write:5658: Journal has aborted
+[   21.308010] c1   2291 EXT4-fs error (device mmcblk0p3) in ext4_ext_remove_space:2671: Journal has aborted
+[   21.321068] c1   2291 EXT4-fs error (device mmcblk0p3) in ext4_reserve_inode_write:5658: Journal has aborted
+[   21.337081] c1   2291 EXT4-fs error (device mmcblk0p3) in ext4_orphan_del:2120: Journal has aborted
+[   21.349208] c1   2291 EXT4-fs error (device mmcblk0p3) in ext4_reserve_inode_write:5658: Journal has aborted
+</file>

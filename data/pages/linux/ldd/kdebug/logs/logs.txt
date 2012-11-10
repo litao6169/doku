@@ -2,3 +2,4 @@
   * [[.emmc:emmc|eMMC]]
   * [[wm8994-suspend|wm8994]]
   * [[sound|Sound]]
+  * [[.pm:pm|PM]]

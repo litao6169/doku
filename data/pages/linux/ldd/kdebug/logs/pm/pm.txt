@@ -1,0 +1,35 @@
+<file>
+[  280.250182] c0     21 PM: suspend entry 2012-01-02 22:09:32.526197040 UTC
+[  280.257629] c0     21 PM: Syncing filesystems ... done.
+[  280.267997] c0     21 Freezing user space processes ... (elapsed 0.02 seconds) done.
+[  280.303245] c0     21 Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+[  280.495778] c0     21  [AUD_ES305B] es305b_soc_config: ES305B: set es305b into Suspend mode
+[  280.695617] c0     21 max77686_rtc_start_alarm: 112/0/2 22:19:27(1)
+[  280.795333] c0     21 PM: suspend of devices complete after 462.457 msecs
+[  280.813876] c0     21 active wake lock alarm, time left 913
+[  280.819643] c0     21 power_suspend_late return -11
+[  280.824781] c0     21 pm_noirq_op(): platform_pm_suspend_noirq+0x0/0x40 returns -11
+[  280.832639] c0     21 PM: Device power.0 failed to suspend late: error -11
+[  280.846959] c0     21 PM: early resume of devices complete after 7.193 msecs
+[  280.855733] c0     21 PM: Some devices failed to power down
+[  280.875563] c0     21 System wake up by ---> [MX_UNKNOW_WAKE] 
+[  280.939187] c0     21 PM: resume of devices complete after 66.717 msecs
+[  280.959166] c0     21 Restarting tasks ... mx2_tvout_enable_power:[ON]
+[  280.990125] c0     21 done.
+[  280.997457] c0     21 PM: suspend exit 2012-01-02 22:09:33.273469707 UTC
+[  281.014315] c0     21 suspend: exit suspend, ret = -11 (2012-01-02 06:09:33.290329999) Shanghai
+[  281.036837] c0    994 mx2_tvout_enable_power:[OFF]
+[  281.056439] c0    994 suspend: enter suspend
+[  281.060940] c0    994 PM: suspend entry 2012-01-02 22:09:33.336957247 UTC
+[  281.068865] c0    994 PM: Syncing filesystems ... done.
+[  281.078474] c0    994 Freezing user space processes ... (elapsed 0.02 seconds) done.
+[  281.113252] c0    994 Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+[  281.305778] c0    994  [AUD_ES305B] es305b_soc_config: ES305B: set es305b into Suspend mode
+[  281.555630] c0    994 max77686_rtc_start_alarm: 112/0/2 22:19:26(1)
+[  281.655190] c0    994 PM: suspend of devices complete after 512.133 msecs
+[  281.673714] c0    994 power_suspend_late return 0
+[  281.678701] c0    994 PM: late suspend of devices complete after 13.363 msecs
+[  281.686092] c0    994 Disabling non-boot CPUs ...
+[  281.691373] c0    994 PM: SLEEP
+[  281.694669] c0    994 ARM_COREx_STATUS CORE1[0x00070000], CORE2[0x00070000], CORE3[0x00070000]
+</file>
