@@ -1,7 +1,6 @@
-分析Linux重要子系统,如：电源，时钟，中断等常用子系统。
+分析Linux重要子系统。
  
 LDD:
-  * [[clock|Clock]]
   * [[.time:time|Time]]
   * [[irq|IRQ]]
   * [[dma|DMA]]
