@@ -1,0 +1,44 @@
+  * Linux clk declare
+
+include/linux/clk.h:
+<code c>
+/*
+ * struct clk 声明，指向具体实现(Plat specifc or common clk)
+ * 1. samsung specific: arch/arm/plat-samsung/include/plat/clock.h
+ * 2. common clk: include/linux/clk-private.h
+ */
+struct clk; 
+
+/* drivers/clk/clkdev.c */
+struct clk *clk_get(struct device *dev, const char *id);
+void clk_put(struct clk *clk);
+
+/* 
+ * Plfatform specific or commnon clk
+ * 1. Samusung specific: arch/arm/plat-samsung/clock.c
+ * 2. common clk: drivers/clk/clk.c
+ */
+int clk_enable(struct clk *clk);
+void clk_disable(struct clk *clk);
+unsigned long clk_get_rate(struct clk *clk);
+long clk_round_rate(struct clk *clk, unsigned long rate);
+int clk_set_rate(struct clk *clk, unsigned long rate);
+int clk_set_parent(struct clk *clk, struct clk *parent);
+struct clk *clk_get_parent(struct clk *clk);
+</code>
+
+  * drivers/clk/clkdev.c
+<code c>
+/*
+ * 所有clock,以clk_lookup 形式,通过clkdev_add 或clk_register_clkdev
+ * 注册在clocks链表上供clk_get查找时使用.
+ */
+static LIST_HEAD(clocks);
+
+struct clk_lookup {
+        struct list_head        node;
+        const char              *dev_id;
+        const char              *con_id;
+        struct clk              *clk;
+};
+</code>

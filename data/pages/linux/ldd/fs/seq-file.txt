@@ -1,4 +1,4 @@
 
 Ref:
 
-Documentation/filesystems/seq_file.txt
+  * http://www.mjmwired.net/kernel/Documentation/filesystems/seq_file.txt

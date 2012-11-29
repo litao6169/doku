@@ -12,7 +12,7 @@ News,Wikis,Docs:
   * http://www.kernel.org/doc/ols/
   * https://blueprints.launchpad.net/linux-linaro
 
-Src:
+Sources,Patches:
   * https://lkml.org/
   * https://patchwork.kernel.org/
   * http://marc.info/

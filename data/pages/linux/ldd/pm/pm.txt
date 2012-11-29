@@ -20,7 +20,7 @@ Linux电源管理技术及相关问题。
   * [[pm-acpi|PM: ACPI]]
   * [[pm-debug|PM: Debug]]
   * [[pm-test|PM: Test]]
-  * [[pm-sub|Pm-Sub System]]
+  * [[pm-sub|Pm: Sub-System]]
 
 Refs:
   * [[http://lwn.net/Articles/505683/|Linux power management]]

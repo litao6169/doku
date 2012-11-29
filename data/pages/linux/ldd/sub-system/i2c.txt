@@ -1,5 +1,5 @@
 Refs:
 
-  * Documentation/i2c/smbus-protocol
+  * http://www.mjmwired.net/kernel/Documentation/i2c/smbus-protocol
   * http://smbus.org/specs/
   * http://www.lm-sensors.org/wiki/I2CTools

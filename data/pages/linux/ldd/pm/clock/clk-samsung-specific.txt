@@ -1,0 +1,101 @@
+samsung:
+arch/arm/plat-samsung/include/plat/clock.h
+
+<code c>
+struct clk {
+        struct list_head      list;
+        struct module        *owner;
+        struct clk           *parent;
+        const char           *name;
+        const char              *devname;
+        int                   id;
+        int                   usage;
+        unsigned long         rate;
+        unsigned long         ctrlbit;
+
+        struct clk_ops          *ops;
+        int                 (*enable)(struct clk *, int enable);
+        struct clk_lookup       lookup;
+#if defined(CONFIG_PM_DEBUG) && defined(CONFIG_DEBUG_FS)
+        struct dentry           *dent;  /* For visible tree hierarchy */
+#endif
+};
+
+</code>
+
+为满足三星新soc需要,新增struct clksrc_clk
+
+
+arch/arm/plat-samsung/include/plat/clock-clksrc.h:
+<code c>
+
+/**
+ * struct clksrc_clk - class of clock for newer style samsung devices.
+ * @clk: the standard clock representation
+ * @sources: the sources for this clock
+ * @reg_src: the register definition for selecting the clock's source
+ * @reg_div: the register definition for the clock's output divisor
+ *
+ * This clock implements the features required by the newer SoCs where
+ * the standard clock block provides an input mux and a post-mux divisor
+ * to provide the periperhal's clock.
+ *
+ * The array of @sources provides the mapping of mux position to the
+ * clock, and @reg_src shows the code where to modify to change the mux
+ * position. The @reg_div defines how to change the divider settings on
+ * the output.
+ */
+struct clksrc_clk {
+        struct clk              clk;
+        struct clksrc_sources   *sources;
+
+        struct clksrc_reg       reg_src;
+        struct clksrc_reg       reg_div;
+};
+
+</code>
+
+
+clock ops分三类:
+
+<code c>
+static struct clk_ops clksrc_ops = {
+        .set_parent     = s3c_setparent_clksrc,
+        .get_rate       = s3c_getrate_clksrc,
+        .set_rate       = s3c_setrate_clksrc,
+        .round_rate     = s3c_roundrate_clksrc,
+};
+
+static struct clk_ops clksrc_ops_nodiv = {
+        .set_parent     = s3c_setparent_clksrc,
+};
+
+static struct clk_ops clksrc_ops_nosrc = {
+        .get_rate       = s3c_getrate_clksrc,
+        .set_rate       = s3c_setrate_clksrc,
+        .round_rate     = s3c_roundrate_clksrc,
+};
+
+</code>
+
+
+配置CLKDEV_LOOKUP支持后, 系统时钟clocks的HEAD 引用 driver/clk/clkdev.c中的static LIST_HEAD(clocks)。
+
+<code c>
+int s3c24xx_register_clock(struct clk *clk)
+{
+        if (clk->enable == NULL)
+                clk->enable = clk_null_enable;
+
+        /* fill up the clk_lookup structure and register it*/
+        clk->lookup.dev_id = clk->devname;
+        clk->lookup.con_id = clk->name;
+        clk->lookup.clk = clk;
+        clkdev_add(&clk->lookup);//调用drivers/clk/clkdev.c 中的接口.
+
+        return 0;
+}
+</code>
+
+Ref:
+  * http://lwn.net/Articles/472998
