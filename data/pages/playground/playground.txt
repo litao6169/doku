@@ -1,1 +1,12 @@
 ====== PlayGround ======
+
+<wrap info round> with</wrap>
+<inline info round 100px> with</inline>
+<div info round 100px></div>
+
+<WRAP warning round 100px>warning</WRAP>
+<WRAP tip round 20em></WRAP>
+
+<WRAP download round 200px>
+//**下载**//
+</WRAP>
