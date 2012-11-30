@@ -1,12 +1,18 @@
 ====== PlayGround ======
 
 <wrap info round> with</wrap>
-<inline info round 100px> with</inline>
-<div info round 100px></div>
+<wrap info round 100px> with</wrap>
+<wrap em>especially emphasised </wrap>
 
-<WRAP warning round 100px>warning</WRAP>
-<WRAP tip round 20em></WRAP>
+<WRAP info round 100px>info</WRAP>
+<wrap warning round 100px>warning warning</wrap>
+<WRAP tip round 20em>TIPS</WRAP>
 
 <WRAP download round 200px>
 //**下载**//
+</WRAP>
+
+<WRAP box 350px>
+<wrap info> test </wrap>
+  * firest
 </WRAP>

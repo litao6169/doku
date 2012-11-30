@@ -1,7 +1,11 @@
-  * [[.clkdev|Linux Base Clock]]
-  * [[.common-clk|Common Clk Framework]]
-  * [[.clk-samsung-common|Samsung Platform Common Clk]]
-  * [[.clk-samsung-specific|Samsung Platform Specific(old)]]
+  * [[clkdev|Linux Clk Subsystem]]  
+  * [[clk-samsung-specific|Samsung Platform Specific(old)]]
+
+  * Common Clk Framework
+    * [[common-clk-types|Common Clk Types]]
+    * [[common-clk-register|Common Clk Register]]
+    * [[common-clk-samsung|Samsung Common Clk]]
+
 
 Refs:
   * http://www.mjmwired.net/kernel/Documentation/clk.txt

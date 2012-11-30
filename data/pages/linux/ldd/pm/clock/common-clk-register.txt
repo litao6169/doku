@@ -1,0 +1,233 @@
+drivers/clk/clk.c
+<code c>
+/**
+ * clk_register - allocate a new clock, register it and return an opaque cookie
+ * @dev: device that is registering this clock
+ * @hw: link to hardware-specific clock data
+ *
+ * clk_register is the primary interface for populating the clock tree with new
+ * clock nodes.  It returns a pointer to the newly allocated struct clk which
+ * cannot be dereferenced by driver code but may be used in conjuction with the
+ * rest of the clock API.  In the event of an error clk_register will return an
+ * error code; drivers must test for an error code after calling clk_register.
+ */
+struct clk *clk_register(struct device *dev, struct clk_hw *hw)
+{
+        int ret;
+        struct clk *clk;
+
+        clk = kzalloc(sizeof(*clk), GFP_KERNEL);
+        if (!clk) {
+                pr_err("%s: could not allocate clk\n", __func__);
+                ret = -ENOMEM;
+                goto fail_out;
+        }
+
+        ret = _clk_register(dev, hw, clk);
+        if (!ret)
+                return clk;
+
+        kfree(clk);
+fail_out:
+        return ERR_PTR(ret);
+}
+EXPORT_SYMBOL_GPL(clk_register);
+
+static int _clk_register(struct device *dev, struct clk_hw *hw, struct clk *clk)
+{
+        int i, ret;
+
+        clk->name = kstrdup(hw->init->name, GFP_KERNEL);
+        if (!clk->name) {
+                pr_err("%s: could not allocate clk->name\n", __func__);
+                ret = -ENOMEM;
+                goto fail_name;
+        }
+        clk->ops = hw->init->ops;
+        clk->hw = hw;
+        clk->flags = hw->init->flags;
+        clk->num_parents = hw->init->num_parents;
+        hw->clk = clk;
+
+        /* allocate local copy in case parent_names is __initdata */
+        clk->parent_names = kzalloc((sizeof(char*) * clk->num_parents),
+                        GFP_KERNEL);
+
+        if (!clk->parent_names) {
+                pr_err("%s: could not allocate clk->parent_names\n", __func__);
+                ret = -ENOMEM;
+                goto fail_parent_names;
+        }
+
+        /* copy each string name in case parent_names is __initdata */
+        for (i = 0; i < clk->num_parents; i++) {
+                clk->parent_names[i] = kstrdup(hw->init->parent_names[i],
+                                                GFP_KERNEL);
+                if (!clk->parent_names[i]) {
+                        pr_err("%s: could not copy parent_names\n", __func__);
+                        ret = -ENOMEM;
+                        goto fail_parent_names_copy;
+                }
+        }
+
+        ret = __clk_init(dev, clk);
+        if (!ret)
+                return 0;
+
+fail_parent_names_copy:
+        while (--i >= 0)
+                kfree(clk->parent_names[i]);
+        kfree(clk->parent_names);
+fail_parent_names:
+        kfree(clk->name);
+fail_name:
+        return ret;
+}
+
+/**
+ * __clk_init - initialize the data structures in a struct clk
+ * @dev:        device initializing this clk, placeholder for now
+ * @clk:        clk being initialized
+ *
+ * Initializes the lists in struct clk, queries the hardware for the
+ * parent and rate and sets them both.
+ */
+int __clk_init(struct device *dev, struct clk *clk)
+{
+        int i, ret = 0;
+        struct clk *orphan;
+        struct hlist_node *tmp, *tmp2;
+
+        if (!clk)
+                return -EINVAL;
+
+        mutex_lock(&prepare_lock);
+
+        /* check to see if a clock with this name is already registered */
+        if (__clk_lookup(clk->name)) {
+                pr_debug("%s: clk %s already initialized\n",
+                                __func__, clk->name);
+                ret = -EEXIST;
+                goto out;
+        }
+        /* check that clk_ops are sane.  See Documentation/clk.txt */
+        if (clk->ops->set_rate &&
+                        !(clk->ops->round_rate && clk->ops->recalc_rate)) {
+                pr_warning("%s: %s must implement .round_rate & .recalc_rate\n",
+                                __func__, clk->name);
+                ret = -EINVAL;
+                goto out;
+        }
+
+        if (clk->ops->set_parent && !clk->ops->get_parent) {
+                pr_warning("%s: %s must implement .get_parent & .set_parent\n",
+                                __func__, clk->name);
+                ret = -EINVAL;
+                goto out;
+        }
+
+        /* throw a WARN if any entries in parent_names are NULL */
+        for (i = 0; i < clk->num_parents; i++)
+                WARN(!clk->parent_names[i],
+                                "%s: invalid NULL in %s's .parent_names\n",
+                                __func__, clk->name);
+
+        /*
+         * Allocate an array of struct clk *'s to avoid unnecessary string
+         * look-ups of clk's possible parents.  This can fail for clocks passed
+         * in to clk_init during early boot; thus any access to clk->parents[]
+         * must always check for a NULL pointer and try to populate it if
+         * necessary.
+         *
+         * If clk->parents is not NULL we skip this entire block.  This allows
+         * for clock drivers to statically initialize clk->parents.
+         */
+         if (clk->num_parents > 1 && !clk->parents) {
+                clk->parents = kzalloc((sizeof(struct clk*) * clk->num_parents),
+                                GFP_KERNEL);
+                /*
+                 * __clk_lookup returns NULL for parents that have not been
+                 * clk_init'd; thus any access to clk->parents[] must check
+                 * for a NULL pointer.  We can always perform lazy lookups for
+                 * missing parents later on.
+                 */
+                if (clk->parents)
+                        for (i = 0; i < clk->num_parents; i++)
+                                clk->parents[i] =
+                                        __clk_lookup(clk->parent_names[i]);
+        }
+
+        clk->parent = __clk_init_parent(clk);
+
+        /*
+         * Populate clk->parent if parent has already been __clk_init'd.  If
+         * parent has not yet been __clk_init'd then place clk in the orphan
+         * list.  If clk has set the CLK_IS_ROOT flag then place it in the root
+         * clk list.
+         *
+         * Every time a new clk is clk_init'd then we walk the list of orphan
+         * clocks and re-parent any that are children of the clock currently
+         * being clk_init'd.
+         */
+        if (clk->parent)
+                hlist_add_head(&clk->child_node,
+                                &clk->parent->children);
+        else if (clk->flags & CLK_IS_ROOT)
+                hlist_add_head(&clk->child_node, &clk_root_list);
+        else
+                hlist_add_head(&clk->child_node, &clk_orphan_list);
+
+        /*
+         * Set clk's rate.  The preferred method is to use .recalc_rate.  For
+         * simple clocks and lazy developers the default fallback is to use the
+         * parent's rate.  If a clock doesn't have a parent (or is orphaned)
+         * then rate is set to zero.
+         */
+        if (clk->ops->recalc_rate)
+                clk->rate = clk->ops->recalc_rate(clk->hw,
+                                __clk_get_rate(clk->parent));
+        else if (clk->parent)
+                clk->rate = clk->parent->rate;
+        else
+                clk->rate = 0;
+
+        /*
+         * walk the list of orphan clocks and reparent any that are children of
+         * this clock
+         */
+        hlist_for_each_entry_safe(orphan, tmp, tmp2,
+                                        &clk_orphan_list, child_node) {
+                /*Fix bug: pathched by litao, 2012.11.28*/
+                if (orphan->ops->get_parent) {
+                        i = orphan->ops->get_parent(orphan->hw);
+                        if (!strcmp(clk->name, orphan->parent_names[i]))
+                                __clk_reparent(orphan, clk);
+                        continue;
+                }
+
+                for (i = 0; i < orphan->num_parents; i++)
+                        if (!strcmp(clk->name, orphan->parent_names[i])) {
+                                __clk_reparent(orphan, clk);
+                                break;
+                        }
+        }
+
+        /*
+         * optional platform-specific magic
+         *
+         * The .init callback is not used by any of the basic clock types, but
+         * exists for weird hardware that must perform initialization magic.
+         * Please consider other ways of solving initialization problems before
+         * using this callback, as it's use is discouraged.
+         */
+        if (clk->ops->init)
+                clk->ops->init(clk->hw);
+
+        clk_debug_register(clk);
+
+out:
+        mutex_unlock(&prepare_lock);
+
+        return ret;
+}
+</code>

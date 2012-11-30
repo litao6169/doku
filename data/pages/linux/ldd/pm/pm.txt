@@ -4,6 +4,7 @@ Linux电源管理技术及相关问题。
   * [[power-supply|PM: Power-Supply]]
   * [[pm-domain|PM: Domain]]
   * [[runtime-pm|PM: Runtime]]
+  * [[power-seq|PM: Power Sequences]]
   * [[pm-qos|PM: Qos]]
   * [[devfreq|PM: DevFreq]]
   * [[.dvfs:dvfs|PM: CPUFreq]]
