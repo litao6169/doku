@@ -1,10 +1,12 @@
   * [[clkdev|Linux Clk Subsystem]]  
   * [[clk-samsung-specific|Samsung Platform Specific(old)]]
 
-  * Common Clk Framework
+  * <wrap todo>Common Clk Framework</wrap>
     * [[common-clk-types|Common Clk Types]]
     * [[common-clk-register|Common Clk Register]]
+    * [[common-clk-disable-unused| Disable Unused Clk(init)]]
     * [[common-clk-samsung|Samsung Common Clk]]
+    * [[common-clk-max77686|MAX77686 Common Clk]]
 
 
 Refs:

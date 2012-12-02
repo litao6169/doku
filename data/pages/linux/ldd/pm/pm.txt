@@ -2,7 +2,7 @@ Linux电源管理技术及相关问题。
   * [[pmic|PM: Regulator]]
   * [[.clock:clock|PM: Clock]]
   * [[power-supply|PM: Power-Supply]]
-  * [[pm-domain|PM: Domain]]
+  * [[pm-domains|PM: Domains]]
   * [[runtime-pm|PM: Runtime]]
   * [[power-seq|PM: Power Sequences]]
   * [[pm-qos|PM: Qos]]

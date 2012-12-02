@@ -2,9 +2,9 @@
 ==== File Systems ====
   * [[pstore|Persistent Store]]
   * [[initrd|Initrd]]
-  * [[rootfs|Rootfs]]
   * [[ext4|Ext4]]
   * [[ntfs-3g|NTFS-3G]]
+  * [[sysfs|Sysfs]]
 
 
 === 文件系统接口 ===

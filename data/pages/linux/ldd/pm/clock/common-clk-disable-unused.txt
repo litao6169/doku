@@ -1,0 +1,64 @@
+<wrap danger> 
+系统启动完后为省电会关掉未使用的时钟，处理不当可能引起死机。
+</wrap>
+
+<wrap info>
+<nowiki>
+保持打开： 设置CLK_IGNORE_UNUSED flag或不提供ops->enable回调。
+</nowiki>
+</wrap>
+
+  *clk_disable_unused
+<code c>
+//drivers/clk/clk.c
+
+/* caller must hold prepare_lock */
+static void clk_disable_unused_subtree(struct clk *clk)
+{
+        struct clk *child;
+        struct hlist_node *tmp;
+        unsigned long flags;
+
+        if (!clk)
+                goto out;
+
+        hlist_for_each_entry(child, tmp, &clk->children, child_node)
+                clk_disable_unused_subtree(child);
+
+        spin_lock_irqsave(&enable_lock, flags);
+
+        if (clk->enable_count)
+                goto unlock_out;
+
+        if (clk->flags & CLK_IGNORE_UNUSED)
+                goto unlock_out;
+
+        if (__clk_is_enabled(clk) && clk->ops->disable)
+                clk->ops->disable(clk->hw);
+
+unlock_out:
+        spin_unlock_irqrestore(&enable_lock, flags);
+
+out:
+        return;
+}
+
+static int clk_disable_unused(void)
+{
+        struct clk *clk;
+        struct hlist_node *tmp;
+
+        mutex_lock(&prepare_lock);
+
+        hlist_for_each_entry(clk, tmp, &clk_root_list, child_node)
+                clk_disable_unused_subtree(clk);
+
+        hlist_for_each_entry(clk, tmp, &clk_orphan_list, child_node)
+                clk_disable_unused_subtree(clk);
+
+        mutex_unlock(&prepare_lock);
+
+        return 0;
+}
+late_initcall(clk_disable_unused);
+</code>

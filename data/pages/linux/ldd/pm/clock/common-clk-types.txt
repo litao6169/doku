@@ -1,6 +1,6 @@
 === Common Clk Tpypes ===
 
-<wrap tip>
+<wrap info>
 clk_fixed_rate, clk_gate, clk_divider, clk_mux, clk_fixed_factor.
 </wrap>
 

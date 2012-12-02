@@ -1,4 +1,29 @@
 drivers/clk/clk.c
+
+  *<wrap important><nowiki>__clk_init 分析:</nowiki></wrap>
+
+<file>
+1. clk 注册在 clk_root_list和clk_orphan_list链表上。
+
+2. 检查 clk name唯一性，__clk_lookup。
+
+3. Check that clk_ops are sane. See Documentation/clk.txt
+
+4. Alloc parent names array, and look up parents.
+
+5. Populate clk->parent if parent has already been __clk_init'd.
+If parent has not yet been __clk_init'd then place clk in the orphan
+list.  If clk has set the CLK_IS_ROOT flag then place it in the root
+clk list.  
+
+6. Set clk's rate.
+
+7. walk the list of orphan clocks and reparent any that are children of
+this clock.                    
+</file>
+
+  *clk_register:
+
 <code c>
 /**
  * clk_register - allocate a new clock, register it and return an opaque cookie
