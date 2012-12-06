@@ -1,0 +1,47 @@
+  * <wrap>Serial Interfaces</wrap>
+    * [[i2c|I2C]]
+    * [[edid|EDID]]
+    * [[uart|UART]]
+    * [[spi|SPI]]
+    * [[usi|USI]]
+    * [[hdmi|HDMI]]
+    * [[sata|SATA]]
+    * [[jtag|JTAG]]
+    * <wrap>Audio</wrap>
+      * [[i2s|I2S]]
+      * [[spdif|SPDIF]]
+      * [[pcm|PCM]]
+      * [[ac97|AC97]]
+    * <wrap>USB</wrap>
+      * [[usb12|USB1.x-2.x]]
+      * [[hsic|High Speed Inter-Chip (HSIC)]]
+      * [[usb3|USB3.0]]
+
+  * <wrap>Parallel Interfaces</wrap>
+    * <wrap> Memory </wrap>
+      * [[sdr|SDRAM]]
+      * [[ddr|DDRAM]]
+      * [[c2c|C2C]]
+      * [[nor-flash|Nor-Flash]]
+      * [[nand-flash|Nand-Flash]]
+      * [[onenand|oneNand]]
+      * [[sd-sdio|SD(IO)]]
+      * [[mmc|MMC]]
+      * [[emmc|eMMC/iNAND]]
+    * [[rgb|RGB]]
+    * [[camif|CAMIF]]
+ 
+  * <wrap> MIPI </wrap>
+    * [[csi|Camera Serial Interface (CSI)]]
+    * [[dsi|Display Serial Interface (DSI)]]
+    * [[hsi|High Speed Synchronous Interface (HSI)]]
+    * [[bif|Battery Interface (BIF)]]
+    * [[stp|System Trace Protocol (STP)]]
+    * [[digrf|Radio Frequency (DigRF)]]
+    * [[lli|Low Latency Interface (LLI)]]
+    * [[smpi|System Power Management Interface (SPMI)]]
+    * [[slimbus|Serial Low-power Inter-chip Media Bus (SLIMbus®)]]
+
+Refs:
+  * http://www.mipi.org/
+  * http://www.interfacebus.com
