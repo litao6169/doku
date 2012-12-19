@@ -1,0 +1,8 @@
+<file>
+drivers/input/misc/gpio_*
+gpio_axis.c
+gpio_event.c
+gpio_input.c
+gpio_matrix.c
+gpio_output.c
+</file>

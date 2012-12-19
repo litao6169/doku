@@ -54,8 +54,10 @@ Just for fun(Samsung Platform)~~~\\
   * [[tools:embedded:embedded-system|Embedded Systems]]
 
 ===== Android =====
-  * [[android:port:port|Android Porting]]
+
+  * [[android:pm:pm|Android PM]]
   * [[android:app:app|Android App]]
+  * [[android:port:port|Android Porting]]
 
 ===== PM =====
 兼容性(前后)

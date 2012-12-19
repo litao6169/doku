@@ -1,0 +1,30 @@
+
+  * frameworks/native/cmds/dumpstate/dumpstate.c
+<code>
+ 91     dump_file("KERNEL WAKELOCKS", "/proc/wakelocks");
+ 92     dump_file("KERNEL WAKE SOURCES", "/d/wakeup_sources");
+</code>
+
+  * frameworks/base/core/java/com/android/internal/os/BatteryStatsImpl.java
+<code>
+...
+1041     private final Map<String, KernelWakelockStats> readKernelWakelockStats() {
+1042 
+1043         FileInputStream is;
+1044         byte[] buffer = new byte[8192];
+1045         int len;
+1046         boolean wakeup_sources = false;
+1047 
+1048         try {
+1049             try {
+1050                 is = new FileInputStream("/proc/wakelocks");
+1051             } catch (java.io.FileNotFoundException e) {
+1052                 try {
+1053                     is = new FileInputStream("/d/wakeup_sources");
+1054                     wakeup_sources = true;
+1055                 } catch (java.io.FileNotFoundException e2) {
+1056                     return null;
+1057                 }
+1058             }
+...
+</code>

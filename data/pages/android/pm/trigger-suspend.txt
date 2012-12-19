@@ -1,0 +1,206 @@
+ * libpower.so: hardware/libhardware_legacy/power/power.c
+<file>
+1、Android4.1之前: 
+  1). suspend: 通过set_screen_state函数 写入state on/mem。
+  2). 提供userland wake_lock 接口。 
+</file>
+
+<code>
+const char * const NEW_PATHS[] = {
+    "/sys/power/wake_lock",
+    "/sys/power/wake_unlock",
+    "/sys/power/state"
+};
+</code>
+
+<file>
+2、Android4.1 之后: 
+  1). suspend: 迁往/system/core/libsuspend/*。
+  2). 只提供userland wake_lock 接口。
+</file>
+
+<code>
+const char * const NEW_PATHS[] = {
+    "/sys/power/wake_lock",
+    "/sys/power/wake_unlock",
+};
+</code>
+
+
+  * android4.1之后新增 suspend(libsuspend.so): system/core/libsuspend/*
+<file>
+1. autosuspend type:
+/*
+ * suspend优先级： early_suspend > autosleep > wakeup_count
+ * 1). early_suspend: state + wait_for_fb_*
+ * 2). autosleep: autosleep
+ * 3). wakeup_count: state + wakeup_count
+ *
+ * early_suspend 是兼容旧opportunistic 实现，而autosleep为新的实现。
+ */
+</file>
+
+
+<code>
+static int autosuspend_init(void)
+{
+    if (autosuspend_inited) {
+        return 0;
+    }
+
+    autosuspend_inited = true;
+
+    autosuspend_ops = autosuspend_earlysuspend_init();
+    if (autosuspend_ops) {
+        goto out;
+    }
+
+    autosuspend_ops = autosuspend_autosleep_init();
+    if (autosuspend_ops) {
+        goto out;
+    }
+
+    autosuspend_ops = autosuspend_wakeup_count_init();
+    if (autosuspend_ops) {
+        goto out;
+    }
+
+    if (!autosuspend_ops) {
+        ALOGE("failed to initialize autosuspend\n");
+        return -1;
+    }
+
+out:
+    ALOGV("autosuspend initialized\n");
+    return 0;
+}
+</code>
+
+<file>
+2. autosuspend_enable()/autosuspend_disable() 调用：
+</file>
+<code>
+//frameworks/base/services/jni/com_android_server_PowerManagerService.cpp
+static int nativeSetScreenState(JNIEnv *env, jobject clazz, jboolean on) {
+    if (on) {
+        autosuspend_disable();
+        if (gPowerModule) {
+            gPowerModule->setInteractive(gPowerModule, true);
+        }
+    } else {
+        if (gPowerModule) {
+            gPowerModule->setInteractive(gPowerModule, false);
+        }
+        autosuspend_enable();
+    }
+
+    return 0;
+}
+</code>
+
+  * wait_for_fb_*
+<file>
+1. Android4.2之前: wait_for_fb_*的操作(Display同步early suspend)在surfaceflinger中。
+</file>
+
+<code>
+ //frameworks/native/services/surfaceflinger/DisplayHardware/DisplayHardwareBase.cpp
+ 30 // ----------------------------------------------------------------------------
+ 31 namespace android {
+ 32 
+ 33 static char const * const kSleepFileName = "/sys/power/wait_for_fb_sleep";
+ 34 static char const * const kWakeFileName  = "/sys/power/wait_for_fb_wake";
+....
+72 status_t DisplayHardwareBase::DisplayEventThread::waitForFbSleep() {
+ 73     int err = 0;
+ 74     char buf;
+ 75     int fd = open(kSleepFileName, O_RDONLY, 0);
+ 76     // if the file doesn't exist, the error will be caught in read() below
+ 77     do {
+ 78         err = read(fd, &buf, 1);
+ 79     } while (err < 0 && errno == EINTR);
+ 80     close(fd);
+ 81     ALOGE_IF(err<0, "*** ANDROID_WAIT_FOR_FB_SLEEP failed (%s)", strerror(errno));
+ 82     return err < 0 ? -errno : int(NO_ERROR);
+ 83 }
+ 84 
+ 85 status_t DisplayHardwareBase::DisplayEventThread::waitForFbWake() {
+ 86     int err = 0;
+ 87     char buf;
+ 88     int fd = open(kWakeFileName, O_RDONLY, 0);
+ 89     // if the file doesn't exist, the error will be caught in read() below
+ 90     do {
+ 91         err = read(fd, &buf, 1);
+ 92     } while (err < 0 && errno == EINTR);
+ 93     close(fd);
+ 94     ALOGE_IF(err<0, "*** ANDROID_WAIT_FOR_FB_WAKE failed (%s)", strerror(errno));
+ 95     return err < 0 ? -errno : int(NO_ERROR);
+ 96 }
+ 97 
+</code>
+
+<file>
+2. 在4.2中此部分己转移到 system/core/libsuspend/autosuspend_earlysuspend.c 中。
+
+commit 8e533069e5721e55cb9768e140e16546c3a4a8b6
+Author: Colin Cross <ccross@android.com>
+Date:   Thu Jun 7 13:17:52 2012 -0700
+
+    surfaceflinger: replace early suspend with binder call from PowerManager
+
+    SurfaceFlinger will no longer directly synchronize with early suspend.
+    Instead, PowerManagerService will synchronize with SurfaceFlinger to
+    ensure that a black frame has been drawn on the display, and then
+    trigger all early suspend handlers.
+
+    Change-Id: I07acdd628440d23fdb69db94319ec5d65d3f4919
+
+ .../DisplayHardware/DisplayHardwareBase.cpp        |   78 --------------------
+ 1 file changed, 78 deletions(-)
+</file>
+
+<code>
+int wait_for_fb_wake(void)
+{
+    int err = 0;
+    char buf;
+    int fd = open(EARLYSUSPEND_WAIT_FOR_FB_WAKE, O_RDONLY, 0);
+    // if the file doesn't exist, the error will be caught in read() below
+    do {
+        err = read(fd, &buf, 1);
+    } while (err < 0 && errno == EINTR);
+    ALOGE_IF(err < 0,
+            "*** ANDROID_WAIT_FOR_FB_WAKE failed (%s)", strerror(errno));
+    close(fd);
+    return err < 0 ? err : 0;
+}
+
+static int wait_for_fb_sleep(void)
+{
+    int err = 0;
+    char buf;
+    int fd = open(EARLYSUSPEND_WAIT_FOR_FB_SLEEP, O_RDONLY, 0);
+    // if the file doesn't exist, the error will be caught in read() below
+    do {
+        err = read(fd, &buf, 1);
+    } while (err < 0 && errno == EINTR);
+    ALOGE_IF(err < 0,
+            "*** ANDROID_WAIT_FOR_FB_SLEEP failed (%s)", strerror(errno));
+    close(fd);
+    return err < 0 ? err : 0;
+}
+</code>
+
+
+  * recovery suspend_path: 注意与选用的 autosleep type 一致。
+<code>
+//bootable/recovery/recovery.cpp
+char *suspend_path = "/sys/power/state";
+</code>
+
+
+Refs:
+  * http://developer.android.com/reference/android/os/PowerManager.html
+  * http://www.360doc.com/userhome.aspx?userid=496343&cid=15
+  * http://lwn.net/Articles/479841/
+  * http://git.kernel.org/?p=linux/kernel/git/kas/linux-android-ia.git;a=history;f=kernel/power;hb=388080b52778fa87a5dddd3a933250ca712a6018

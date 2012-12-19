@@ -20,4 +20,4 @@ Sources,Patches:
   * http://vger.kernel.org/vger-lists.html
   * http://news.gmane.org/gmane.linux.kernel
   * https://opensource.samsung.com/community.do
- 
+  *  http://wiki.cyanogenmod.org/wiki/Building_Kernel_from_source

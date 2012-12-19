@@ -2,3 +2,4 @@ runtime pm
 
 Refs:
   * http://wenku.it168.com/d_000059937.shtml
+  * http://lwn.net/Articles/526760/
