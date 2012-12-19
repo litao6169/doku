@@ -18,7 +18,7 @@ Just for fun(Samsung Platform)~~~\\
 ==== Linux os ====
 
   * [[linux:ldd:model:ldd-model|Device Driver Model]]
-  * [[linux:ldd:widget:widget|Important Widgets]]
+  * [[linux:ldd:widget:widget|Kernel Technique]]
   * [[linux:ldd:kdebug:debug|Kernel Hacking]]
   * [[linux:ldd:pm:pm|Power Management]]
   * [[linux:ldd:sub-system:sub-system|Driver Subsystems]]
