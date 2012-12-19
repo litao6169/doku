@@ -1,0 +1,22 @@
+<file>
+[jstultz 2012-11-27] As of Android 4.2 userland, this is being used.
+See frameworks/base/services/input/EventHub.cpp -
+    // Tell the kernel that we want to use the monotonic clock for reporting timestamps
+    // associated with input events. This is important because the input system
+    // uses the timestamps extensively and assumes they were recorded using the monotonic
+    // clock.
+    //
+    // In older kernel, before Linux 3.4, there was no way to tell the kernel which
+    // clock to use to input event timestamps. The standard kernel behavior was to
+    // record a real time timestamp, which isn't what we want. Android kernels therefore
+    // contained a patch to the evdev_event() function in drivers/input/evdev.c to
+    // replace the call to do_gettimeofday() with ktime_get_ts() to cause the monotonic
+    // clock to be used instead of the real time clock.
+    //
+    // As of Linux 3.4, there is a new EVIOCSCLOCKID ioctl to set the desired clock.
+    // Therefore, we no longer require the Android-specific kernel patch described above
+    // as long as we make sure to set select the monotonic clock. We do that here. 
+</file>
+
+Refs:
+  * http://cards.linaro.org/browse/CARD-208

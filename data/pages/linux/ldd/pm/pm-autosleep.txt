@@ -1,0 +1,13 @@
+kernel/power/autosleep.c
+
+<file>
+autosleep：基于wakup source 的 Android opportunistic suspend实现。
+/sys/power/autosleep
+1. 写入 "mem": 开启autosleep, 当系统没有active wakeup_source时，调用标准pm_suspend(autosleep_state)
+进入休眠状态转换。
+2. 写入 "off": 关闭autosleep.
+</file>
+
+
+Refs:
+  * http://lwn.net/Articles/479841/

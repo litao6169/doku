@@ -28,6 +28,7 @@
       * [[sd-sdio|SD(IO)]]
       * [[mmc|MMC]]
       * [[emmc|eMMC/iNAND]]
+      * [[ufs|UFS]]
     * [[rgb|RGB]]
     * [[camif|CAMIF]]
  

@@ -7,12 +7,13 @@ Android 移植所涉及到的内容。
   * [[configs|Configs]]
   * [[tips|Tips]]
   * [[new-product|Add a new product]]
+  * [[evdev:Evdev Clock]]
+  * [[input-gpio|Google Input GPIO]]
   * [[.kernel:kernel-src|Android kernel]]
-
 
 Refs:
   * [[http://www.kandroid.org/android_pdk/index.html|Android PDK]]
   * [[http://source.android.com/source/downloading.html|Source]]
   * [[http://en.androidwiki.com/wiki/Main_Page|Android wiki]]
-  * [[http://omappedia.org/wiki/Main_Page|OMAP pedia]]
   * [[http://www.cyanogenmod.com|CyanogenMod]]
+  * http://www.omappedia.com/wiki/Android_How-tos

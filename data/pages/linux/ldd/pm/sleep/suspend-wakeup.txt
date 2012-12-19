@@ -1,0 +1,26 @@
+<file>
+echo "mem" > /sys/power/state
+
+state_store
+  pm_suspend(state);
+    enter_state(state);
+      sys_sync();
+      suspend_prepare();
+        suspend_freeze_processes();
+      suspend_devices_and_enter(state);
+        suspend_console();
+        dpm_suspend_start(PMSG_SUSPEND);
+        suspend_enter(state, &wakeup);
+          suspend_ops->prepare(); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_prepare*/
+          dpm_suspend_end(PMSG_SUSPEND);
+          suspend_ops->prepare_late(); /*Platform Specific*/
+          syscore_suspend();
+          suspend_ops->enter(state); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_enter*/
+-------------below wakeup--------------
+          dpm_resume_start(PMSG_RESUME);
+          suspend_ops->finish(); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_finish*/
+        dpm_resume_end(PMSG_RESUME);
+        resume_console();
+      suspend_finish();
+        suspend_thaw_processes();
+</file>
