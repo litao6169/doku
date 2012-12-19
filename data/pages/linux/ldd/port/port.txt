@@ -4,4 +4,4 @@
 
 
 Ref:
-  * http://www.mjmwired.net/kernel/Documentation/kernel-parameters.txt
+  * {{http://www.mjmwired.net/kernel/Documentation/kernel-parameters.txt|Documentation/kernel-parameters.txt}}

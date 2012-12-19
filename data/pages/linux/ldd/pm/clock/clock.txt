@@ -10,4 +10,4 @@
 
 
 Refs:
-  * http://www.mjmwired.net/kernel/Documentation/clk.txt
+  * {{http://www.mjmwired.net/kernel/Documentation/clk.txt|Documentation/clk.txt}}

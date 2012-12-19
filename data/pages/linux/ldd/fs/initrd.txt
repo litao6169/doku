@@ -35,4 +35,4 @@ mkimage -A arm -O linux -T ramdisk -C none -a 0x40800000 -n "ramdisk" -d ramdisk
 
 
 Refs:
-  * http://www.mjmwired.net/kernel/Documentation/initrd.txt
+  * {{http://www.mjmwired.net/kernel/Documentation/initrd.txt|Documentation/initrd.txt}}

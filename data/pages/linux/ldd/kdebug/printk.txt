@@ -67,3 +67,6 @@ register_console, printk.c中console_cmdline name及index 与samsung.c 中一致
 <file>
 echo "4 4 1 7" >/proc/sys/kernel/printk
 </file>
+
+Refs:
+  * {{http://www.mjmwired.net/kernel/Documentation/printk-formats.txt|Documentation/printk-formats.txt}}

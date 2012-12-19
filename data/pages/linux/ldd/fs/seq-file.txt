@@ -3,4 +3,4 @@ Ref:
 
   * http://linux.die.net/lkmpg/x861.html
   * http://lwn.net/Articles/22355/
-  * http://www.mjmwired.net/kernel/Documentation/filesystems/seq_file.txt
+  * {{http://www.mjmwired.net/kernel/Documentation/filesystems/seq_file.txt|Documentation/filesystems/seq_file.txt}}
