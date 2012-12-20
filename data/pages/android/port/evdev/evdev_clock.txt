@@ -18,5 +18,6 @@ See frameworks/base/services/input/EventHub.cpp -
     // as long as we make sure to set select the monotonic clock. We do that here. 
 </file>
 
+
 Refs:
   * http://cards.linaro.org/browse/CARD-208

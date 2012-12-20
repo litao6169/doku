@@ -1,3 +1,4 @@
+big.LITTLE
 
 Refs:
   * https://wiki.linaro.org/WorkingGroups/PowerManagement/Specs/sched_mc

@@ -7,7 +7,7 @@ Android 移植所涉及到的内容。
   * [[configs|Configs]]
   * [[tips|Tips]]
   * [[new-product|Add a new product]]
-  * [[evdev:Evdev Clock]]
+  * [[.evdev:Evdev Clock]]
   * [[input-gpio|Google Input GPIO]]
   * [[.kernel:kernel-src|Android kernel]]
 

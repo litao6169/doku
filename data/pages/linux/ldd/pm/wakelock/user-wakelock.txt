@@ -1,0 +1,27 @@
+  * active/decactive userspace wake_locks:
+<WRAP tip round 400px>
+写入wake_lock时，会查找此name的wake_lock 是否存在，若不存在则另分配。所以多次写入wake_lock同一名字，只会有一个wake_lock,而且不计数。
+(eg: 多次active，一次可decactive)。
+</WRAP>
+
+<code bash>
+echo test_lock > /sys/power/wake_lock
+echo test_lock > /sys/power/wake_unlock
+</code>
+
+  * 查看 userspace active/deactive wake_locks:
+<code>
+cat /sys/power/wake_lock
+cat /sys/power/wake_unlock
+</code>
+
+  * 查看android wake_locks:
+<code bash>
+dumpsys power
+</code>
+
+  * 查看系统所有wake_locks: userspace,kernel,active and deactive.
+<code bash>
+cat /proc/wakelocks   #Legacy
+cat /d/wakeup_sources #需要挂载debugfs
+</code>

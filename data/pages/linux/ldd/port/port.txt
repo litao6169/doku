@@ -1,6 +1,6 @@
   * [[gpio|GPIO]]
   * [[console|Console]]
-  * [[machine|Machine macros and numbers]]
+  * [[machine|Machine macros and numbers(Legacy)]]
 
 
 Ref:

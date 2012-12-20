@@ -14,7 +14,7 @@ Linux电源管理技术及相关问题。
   * [[idle|PM: CPUIdle]]
   * [[coupled-cpuidle|PM: Coupled-CPUIdle]]
   * [[early-suspend|PM: Early-Suspend]]
-  * [[wakelock|PM: Wakelock/Wakeup_sources]]
+  * [[.wakelock:wakelock|PM: Wakelock/Wakeup_sources]]
   * [[pm-autosleep|PM: Auto-Sleep]]
   * [[.sleep:sleep|PM: Sleep]]
   * [[reboot|PM: Reboot]]

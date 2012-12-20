@@ -1,5 +1,5 @@
   * [[clkdev|Linux Clk Subsystem]]  
-  * [[clk-samsung-specific|Samsung Platform Specific(old)]]
+  * [[clk-samsung-specific|Samsung Platform Specific(Legacy)]]
 
   * <wrap todo>Common Clk Framework</wrap>
     * [[common-clk-types|Common Clk Types]]

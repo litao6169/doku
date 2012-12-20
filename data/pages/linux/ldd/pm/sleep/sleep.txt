@@ -1,4 +1,3 @@
   * [[suspend-wakeup|Suspend-wakeup Sequence]]
-  * eMMC 休眠问题timeout：
-gpio 驱动能力,上拉，上下电时序(不断电？),时钟频率，DDR?。
-  * [[suspend|休眠唤醒Log]]
+  * [[wakeup-issue|Wakeup Issue]]
+  * [[suspend-logs|Suspend Wakeup Logs]]
