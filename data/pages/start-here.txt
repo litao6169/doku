@@ -58,6 +58,7 @@ Just for fun(Samsung Platform)~~~\\
   * [[android:pm:pm|Android PM]]
   * [[android:app:app|Android App]]
   * [[android:port:port|Android Porting]]
+  * [[android:recovery:recovery|Android Recovery]]
 
 ===== PM =====
 兼容性(前后)

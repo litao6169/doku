@@ -1,3 +1,4 @@
   * [[suspend-wakeup|Suspend-wakeup Sequence]]
+  * [[suspend-stats|Suspend Stats]]
   * [[wakeup-issue|Wakeup Issue]]
   * [[suspend-logs|Suspend Wakeup Logs]]

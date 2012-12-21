@@ -25,3 +25,51 @@ dumpsys power
 cat /proc/wakelocks   #Legacy
 cat /d/wakeup_sources #需要挂载debugfs
 </code>
+
+<WRAP info round 600px>
+  * active_count: active次数（deactive到active）。
+  * wakeup_count: 休眠转换期间唤醒事件(events_check_enabled 为 Ture 时有效)。
+  * event_count： <nowiki>__pm_stay_awake + __pm_wakeup_event 次数。</nowiki>
+  * expire_count：timeout wakeup sources。
+  * active_since: 0 is deactive, !0 is active。
+</WRAP> 
+
+<file>
+#cat /d/wakeup_sources
+---Eg1-------------------------------------
+name            active_count    event_count     wakeup_count    expire_count    active_since    total_time      max_time        last_change     prevent_suspend_time
+gpio_input:m040-keypad  36              36              1               0               0               371             16              47658290                371
+alarmtimer      0               0               0               0               0               0               0               955             0
+1-0009          0               0               0               0               0               0               0               605             0
+14-0066         0               0               0               0               0               0               0               405             0
+serial-debug    1               1               0               0               0               500             500             755             0
+early_suspend   1               1               0               0               0               52268           52268           52518           1014
+timeout_ws      4723            9446            4723            4722            3116            46353648                9826            47839506                4635368
+autosleep       2               2               0               0               0               0               0               121502          0
+
+---Eg2-------------------------------------
+# cat /d/wakeup_sources 
+name            active_count    event_count     wakeup_count    expire_count    active_since    total_time      max_time        last_change     prevent_suspend_time
+lt              2               6               0               0               1752            48607           46855           422703          0
+gpio_input:m040-keypad  80              80              1               0               0               864             13              418188          864
+alarmtimer      0               0               0               0               0               0               0               953             0
+1-0009          0               0               0               0               0               0               0               605             0
+14-0066         0               0               0               0               0               0               0               405             0
+serial-debug    1               1               0               0               0               500             500             755             0
+early_suspend   1               1               0               0               0               223348          223348          223598          1016
+timeout_ws      16              16              0               15              -1083070                -17016664               0               1507526         -170164
+autosleep       1               1               0               0               0               0               0               222581          0
+
+---Eg3-------------------------------------
+# cat /d/wakeup_sources 
+name            active_count    event_count     wakeup_count    expire_count    active_since    total_time      max_time        last_change     prevent_suspend_time
+lt              2               6               0               0               15200           62055           46855           422703          0
+gpio_input:m040-keypad  80              80              1               0               0               864             13              418188          864
+alarmtimer      0               0               0               0               0               0               0               953             0
+1-0009          0               0               0               0               0               0               0               605             0
+14-0066         0               0               0               0               0               0               0               405             0
+serial-debug    1               1               0               0               0               500             500             755             0
+early_suspend   1               1               0               0               0               223348          223348          223598          1016
+timeout_ws      16              16              0               16              0               -17012960               0               428160          -17012960
+autosleep       1               1               0               0               0               0               0               222581          0
+</file>

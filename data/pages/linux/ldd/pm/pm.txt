@@ -1,24 +1,38 @@
 Linux电源管理技术及相关问题。
-  * [[pmic|PM: Regulator]]
-  * [[.clock:clock|PM: Clock]]
-  * [[power-supply|PM: Power-Supply]]
-  * [[pm-domains|PM: Domains]]
-  * [[power-seq|PM: Power Sequences]]
-  * [[pm-qos|PM: Qos]]
-  * [[devfreq|PM: DevFreq]]
-  * [[runtime-pm|PM: Runtime]]
-  * [[.dvfs:dvfs|PM: CPUFreq]]
-  * [[cpu-hotplug|PM: CPU-Hotplug]]
-  * [[cpu-topology|PM: CPU-Topology]]
-  * [[pm-cooling|PM: Cooling-Device]]
-  * [[idle|PM: CPUIdle]]
-  * [[coupled-cpuidle|PM: Coupled-CPUIdle]]
-  * [[early-suspend|PM: Early-Suspend]]
-  * [[.wakelock:wakelock|PM: Wakelock/Wakeup_sources]]
-  * [[pm-autosleep|PM: Auto-Sleep]]
-  * [[.sleep:sleep|PM: Sleep]]
+  * <wrap todo> PM--Power </wrap>
+    * [[pmic|PM: Regulator]]
+    * [[pm-domains|PM: Domains]]
+    * [[power-supply|PM: Power-Supply]]
+
+  * <wrap todo> PM--Clock </wrap>
+    * [[.clock:clock|PM: Clock]]
+
+  * <wrap todo> PM--Base </wrap>
+    * [[pm-qos|PM: Qos]]
+    * [[pm-opp|PM: Opp]]
+    * [[power-seq|PM: Power Sequences]]
+
+  * <wrap todo> PM--CPU </wrap>
+    * [[.dvfs:dvfs|PM: CPUFreq]]
+    * [[cpu-hotplug|PM: CPU-Hotplug]]
+    * [[cpu-topology|PM: CPU-Topology]]
+    * [[pm-cooling|PM: Cooling-Device]]
+    * [[idle|PM: CPUIdle]]
+    * [[coupled-cpuidle|PM: Coupled-CPUIdle]]
+
+  * <wrap todo> PM--I/O Devs </wrap>
+    * [[devfreq|PM: DevFreq]]
+    * [[runtime-pm|PM: Runtime]]
+
+  * <wrap todo> PM--Suspend Wakeup </wrap>
+    * [[early-suspend|PM: Early-Suspend]]
+    * [[.wakelock:wakelock|PM: Wakeup_sources/Wakelock]]
+    * [[pm-wakeup-count|PM: Wakeup_count]]
+    * [[pm-autosleep|PM: Auto-Sleep]]
+    * [[.sleep:sleep|PM: Suspend]]
+    * [[pm-acpi|PM: ACPI]]
+
   * [[reboot|PM: Reboot]]
-  * [[pm-acpi|PM: ACPI]]
   * [[pm-debug|PM: Debug]]
   * [[pm-test|PM: Test]]
   * [[pm-sub|Pm: Sub-System]]

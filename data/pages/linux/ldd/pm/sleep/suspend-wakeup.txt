@@ -1,26 +1,46 @@
-<file>
-echo "mem" > /sys/power/state
-
+  * suspend 转换: echo "mem" > /sys/power/state
+<code c>
+/*Linux-3.4.5*/
 state_store
-  pm_suspend(state);
-    enter_state(state);
-      sys_sync();
-      suspend_prepare();
-        suspend_freeze_processes();
-      suspend_devices_and_enter(state);
-        suspend_console();
-        dpm_suspend_start(PMSG_SUSPEND);
-        suspend_enter(state, &wakeup);
-          suspend_ops->prepare(); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_prepare*/
-          dpm_suspend_end(PMSG_SUSPEND);
-          suspend_ops->prepare_late(); /*Platform Specific*/
-          syscore_suspend();
-          suspend_ops->enter(state); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_enter*/
--------------below wakeup--------------
-          dpm_resume_start(PMSG_RESUME);
-          suspend_ops->finish(); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_finish*/
-        dpm_resume_end(PMSG_RESUME);
-        resume_console();
-      suspend_finish();
-        suspend_thaw_processes();
-</file>
+    pm_suspend(state);
+        enter_state(state);
+            sys_sync();
+            suspend_prepare();
+                suspend_freeze_processes();
+                    freeze_processes();
+                        try_to_freeze_tasks(true);
+                            pm_wakeup_pending()? /* !!若有wakeup_source 退出休眠转换!!*/
+            suspend_devices_and_enter(state);
+                suspend_console();
+                dpm_suspend_start(PMSG_SUSPEND);
+                    dpm_prepare(state);
+                    dpm_suspend(state); /*Execute "suspend" callbacks for all non-sysdev devices.*/
+                        device_suspend(dev);
+                            __device_suspend(dev, pm_transition, false);
+                                pm_wakeup_pending()? /* !!若有wakeup_source 退出休眠转换!! */
+                suspend_enter(state, &wakeup);
+                    suspend_ops->prepare(); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_prepare*/
+                    dpm_suspend_end(PMSG_SUSPEND);
+                        dpm_suspend_late(state); /*Execute "late suspend" callbacks for all devices.*/
+                            device_suspend_late(dev, state);
+                            pm_wakeup_pending()? /* !!若有wakeup_source 退出休眠转换!! */
+                        dpm_suspend_noirq(state); /*Execute "noirq suspend" callbacks for all devices.*/
+                            device_suspend_noirq(dev, state);
+                            pm_wakeup_pending()? /* !!若有wakeup_source 退出休眠转换!! */
+                    suspend_ops->prepare_late(); /*Platform Specific*/
+                    disable_nonboot_cpus();
+                    arch_suspend_disable_irqs(); /*关掉中断，soc休眠后，唤醒逻辑reset soc*/
+                    syscore_suspend(); /*Execute all the registered system core suspend callbacks.*/
+                    pm_wakeup_pending()? /* !!若有wakeup_source 退出休眠转换!! */
+                    suspend_ops->enter(state); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_enter*/
+/*------------------------------------------------below wakeup------------------------------------------------*/
+                    syscore_resume();
+                    arch_suspend_enable_irqs();
+                    enable_nonboot_cpus();
+                    dpm_resume_start(PMSG_RESUME);
+                    suspend_ops->finish(); /*Platform Specific: arch/arm/plat-samsung/pm.c-->s3c_pm_finish*/
+                dpm_resume_end(PMSG_RESUME);
+                resume_console();
+            suspend_finish();
+                suspend_thaw_processes();
+</code>

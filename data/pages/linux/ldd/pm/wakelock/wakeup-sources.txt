@@ -1,0 +1,4 @@
+  * pm_wakeup_pending
+<file>
+Function: 用于检测休眠转换期间是否有 active wakeup_souces产生，若有则退出休眠转换。只有在events_check_enabled 为ture时有效。
+</file>
